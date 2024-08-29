@@ -43,8 +43,8 @@ public class EmailQueueDataInserter {
 
     Thread dataPusher = null;
     
-    final String username = "paramjeetsinghbawa@gmail.com";
-    final String password = "PNB$2379241";
+    final String username = "xxxx@gmail.com";
+    final String password = "xxxx";
     
     public boolean sendMail(String to, String subject, 
             String content, String filePath, String cC) throws MessagingException {
@@ -69,7 +69,7 @@ public class EmailQueueDataInserter {
         Session session = Session.getDefaultInstance(props, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("paramjeet.singh@logicoy.com", "param237924");
+                return new PasswordAuthentication("xxxx@gmail.com", "xxxx");
             }
         });
         try {

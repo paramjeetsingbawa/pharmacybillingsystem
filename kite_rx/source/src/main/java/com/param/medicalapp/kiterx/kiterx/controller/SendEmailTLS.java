@@ -19,8 +19,8 @@ public class SendEmailTLS {
     
     public static void sendMail(){
     Properties properties = System.getProperties();
-    final String USERNAME = "paramjeetsinghbawa@gmail.com";
-    final String PASSWORD = "PNB$2379241";
+    final String USERNAME = "xxxx@gmail.com";
+    final String PASSWORD = "xxxx";
 
     properties.put("mail.smtp.starttls.enable", "true");
     properties.put("mail.smtp.host", "smtp.gmail.com");
