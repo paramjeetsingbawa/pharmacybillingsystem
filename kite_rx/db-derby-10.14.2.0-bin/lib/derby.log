@@ -1,0 +1,14 @@
+Wed Aug 28 19:12:45 IST 2024 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1529
+----------------------------------------------------------------
+Wed Aug 28 19:13:16 IST 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0191-9938-c495-ffffcd56aa2c 
+on database directory /Users/param-logicoy-mac/Downloads/kite_rx/db-derby-10.14.2.0-bin/lib/avonprodv1 with class loader sun.misc.Launcher$AppClassLoader@55f96302 
+Loaded from file:/Users/param-logicoy-mac/Downloads/kite_rx/db-derby-10.14.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_391-b13
+user.dir=/Users/param-logicoy-mac/Downloads/kite_rx/db-derby-10.14.2.0-bin/lib
+os.name=Mac OS X
+os.arch=aarch64
+os.version=14.3.1
+derby.system.home=/Users/param-logicoy-mac/Downloads/kite_rx/db-derby-10.14.2.0-bin/lib
+Database Class Loader started - derby.database.classpath=''
