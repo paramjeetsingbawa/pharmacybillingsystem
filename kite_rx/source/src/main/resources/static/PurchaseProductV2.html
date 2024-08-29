@@ -1,0 +1,1247 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="msapplication-TileColor" content="#0061da">
+        <meta name="theme-color" content="#1643a3">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+        <!-- Title -->
+        <title>KiteRx Purchase</title>
+        <link rel="stylesheet" href="assets/fonts/fonts/font-awesome.min.css">
+
+        <!-- Font family -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+        <!-- Dashboard Css -->
+        <link href="assets/css/dashboard.css" rel="stylesheet" />
+
+
+        <!-- c3.js Charts Plugin -->
+        <link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
+
+        <!-- Custom scroll bar css-->
+        <link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+        <!---Font icons-->
+        <link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/sweet-alert.css" />
+
+    </head>
+    <body class="">
+        <div id="global-loader" ></div>
+        <div class="page" >
+            <div class="page-main">
+                <div class="header py-1">
+                    <div class="container">
+                        <div class="d-flex">
+                            <a class="header-brand" href="#">
+                                <!--								<img src="assets/images/brand/logo.png" class="header-brand-img" alt="Viboon logo">-->
+                                <img src="img/logo_3.png" style="position: absolute;top: -15px;">
+                            </a>
+                            <div class="d-flex order-lg-2 ml-auto">
+                                <div class="dropdown d-none d-md-flex mt-4" >
+                                    <h3 style="color: white;">  Window view : Product Purchase </h3>
+                                </div>
+                                <div class="dropdown d-none d-md-flex mt-1" >
+                                    <a  class="nav-link icon full-screen-link">
+                                        <i class="fe fe-maximize floating"  id="fullscreen-button"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown d-none d-md-flex mt-1" >
+                                    <a  class="nav-link icon full-screen-link">
+                                        <i class="fe fe-star floating"  id="buttonAside"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-bell floating"></i>
+                                        <span class="nav-unread bg-danger"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-thumbs-o-up"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Someone likes our posts.</strong>
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-commenting-o"></i>
+                                            </div>
+                                            <div>
+                                                <strong> 3 New Comments</strong>
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-cogs"></i>
+                                            </div>
+                                            <div>
+                                                <strong> Server Rebooted.</strong>
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">View all Notification</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-mail floating"></i>
+                                        <span class=" nav-unread badge badge-warning  badge-pill">2</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item text-center">2 New Messages</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/male/41.jpg)"></span>
+                                            <div>
+                                                <strong>Madeleine</strong> Hey! there I' am available....
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/1.jpg)"></span>
+                                            <div>
+                                                <strong>Anthony</strong> New product Launching...
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/18.jpg)"></span>
+                                            <div>
+                                                <strong>Olivia</strong> New Schedule Realease......
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">See all Messages</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown mt-1">
+                                    <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                                        <span class="avatar avatar-md brround" style="background-image: url(img/user_images/user_1.jpg)"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow ">
+                                        <div class="text-center">
+                                            <a href="#" class="dropdown-item text-center font-weight-sembold user" id="username">Manish Soin</a>
+                                            <span class="text-center user-semi-title text-dark" id="userRole">Pharmacy Director</span>
+                                            <div class="dropdown-divider"></div>
+                                        </div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-account-outline "></i> Profile
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon  mdi mdi-settings"></i> Settings
+                                        </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?
+                                        </a>
+                                        <a class="dropdown-item" href="login.html">
+                                            <i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                                <span class="header-toggler-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-navbar" id="headerMenuCollapse">
+                    <div class="container">
+                        <ul class="nav">
+                            <li class="nav-item with-sub">
+                                <a class="nav-link active" href="#"><i class="fa fa-bar-chart"></i> <span>Billing</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductSaleEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Sales Entry</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html"><i class="fa fa-check"></i>Old Sale Bill (Complete product list)</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Purchase Bill</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html">Tagged Billing</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sale return</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Purchase return</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link " href="index4.html">
+                                    <i class="fa fa-home"></i>
+                                    <span>DASHBOARD</span>
+                                </a>
+                                <!--                                <div class="sub-item">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="index.html">Dashboard 1</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index2.html">Dashboard 2</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index3.html">Dashboard 3</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index4.html">Dashboard 4</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index5.html">Dashboard 5</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> sub-item -->
+                            </li>
+                            
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" href="#"><i class="fa fa-snowflake-o"></i> <span>Reports</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="SaleReportV2.html"><i class="fa fa-check"></i>Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductSalesReportV2.html"><i class="fa fa-check"></i>Product Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="PurchaseReportV2.html"><i class="fa fa-check"></i>Purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleReportV2.html?paymentTypeFilter=CREDIT"> <i class="fa fa-check"></i> Credit report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Inventory report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Return items</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-file-text-o"></i> <span>Stocks</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseV2.html"><i class="fa fa-check"></i>Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2_Stock.html"><i class="fa fa-check"></i>Current Stock</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2.html"><i class="fa fa-check"></i>Sales chart</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Expired products</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub ">
+                                <a class="nav-link " data-toggle="dropdown" href="#"><i class="fa fa-cubes"></i> <span>Accounts</span></a>
+                                <div class="sub-item">
+                                    <ul>
+<!--                                        <li>
+                                            <a href="new-company.html"><i class="fa fa-check"></i>New Company</a>
+                                        </li>-->
+                                        <li>
+                                            <a href="new-customer.html"><i class="fa fa-check"></i>New Customer</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-credit-account.html"><i class="fa fa-check"></i>New Credit Account</a>
+                                        </li>
+<!--                                        <li>
+                                            <a href="#">Company list</a>
+                                        </li>-->
+                                        <li>
+                                            <a href="CustomerListV2.html"><i class="fa fa-check"></i>Manage Customers & Payments</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?isCreditSearch=1"><i class="fa fa-check"></i>Credit Account List</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?onlyPending=1"><i class="fa fa-check"></i>Pending Payments To me</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-bandcamp"></i> <span>System Management</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="salesHistory.html">Export Product Sheet</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export expiry</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Database Backup</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="my-3 my-md-5">
+                    <div class="container">
+                        <div class="row-fluid" id="myModal" style="position:absolute;">
+                            <button type="button" class="close" data-dismiss="modal" style="background-color: #393939;"></button>
+                            <center>
+                                <div class="modal-body">
+                                    <img src="img/red_loader.gif" width="100" height="100" />
+                                </div>
+                            </center>
+                        </div>
+
+                        <div class="row-fluid" style="overflow: auto">
+                            <div class="center"><font style="font-size:20px; color: green;">Total Item For The Purchase : </font><button id="saveBillBtn" class="btn btn-round btn-success btn-large" data-toggle="collapse" data-target="#saleDemo"><font style="font-size:20px;"><span id="spnCartCount">#0</span></font></button></div>
+
+                            <div id="saleDemo" class="collapse">
+                                <div class="box span12" id="salesDivSummary" >
+
+                                    <p align='left' style='color:black;font-size: 14px;font-weight: 600;'>Sales Order Detail (Press "Ctrl + G" Key to generate Invoice And save this sale data) </p>
+                                    <!--<p align='left' style='color:white'>Purchase Order Detail <span style='cursor:pointer' onclick='refreshBill()'> <u>Refresh</u> </p>-->
+                                    <table id="tableForOrder" class="table" style="font-size : 12px;cursor:pointer" border="2">
+                                        <thead>
+                                            <tr style='color:black;font-size : 12px;font-style:thoma;background-color: white'>
+                                                <th align='left'>ACTION</th>
+                                                <th align='left'>PRODUCT NAME </th>
+                                                <th align='left'>QUANTITY </th>
+                                                <th align='left'>AMOUNT PER UNIT</th>	
+                                                <th align='left'>CGST (%)</th>
+                                                <th align='left'>SGST (%)</th>
+                                                <th align='left'>TOTAL AMOUNT</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody id="bpelInstSummayTabBody" style='color:black;font-size : 12px;font-style:thoma'>
+                                        </tbody>							
+
+                                    </table>
+
+                                    <center><strong><button id='btnGenerateBill' class="btn btn-warning" style="font-weight:700;visibility:hidden" onclick="generateBill()" > Generate Purchase Order </button></strong></center>
+                                    <br />
+
+                                </div>
+
+                            </div>
+                            <br />
+
+                            <table width="100%">
+                                        <tr>
+
+                                            <td>
+                                                <input type="text" autofocus id="productNameFilterTxt"  placeholder="Product name" class="form-control" style="width:100%;height:35px;font-size : 13px;font-weight:600;background-color:#FAFB9E"/>
+                                            </td>
+                                            <td>
+                                                <input type="text" id="companyFilterTxt"  placeholder="Company name" class="form-control" style="width:100%;height:35px;font-size : 13px;font-weight:600;background-color:#FAFB9E"/>
+                                            </td>
+                                            <td>
+                                                <input type="text" id="formulaFilterTxt"  placeholder="Formula name" tabindex="3" class="form-control" style="width:100%;height:35px;font-size : 13px;font-weight:600;background-color:#FAFB9E"/>
+                                            </td>
+                                            <td>
+                                                <input type="text" id="batchNoFilterTxt"  placeholder="Batch number" tabindex="4" class="form-control" style="width:100%;height:35px;font-size : 13px;font-weight:600;background-color:#FAFB9E"/>
+                                            </td>
+                                            <td>
+                                                <input type="text" id="scheduleFilterTxt"  placeholder="Drug schedule" tabindex="4" class="form-control" style="width:100%;height:35px;font-size : 13px;font-weight:600;background-color:#FAFB9E"/>
+                                            </td>
+                                            <!--                                            <td>
+                                                                                            <button id="showExpFilterBtn" type="button" class="btn btn-success" data-toggle="collapse" data-target="#demo" style="background-color:#FAFB9E;width:100%;height:35px;font-weight: 600;font-size: 18px;margin-top: -10px;"> Expiry date filter</button>
+                                                                                        </td>-->
+                                        </tr>
+                                    </table>
+                            <br />
+                            <div id="demo" class="collapse">
+                                <br />
+                                <center>
+                                    <input type="text" id="expDateFiltertxt" value="" style="width:50%;height:30px;font-weight: 500;background-color:#FAFB9E;" />
+
+                                    <div class="span4">
+                                        <div id="calendar" style="curson:pointer;width:350px;height:300px"></div>
+                                        <center>
+                                    </div>
+                                </center>
+                            </div>
+                            <br />
+                            <div id="testInstDiv" class="table-responsive">
+                                <table id="testInst" class="table card-table table-vcenter text-nowrap">
+                                    <thead style="height: 10px;">
+                                        <tr style="background-color: white">
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >ACTION</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >ENTRY DATE</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >PRODUCT</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >PACKING </p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >QUANTITY</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >FREE</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >BATCH</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >EXP</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >MRP</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >PURCHASE RATE</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >MARGIN</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >SCHEDULE</p>
+                                            </th>
+                                            <!--                                                <th style='vertical-align:top'>
+                                                                                                <p align='left' >CGST</p>
+                                                                                            </th>
+                                                                                            <th style='vertical-align:top'>
+                                                                                                <p align='left' >SGST</p>
+                                                                                            </th>
+                                                                                            <th style='vertical-align:top'>
+                                                                                                <p align='left' >IGST</p>
+                                                                                            </th>-->
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >DISCOUNT</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >TOTAL</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >COMPANY</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >DISTUBUTER NAME</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' >DISTUBUTER NO</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="bpelInstSummayTabBody3" style="font-size : 12px;cursor:pointer;font-weight: 600;">
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <br />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="myMessageTrackingWindow" class="modal fade">
+                <div class="modal-dialog modal-xxxlg" role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header pd-x-20">
+                            <h6 class="modal-title"><table>
+                                    <tr>
+                                        <td>
+                                            <h2>Update or add product window for product id : </h2>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="deleteProductTxt" style="height:45px;font-weight: 700;color:green;font-size: 26px;margin-top: -10px;" placeholder="Product id (not name)" disabled />
+                                        </td>
+                                    </tr>
+                                </table></h6>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="table-responsive" id="billingDivMainTop" style="overflow: scroll;">
+                            <table border="2" id="testInst" class="table" style="width:2000px;font-size : 12px;cursor:pointer;overflow: scroll;">
+                                <thead style="height: 10px;">
+                                    <tr style="background-color: white">
+                                        <!--<th style='vertical-align:top'>
+                                            <p align='left' >DATE </p>
+                                        </th>-->
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >ENTRY DATE</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >PRODUCT</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >PACKING </p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >QUANTITY</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >FREE</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >BATCH</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >EXP</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >MRP</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >AMOUNT PER UNIT</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >DRUG SCHEDULE</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >PURCHASE RATE</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >TAX</p>
+                                        </th>  
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >MARGIN</p>
+                                        </th>
+
+                                        <!--                            <th style='vertical-align:top'>
+                                                                        <p align='left' >CGST</p>
+                                                                    </th>
+                                                                    <th style='vertical-align:top'>
+                                                                        <p align='left' >SGST</p>
+                                                                    </th>
+                                                                    <th style='vertical-align:top'>
+                                                                        <p align='left' >IGST</p>
+                                                                    </th>-->
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >DISCOUNT</p>
+                                        </th>                                                
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >COMPANY</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >FORMULA</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >DISTUBUTER NAME</p>
+                                        </th>
+                                        <th style='vertical-align:top'>
+                                            <p align='left' >DISTUBUTER NO</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bpelInstSummayTabBody32" style="font-size : 12px;cursor:pointer">
+                                    <tr>
+                                        <td>
+                                            <input disabled type = 'text' id='dateAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" />
+                                        </td>
+                                        <td>
+                                            <input disabled type = 'text' id='productNameAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 250px;" placeholder="Product Name"/>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='packingAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Packing" onkeyup="keychangemrp(this)"/>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='quantityAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder=
+                                                   "Quantity"/>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='freeAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Free"/>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='batchNoAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Batch number"/>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='ExpiryDateAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Expiry date"/>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='mrpAddTxt' style ="width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="MRP" onkeyup="keychangemrp(this)"/>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='amountAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Per unit purchase price" />
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='scheduleAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Schedule" />
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='prateAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="P.Rate" onkeyup="keychangemrp(this)" />
+                                        </td>
+                                        <td>
+                                            <select class="form-control myListenerParam" id="taxesAddTxt" style="width:70px;height:35px;font-weight: 600;font-size: 20px;background-color: #FAFB9E;" onchange="onchangetax(this)">
+                                                <option value="0" selected="selected">0</option>
+                                                <option value="5">5</option>
+                                                <option value="12">12</option>
+                                                <option value="18">18</option>
+                                                <option value="28">28</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='marginTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Margin" disabled="true"/>
+                                        </td>
+                                        <!--                            <td>
+                                                                        <input type = 'text' id='cgstAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="CGST in percentage"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type = 'text' id='sgstAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="SGST in percentage"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type = 'text' id='igstAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="IGST in percentage"/>
+                                                                    </td>-->
+                                        <td>
+                                            <input type = 'text' id='discountAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Discount"/>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='companyAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Company name"/>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='formulaAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Formula"/>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='disNameAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Distributer name"/>
+                                        </td>
+                                        <td>
+                                            <input type = 'text' id='disNoAddTxt' style = "width:100%;height:35px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Distributer contact number"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table id="tabBpelInstSum1" class="" style="font-size : 12px;cursor:pointer;width:40%">
+                                <tbody id="myTable1">
+                                    <tr id='insertButton1' >
+                                        <td>
+                                            <div class="demo flowchart-demo"  style="cursor:pointer">			
+                                                <button id="saveProductBtn" class="btn btn-warning" onclick="addProduct()"><strong>Add Product</strong></button>(Ctrl + a)
+                                            </div>	
+                                        </td>
+                                        <td>
+                                            <div class="demo flowchart-demo"  style="cursor:pointer">			                                                        		
+                                                <button id="updateProductBtn" class="btn btn-warning" onclick="updateProduct()"><strong>Update Product</strong></button>(Ctrl + u)
+                                            </div>																
+
+                                        </td>
+                                        <td>
+                                            <div class="demo flowchart-demo"  style="cursor:pointer">			                                                        		
+                                                <button id="showDeleteFilterBtn" class="btn btn-danger" onclick="deleteProduct()"><strong>Delete Product</strong></button>
+                                            </div>																
+
+                                        </td>
+                                    </tr>
+
+                            </table>
+                            <br />
+                            <br />
+                        </div>
+
+
+                        <div id='billingDivMainTopFinalBill' style="visibility:hidden;">
+                            <div class="modal-body">
+                                <table class="table" style="font-size : 12px;cursor:pointer;width:100%" border="2">
+                                    <tr>
+                                        <td align="left" style='color:black;font-size : 12px;font-style:thoma'>Purchase Order ID</td>
+                                        <td  align="left">
+                                            <span id='billNo' style='color:black;font-size : 13px;font-style:thoma;font-weight:700;'> </span> </td>
+
+                                        <td align="left" style='color:black;font-size : 12px;font-style:thoma'>Purchase Order date</td>
+                                        <td  align="left">
+                                            <span id='billDate' style='color:black;font-size : 13px;font-style:thoma;font-weight:700;'> </span> </td>
+                                        <td><p></p></td><td><p></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style='color:black;font-size : 12px;font-style:thoma'>Company Name </td>
+                                        <td align="left">
+                                            <input type='text' id='custNameForBillingTxt' style="width:100%;height:35px;font-size : 18px;font-style:thoma;font-weight:600;background-color:#FAFB9E" value="admin" placeholder="Username"/> </td>
+
+                                        <td style='color:black;font-size : 12px;font-style:thoma'>Company Contact Number</td>
+                                        <td id='tdCustMobile' align="left">
+                                            <input type='text' id='custNameMobileNumberTxt' style="width:100%;height:35px;font-size : 18px;font-style:thoma;font-weight:600;background-color:#FAFB9E" value="+91123456789"placeholder="Contact number"/> </td>
+
+                                        <td style='color:black;font-size : 12px;font-style:thoma'>Company Address</td>
+                                        <td id='tdCustAddress' align="left">
+                                            <input type='text' id='tdCustAddressTxt' style="width:100%;height:35px;font-size : 18px;font-style:thoma;font-weight:600;background-color:#FAFB9E" value="+91123456789"placeholder="Contact number"/> </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td align="left" style='color:black;font-size : 12px;font-style:thoma'>Number of products</td>
+                                        <td align="left"><span id='productForBill' style='color:black;font-size : 13px;font-style:thoma'></span> </td>
+
+                                        <td align="left" style='color:black;font-size : 12px;font-style:thoma'>Order Total Amount</td>
+                                        <td align="left"><span id='amountTotalForFill' style='color:black;font-size : 13px;font-style:thoma;font-weight:700;'></span> </td>
+                                        <td><p></p></td><td><p></p></td>
+                                    </tr>
+
+                                </table>
+
+                                <strong><button id='btnGenerateFinalBill2' class="btn btn-warning" style="font-weight:700" onclick="print_specific_div_content()" >Generate Purchase Order</button> </strong>
+
+                                <table id="tableForFinalOrder" class="table" style="font-size : 12px;cursor:pointer;width:100%" border="2">
+                                    <thead>
+                                        <tr>
+                                            <th align='left' style='color:black;font-size : 12px;font-style:thoma'>Product Name</th>
+                                            <th align='left' style='color:black;font-size : 12px;font-style:thoma'>Quantity</th>
+                                            <th align='left' style='color:black;font-size : 12px;font-style:thoma'>Amount</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="bpelInstSummayTabBody" style='color:black;font-size : 12px;font-style:thoma'>
+                                    </tbody>
+
+                                </table>
+
+                                <span style='color:black;font-size : 13px;font-style:thoma;font-weight:700;'>Total Amount :</span> <span id='amountTotalForFill2' style='color:black;font-size : 13px;font-style:thoma;font-weight:700;'></span>
+
+                                <br /><br />
+
+
+
+                                <h4 id='billFooter' style='color:blue;font-size : 12px;font-style:thoma;visibility:hidden'>This is electronic generated sales invoice, Signature not needed</h4>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div><!-- modal-dialog -->
+            </div>
+
+            <footer>
+                <p class="pull-left"><font color='black'>&copy; BTech Software Pvt. Ltd.</a> 2018-2019</p>
+                <p class="pull-right"><font color='black' >Developed by: <a href="https://www.facebook.com/param.cool2008"  target="_blank">Paramjeet Singh.</a></p>
+                <marquee behavior="scroll" direction="left">In case of any doubt on the product operation, feel free to contact us on +91 9986881500, or sent email to paramjeetsinghbawa@gmail.com </marquee>
+            </footer>
+            <!-- End Footer-->
+        </div>
+        <!-- Back to top -->
+        <a href="#top" id="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
+
+        <!-- Dashboard Core -->
+        <script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+        <script src="custom-js/jquery-ui-1.8.21.custom.min.js"></script>
+        <!-- transition / effect library -->
+        <script src="custom-js/bootstrap-transition.js"></script>
+        <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/vendors/jquery.sparkline.min.js"></script>
+        <script src="assets/js/vendors/selectize.min.js"></script>
+        <script src="assets/js/vendors/jquery.tablesorter.min.js"></script>
+        <script src="assets/js/vendors/circle-progress.min.js"></script>
+        <script src="assets/plugins/rating/jquery.rating-stars.js"></script>
+
+        <!-- Charts Plugin -->
+        <script src="assets/plugins/chart/Chart.bundle.js"></script>
+        <script src="assets/plugins/chart/utils.js"></script>
+
+        <!-- Input Mask Plugin -->
+        <script src="assets/plugins/input-mask/jquery.mask.min.js"></script>
+
+        <!-- Custom scroll bar Js-->
+        <script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Index Scripts -->
+        <script src="assets/js/index4.js"></script>
+
+        <!-- Custom-->
+        <script src="assets/js/custom.js"></script>
+        <script src="custom-js/sweet-alert.min.js"></script>
+        <!-- application script for Charisma demo -->
+        <script src="custom-js/PurchaseOrderV2.js"></script>
+        <script>
+                        function shownav() {
+
+                            document.getElementById("navdiv1").style.display = "block";
+                        }
+        </script>
+
+        <script type="text/javascript">
+            window.onload = maxWindow;
+
+            var currentTab = 0;
+            var currenModal = 0;
+            var searchCommand = 1;
+            var mainMenuCommand = 0;
+            document.getElementById("productNameFilterTxt").focus();
+            document.getElementById("productNameFilterTxt").style.border = '0.17em solid orange';
+            window.onkeydown = function (evnt) {
+
+                //alert(evnt.keyCode);
+
+                if (evnt.keyCode === 9 || evnt.keyCode === 38 || evnt.keyCode === 40 || evnt.keyCode === 37 || evnt.keyCode === 39) {
+                    document.getElementById("productNameFilterTxt").style.border = '';
+                    document.getElementById("companyFilterTxt").style.border = '';
+                    document.getElementById("formulaFilterTxt").style.border = '';
+                    document.getElementById("batchNoFilterTxt").style.border = '';
+                    
+                    if (mainMenuCommand === 1) {
+                        document.getElementById("menu1").style.border = '';
+                        document.getElementById("menu2").style.border = '';
+                        document.getElementById("menu3").style.border = '';
+                        document.getElementById("menu4").style.border = '';
+                        document.getElementById("menu5").style.border = '';
+                        document.getElementById("menu6").style.border = '';
+                        document.getElementById("menu7").style.border = '';
+                        document.getElementById("menu8").style.border = '';
+                        document.getElementById("menu9").style.border = '';
+
+
+                        document.getElementById("menu" + currentTab).focus();
+                        document.getElementById("menu" + currentTab).style.border = '0.3em solid orange';
+
+
+                        currentTab++;
+
+                        if (currentTab === 10) {
+                            currentTab = 1;
+                        }
+
+                    } else if (currenModal === 1 && searchCommand === 1) {
+                        if (finalBilling === 0) {
+                            try {
+                                document.getElementById("amountPerUnit").style.border = '';
+                                document.getElementById("addQuantityForBillingTxt").style.border = '';
+
+
+                                if (currentTab === 0) {
+                                    document.getElementById("amountPerUnit").focus();
+                                    document.getElementById("amountPerUnit").style.border = '0.17em solid orange';
+                                }
+
+                                if (currentTab === 1) {
+                                    document.getElementById("addQuantityForBillingTxt").focus();
+                                    document.getElementById("addQuantityForBillingTxt").style.border = '0.17em solid orange';
+                                }
+
+                                currentTab++;
+
+                                if (currentTab === 2) {
+                                    currentTab = 0;
+                                }
+                            } catch (err) {
+
+                                if (evnt.keyCode === 39 || evnt.keyCode === 9 || evnt.keyCode === 13) {
+                                    if ((document.getElementById("bpelInstSummayTabBody32").children[0].children.length) !== currentTab) {
+                                        currentTab++;
+                                    }
+                                }
+
+                                if (evnt.keyCode === 37) {
+                                    //alert(currentTab);
+                                    //alert(document.getElementById("bpelInstSummayTabBody3").children[0].children.length);
+                                    if (currentTab !== 1) {
+                                        currentTab--;
+                                    } else if (currentTab !== 1) {
+                                        currentTab++;
+                                    }
+                                }
+
+                                var tableRowRountInst = document.getElementById("bpelInstSummayTabBody32").children[0].children.length;
+                                for (var i1 = 0; i1 < document.getElementById("bpelInstSummayTabBody32").children[0].children.length; i1++) {
+                                    document.getElementById("bpelInstSummayTabBody32").children[0].children[i1].style.border = "";
+                                    document.getElementById("bpelInstSummayTabBody32").children[0].children[i1].style.backgroundColor = "#ffffff";
+                                }
+
+                                // alert(tableRowRountInst);
+
+                                //alert(currentTab);
+                                //alert(document.getElementById("bpelInstSummayTabBody32").children[0].children[currentTab]);
+                                document.getElementById("bpelInstSummayTabBody32").children[0].children[currentTab].children[0].focus();
+                                document.getElementById("bpelInstSummayTabBody32").children[0].children[currentTab].style.border = '0.3em solid black';
+                                document.getElementById("bpelInstSummayTabBody32").children[0].children[currentTab].style.backgroundColor = '#6DFD2A';
+
+                                if (currentTab !== 11) {
+                                    document.getElementById("bpelInstSummayTabBody32").children[0].children[currentTab].children[0].select();
+                                }
+
+
+
+                                //currentTab++;
+
+
+
+
+                                if (currentTab > tableRowRountInst) {
+                                    currentTab = 1;
+                                }
+                            }
+                        }
+
+                        if (finalBilling === 1) {
+                            document.getElementById("custNameMobileNumberTxt").style.border = '';
+                            document.getElementById("custNameForBillingTxt").style.border = '';
+                            document.getElementById("tdCustAddressTxt").style.border = '';
+                            //btnGenerateFinalBill2
+                            document.getElementById("btnGenerateFinalBill2").style.border = '';
+                            if (currentTab === 0) {
+                                document.getElementById("custNameForBillingTxt").focus();
+                                document.getElementById("custNameForBillingTxt").select();
+                                document.getElementById("custNameForBillingTxt").style.border = '0.17em solid orange';
+                            }
+
+                            if (currentTab === 1) {
+                                document.getElementById("custNameMobileNumberTxt").focus();
+                                document.getElementById("custNameMobileNumberTxt").select();
+                                document.getElementById("custNameMobileNumberTxt").style.border = '0.17em solid orange';
+                            }
+
+                            if (currentTab === 2) {
+                                document.getElementById("tdCustAddressTxt").focus();
+                                document.getElementById("tdCustAddressTxt").select();
+                                document.getElementById("tdCustAddressTxt").style.border = '0.17em solid orange';
+                            }
+
+                            if (currentTab === 3) {
+                                document.getElementById("btnGenerateFinalBill2").focus();
+                                document.getElementById("btnGenerateFinalBill2").style.border = '0.17em solid orange';
+                            }
+
+                            currentTab++;
+
+                            if (currentTab === 4) {
+                                currentTab = 0;
+                            }
+                        }
+
+                    } else if (currenModal === 0) {
+
+                        if (isSearchedProduct === 0) {
+
+                            if (evnt.keyCode === 39 || evnt.keyCode === 9) {
+                                currentTab++;
+                            }
+
+                            if (evnt.keyCode === 37) {
+                                if (currentTab !== -1) {
+                                    currentTab--;
+                                } else {
+                                    currentTab++;
+                                }
+                            }
+
+                            document.getElementById("productNameFilterTxt").style.border = '';
+                            document.getElementById("companyFilterTxt").style.border = '';
+                            document.getElementById("formulaFilterTxt").style.border = '';
+                            document.getElementById("batchNoFilterTxt").style.border = '';
+
+                            if (currentTab === 0) {
+                                document.getElementById("productNameFilterTxt").focus();
+                                document.getElementById("productNameFilterTxt").select();
+                                document.getElementById("productNameFilterTxt").style.border = '0.17em solid orange';
+                            }
+
+                            if (currentTab === 1) {
+                                document.getElementById("companyFilterTxt").focus();
+                                document.getElementById("companyFilterTxt").select();
+                                document.getElementById("companyFilterTxt").style.border = '0.17em solid orange';
+                            }
+
+                            if (currentTab === 2) {
+                                document.getElementById("formulaFilterTxt").focus();
+                                document.getElementById("formulaFilterTxt").select();
+                                document.getElementById("formulaFilterTxt").style.border = '0.17em solid orange';
+                            }
+
+                            if (currentTab === 3) {
+                                document.getElementById("batchNoFilterTxt").focus();
+                                document.getElementById("batchNoFilterTxt").select();
+                                document.getElementById("batchNoFilterTxt").style.border = '0.17em solid orange';
+                            }
+                            
+                            if (currentTab === 4) {
+                                document.getElementById("scheduleFilterTxt").focus();
+                                document.getElementById("scheduleFilterTxt").select();
+                                document.getElementById("scheduleFilterTxt").style.border = '0.17em solid orange';
+                            }
+
+                            // currentTab++;
+
+                            if (currentTab === 4) {
+                                currentTab = -1;
+                            }
+                        } else {
+                            if (evnt.keyCode === 40 || evnt.keyCode === 9) {
+                                currentTab++;
+                            }
+
+                            if (evnt.keyCode === 38) {
+                                if (currentTab !== 0) {
+                                    currentTab--;
+                                } else {
+                                    currentTab++;
+                                }
+                            }
+
+                            tableRowRountInst = document.getElementById("bpelInstSummayTabBody3").children.length;
+                            for (var i1 = 0; i1 < document.getElementById("bpelInstSummayTabBody3").children.length; i1++) {
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].style.border = "";
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].style.backgroundColor = "#ffffff";
+
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[2].style.fontSize = '12px';
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[2].style.color = 'black';
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[2].style.fontWeight = '600';
+
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[4].style.fontSize = '12px';
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[4].style.color = 'black';
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[4].style.fontWeight = '600';
+
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[6].style.fontSize = '12px';
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[6].style.color = 'black';
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[6].style.fontWeight = '600';
+
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[8].style.fontSize = '12px';
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[8].style.color = 'black';
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[8].style.fontWeight = '600';
+
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[9].style.fontSize = '12px';
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[9].style.color = 'black';
+                                document.getElementById("bpelInstSummayTabBody3").children[i1].children[9].style.fontWeight = '600';
+                            }
+
+                            try {
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[0].children[0].focus();
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].style.border = '0.3em solid black';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].style.backgroundColor = '#6DFD2A';
+
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[2].style.fontSize = '13px';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[2].style.color = '#8b0000';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[2].style.fontWeight = '800';
+
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[4].style.fontSize = '13px';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[4].style.color = '#8b0000';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[4].style.fontWeight = '800';
+
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[6].style.fontSize = '13px';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[6].style.color = '#8b0000';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[6].style.fontWeight = '800';
+
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[8].style.fontSize = '13px';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[8].style.color = '#8b0000';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[8].style.fontWeight = '800';
+
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[9].style.fontSize = '13px';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[9].style.color = '#8b0000';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[9].style.fontWeight = '800';
+
+                            } catch (err) {
+
+                            }
+
+
+                            if (currentTab > tableRowRountInst - 1) {
+                                currentTab = 0;
+                            }
+                        }
+                    }
+                    if (evnt.keyCode !== 13) {
+                        return false;
+                    } else if (evnt.keyCode === 39) {
+                        return true;
+                    }
+                } else if (evnt.ctrlKey && evnt.which === 80) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                    //alert('Ctrl+S!');
+                    if (finalBilling === 0) {
+                        $("#saveBillBtn").click();
+                        window.scrollTo(0, 0);
+                    }
+                    return false;
+                } else if (evnt.ctrlKey && evnt.which === 71) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                    //alert('Ctrl+S!');
+                    gCmd = 1;
+                    $("#btnGenerateBill").click();
+                    window.scrollTo(0, 0);
+
+                    return false;
+                } else if (evnt.ctrlKey && evnt.which === 65) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+
+                    //if (finalBilling === 0) {
+                    $("#saveProductBtn").click();
+                    window.scrollTo(0, 0);
+                    //}
+                    return false;
+                } else if (evnt.ctrlKey && evnt.which === 85) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+
+                    $("#updateProductBtn").click();
+                    window.scrollTo(0, 0);
+
+                    return false;
+                } else if (evnt.ctrlKey && evnt.which === 73) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                    //alert('Ctrl+S!');
+                    if (gCmd === 1) {
+                        $("#btnGenerateFinalBill2").click();
+                        window.scrollTo(0, 0);
+                        gCmd = 0;
+                        return false;
+                    } else {
+                        gCmd = 1;
+                        $("#btnGenerateBill").click();
+                        window.scrollTo(0, 0);
+                    }
+                } else if (evnt.ctrlKey && evnt.which === 77) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                    //alert('Ctrl+S!');
+                    mainMenuCommand = 1;
+                    searchCommand = 0;
+                    currentTab = 1;
+                    document.getElementById("productNameFilterTxt").style.border = '';
+                    document.getElementById("companyFilterTxt").style.border = '';
+                    document.getElementById("formulaFilterTxt").style.border = '';
+                    document.getElementById("batchNoFilterTxt").style.border = '';
+                    document.getElementById("scheduleFilterTxt").style.border = '';
+
+                    document.getElementById("menu1").focus();
+                    document.getElementById("menu1").style.border = '0.17em solid orange';
+                    window.scrollTo(0, 0);
+
+                    return false;
+                } else if (evnt.ctrlKey && evnt.which === 70) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                    //alert('Ctrl+S!');
+                    searchCommand = 1;
+                    mainMenuCommand = 0;
+                    currentTab = 1;
+                    document.getElementById("productNameFilterTxt").style.border = '';
+                    document.getElementById("companyFilterTxt").style.border = '';
+                    document.getElementById("formulaFilterTxt").style.border = '';
+                    document.getElementById("batchNoFilterTxt").style.border = '';
+                    document.getElementById("scheduleFilterTxt").style.border = '';
+
+                    document.getElementById("productNameFilterTxt").focus();
+                    document.getElementById("productNameFilterTxt").style.border = '0.17em solid orange';
+                    window.scrollTo(0, 0);
+
+                    return false;
+                } else if (evnt.ctrlKey && evnt.which === 81) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+
+                    $("#productNameFilterTxt").val("");
+                    $("#productNameFilterTxt").text("");
+
+                    $("#companyFilterTxt").val("");
+                    $("#companyFilterTxt").text("");
+
+                    $("#formulaFilterTxt").val("");
+                    $("#formulaFilterTxt").text("");
+
+                    $("#batchNoFilterTxt").val("");
+                    $("#batchNoFilterTxt").text("");
+                    
+                    $("#scheduleFilterTxt").val("");
+                    $("#scheduleFilterTxt").text("");
+                    
+                    
+                    
+                    searchCommand = 1;
+                    mainMenuCommand = 0;
+                    currentTab = 1;
+                    isSearchedProduct = 0;
+                    // if (productDetailDT) {
+                    //   productDetailDT.destroy();
+                    // }
+
+                    //document.getElementById("bpelInstSummayTabBody3").innerHTML = "";
+                    document.getElementById("productNameFilterTxt").focus();
+                    document.getElementById("productNameFilterTxt").style.border = '0.17em solid orange';
+
+                    /**/
+
+                    //$('#testInst tr').slice(1).remove();
+
+                    window.scrollTo(0, 0);
+                    return false;
+                } else if (evnt.ctrlKey && evnt.which === 69) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                    //alert('Ctrl+S!');
+                    var pid = document.getElementById("bpelID").innerHTML;
+
+                    window.open("addOrUpdateProduct.html?pid=" + pid, "_blank");
+
+                    return false;
+                }
+            }
+
+            function maxWindow() {
+                window.moveTo(0, 0);
+
+
+                if (document.all) {
+                    top.window.resizeTo(screen.availWidth, screen.availHeight);
+                } else if (document.layers || document.getElementById) {
+                    if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
+                        top.window.outerHeight = screen.availHeight;
+                        top.window.outerWidth = screen.availWidth;
+                    }
+                }
+            }
+
+            $('#myMessageTrackingWindow').on('hidden.bs.modal', function () {
+                // do something…
+                currenModal = 0;
+            });
+
+            $('#myMessageTrackingWindow').on('shown.bs.modal', function () {
+                // do something…
+                if (finalBilling === 0) {
+                    currentTab = 2;
+                } else {
+                    currentTab = 0;
+                }
+                currenModal = 1;
+            });
+
+            
+            if(userRole !== 'superadmin'){
+                document.getElementById("userRole").innerHTML = "Data Entry Operator";
+                document.getElementById("username").innerHTML = "Admin";
+            }else{
+                document.getElementById("username").innerHTML = "Manish Soin";
+                document.getElementById("userRole").innerHTML = "Cheif Executing Officer";
+            }
+
+        </script> 
+        
+    </body>
+
+    <!-- Mirrored from www.spruko.com/demo/viboon/html/Viboon_teal/Horizontal-Light-Headerfix/index4.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Dec 2018 19:18:57 GMT -->
+</html>

@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="msapplication-TileColor" content="#0061da">
+        <meta name="theme-color" content="#1643a3">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+        <!-- Title -->
+        <title>KiteRx Reports</title>
+        <link rel="stylesheet" href="assets/fonts/fonts/font-awesome.min.css">
+
+        <!-- Font family -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+        <!-- Dashboard Css -->
+        <link href="assets/css/dashboard.css" rel="stylesheet" />
+
+
+        <!-- c3.js Charts Plugin -->
+        <link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
+
+        <!-- Custom scroll bar css-->
+        <link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+        <!---Font icons-->
+        <link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/sweet-alert.css" />
+
+    </head>
+    <body class="">
+        <div id="global-loader" ></div>
+        <div class="page" >
+            <div class="page-main">
+                <div class="header py-1">
+                    <div class="container">
+                        <div class="d-flex">
+                            <a class="header-brand" href="#">
+                                <!--								<img src="assets/images/brand/logo.png" class="header-brand-img" alt="Viboon logo">-->
+                                <img src="img/logo_3.png" style="position: absolute;top: -15px;">
+                            </a>
+                            <div class="d-flex order-lg-2 ml-auto">
+                                <div class="dropdown d-none d-md-flex mt-4" >
+                                    <h3 style="color: white;">  Window view : Sale Report </h3>
+                                </div>
+                                <div class="dropdown d-none d-md-flex mt-1" >
+                                    <a  class="nav-link icon full-screen-link">
+                                        <i class="fe fe-maximize floating"  id="fullscreen-button"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown d-none d-md-flex mt-1" >
+                                    <a  class="nav-link icon full-screen-link">
+                                        <i class="fe fe-star floating"  id="buttonAside"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-bell floating"></i>
+                                        <span class="nav-unread bg-danger"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-thumbs-o-up"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Someone likes our posts.</strong>
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-commenting-o"></i>
+                                            </div>
+                                            <div>
+                                                <strong> 3 New Comments</strong>
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-cogs"></i>
+                                            </div>
+                                            <div>
+                                                <strong> Server Rebooted.</strong>
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">View all Notification</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-mail floating"></i>
+                                        <span class=" nav-unread badge badge-warning  badge-pill">2</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item text-center">2 New Messages</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/male/41.jpg)"></span>
+                                            <div>
+                                                <strong>Madeleine</strong> Hey! there I' am available....
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/1.jpg)"></span>
+                                            <div>
+                                                <strong>Anthony</strong> New product Launching...
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/18.jpg)"></span>
+                                            <div>
+                                                <strong>Olivia</strong> New Schedule Realease......
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">See all Messages</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown mt-1">
+                                    <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                                        <span class="avatar avatar-md brround" style="background-image: url(img/user_images/user_1.jpg)"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow ">
+                                        <div class="text-center">
+                                            <a href="#" class="dropdown-item text-center font-weight-sembold user" id="username">Manish Soin</a>
+                                            <span class="text-center user-semi-title text-dark" id="userRole">Pharmacy Director</span>
+                                            <div class="dropdown-divider"></div>
+                                        </div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-account-outline "></i> Profile
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon  mdi mdi-settings"></i> Settings
+                                        </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?
+                                        </a>
+                                        <a class="dropdown-item" href="login.html">
+                                            <i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                                <span class="header-toggler-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-navbar" id="headerMenuCollapse">
+                    <div class="container">
+                        <ul class="nav">
+                            <li class="nav-item with-sub">
+                                <a class="nav-link " href="#"><i class="fa fa-bar-chart"></i> <span>Billing</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductSaleEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Sales Entry</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html"><i class="fa fa-check"></i>Old Sale Bill (Complete product list)</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Purchase Bill</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html">Tagged Billing</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sale return</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Purchase return</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link " href="index4.html">
+                                    <i class="fa fa-home"></i>
+                                    <span>DASHBOARD</span>
+                                </a>
+                                <!--                                <div class="sub-item">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="index.html">Dashboard 1</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index2.html">Dashboard 2</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index3.html">Dashboard 3</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index4.html">Dashboard 4</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index5.html">Dashboard 5</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> sub-item -->
+                            </li>
+
+                            <li class="nav-item with-sub">
+                                <a class="nav-link active" href="#"><i class="fa fa-snowflake-o"></i> <span>Reports</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="SaleReportV2.html"><i class="fa fa-check"></i>Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductSalesReportV2.html"><i class="fa fa-check"></i>Product Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="PurchaseReportV2.html"><i class="fa fa-check"></i>Purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleReportV2.html?paymentTypeFilter=CREDIT"> <i class="fa fa-check"></i> Credit report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Inventory report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Return items</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-file-text-o"></i> <span>Stocks</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseV2.html"><i class="fa fa-check"></i>Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2_Stock.html"><i class="fa fa-check"></i>Current Stock</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2.html"><i class="fa fa-check"></i>Sales chart</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Expired products</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub ">
+                                <a class="nav-link " data-toggle="dropdown" href="#"><i class="fa fa-cubes"></i> <span>Accounts</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <!--                                        <li>
+                                                                                    <a href="new-company.html"><i class="fa fa-check"></i>New Company</a>
+                                                                                </li>-->
+                                        <li>
+                                            <a href="new-customer.html"><i class="fa fa-check"></i>New Customer</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-credit-account.html"><i class="fa fa-check"></i>New Credit Account</a>
+                                        </li>
+                                        <!--                                        <li>
+                                                                                    <a href="#">Company list</a>
+                                                                                </li>-->
+                                        <li>
+                                            <a href="CustomerListV2.html"><i class="fa fa-check"></i>Manage Customers & Payments</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?isCreditSearch=1"><i class="fa fa-check"></i>Credit Account List</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?onlyPending=1"><i class="fa fa-check"></i>Pending Payments To me</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-bandcamp"></i> <span>System Management</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="salesHistory.html">Export Product Sheet</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export expiry</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Database Backup</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="my-3 my-md-5">
+                    <div class="container">
+
+                        <div class="box span12" >
+                            <div class="table-responsive" style="overflow: scroll;">
+                                <table id="testInst" class="table card-table table-vcenter text-nowrap" style="width:2000px;font-size : 12px;cursor:pointer;overflow: scroll;">
+                                    <thead style="height: 10px;">
+                                        <tr style="background-color: white">
+                                            <!--<th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>DATE </p>
+                                            </th>-->
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>ENTRY DATE</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>PRODUCT</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>PACKING </p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>QUANTITY</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>FREE</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>BATCH</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>EXP</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>MRP</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>AMOUNT PER UNIT</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>DRUG SCHEDULE</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>PURCHASE RATE</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>TAX-PAID</p>
+                                            </th>  
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>MARGIN</p>
+                                            </th>  
+                                            <!--                                                <th style='vertical-align:top'>
+                                                                                                <p align='left' style='color:black'>CGST</p>
+                                                                                            </th>
+                                                                                            <th style='vertical-align:top'>
+                                                                                                <p align='left' style='color:black'>SGST</p>
+                                                                                            </th>
+                                                                                            <th style='vertical-align:top'>
+                                                                                                <p align='left' style='color:black'>IGST</p>
+                                                                                            </th>-->
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>DISCOUNT</p>
+                                            </th>                                                
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>COMPANY</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>FORMULA</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>DISTRIBUTER NAME</p>
+                                            </th>
+                                            <th style='vertical-align:top'>
+                                                <p align='left' style='color:black'>DISTRIBUTER NO</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="bpelInstSummayTabBody3" style="font-size : 12px;cursor:pointer">
+                                        <tr>
+                                            <td>
+                                                <input type = 'text' id='dateAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" />
+                                            </td>
+                                            <td>
+                                                <input autofocus type = 'text' id='productNameAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 150px;" placeholder="Product Name"/>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='packingAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Packing" onkeyup="keychangemrp(this)"/>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='quantityAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder=
+                                                       "Quantity"/>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='freeAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Free"/>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='batchNoAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Batch number"/>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='ExpiryDateAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Expiry date"/>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='mrpAddTxt' class="myMrpListenerParam" style ="width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="MRP" onkeyup="keychangemrp(this)"/>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='amountAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Per unit purchase price" />
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='scheduleAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Schedule" />
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='prateAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="P.Rate" onkeyup="keychangemrp(this)"/>
+                                            </td>
+                                            <td>
+                                                <select class="form-control myListenerParam" id="taxesAddTxt" style="width:70px;height:40px;font-weight: 600;background-color: white;" onchange="onchangetax(this)">
+                                                    <option value="0" selected="selected">0</option>
+                                                    <option value="5">5</option>
+                                                    <option value="12">12</option>
+                                                    <option value="18">18</option>
+                                                    <option value="28">28</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='marginTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Margin" disabled="true"/>
+                                            </td>
+                                            <!--                                                <td>
+                                                                                                <input type = 'text' id='cgstAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="CGST in percentage"/>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <input type = 'text' id='sgstAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="SGST in percentage"/>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <input type = 'text' id='igstAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="IGST in percentage"/>
+                                                                                            </td>-->
+                                            <td>
+                                                <input type = 'text' id='discountAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Discount"/>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='companyAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Company name"/>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='formulaAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Formula"/>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='disNameAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Distributer name"/>
+                                            </td>
+                                            <td>
+                                                <input type = 'text' id='disNoAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: white;margin-left: -6px;margin-right: 50px;" placeholder="Distributer contact number"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn btn-round" style="font-size: 20px;" onclick="addNewProductEntryRow()">+</button> <button class="btn btn-round" style="font-size: 20px" onclick="removeNewProductEntryRow()"><span style="margin-top: -20px;">-</span></button>
+                            <br/><hr/>
+
+
+                            <table id="tabBpelInstSum1" class="" style="font-size : 12px;cursor:pointer;width:40%">
+                                <tbody id="myTable1">
+                                    <tr id='insertButton1' >
+                                        <td>
+                                            <div class="demo flowchart-demo"  style="cursor:pointer">			
+                                                <button id="saveProductBtn" class="btn btn-success" onclick="addProduct()"><strong>Add Product</strong></button>(Ctrl + a)
+                                            </div>	
+                                        </td>
+                                        <td>
+                                            <div class="demo flowchart-demo"  style="cursor:pointer">			                                                        		
+                                                <button id="updateProductBtn" class="btn btn-primary" onclick="updateProduct()"><strong>Update Product</strong></button>(Ctrl + u)
+                                            </div>																
+
+                                        </td>
+                                        <td>
+                                            <div class="demo flowchart-demo"  style="cursor:pointer">			                                                        		
+                                                <button id="showDeleteFilterBtn" class="btn btn-danger" onclick="deleteProduct()"><strong>Delete Product</strong></button>
+                                            </div>																
+
+                                        </td>
+                                    </tr>
+
+                            </table>
+
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <footer>
+                    <p class="pull-left"><font color='black'>&copy; BTech Software Pvt. Ltd.</a> 2018-2019</p>
+                    <p class="pull-right"><font color='black' >Developed by: <a href="https://www.facebook.com/param.cool2008"  target="_blank">Paramjeet Singh.</a></p>
+                    <marquee behavior="scroll" direction="left">In case of any doubt on the product operation, feel free to contact us on +91 9986881500, or sent email to paramjeetsinghbawa@gmail.com </marquee>
+                </footer>
+                <!-- End Footer-->
+            </div>
+        </div>
+
+        <!-- Back to top -->
+        <a href="#top" id="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
+
+        <!-- Dashboard Core -->
+        <script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+        <script src="custom-js/jquery-ui-1.8.21.custom.min.js"></script>
+        <!-- transition / effect library -->
+        <script src="custom-js/bootstrap-transition.js"></script>
+        <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/vendors/jquery.sparkline.min.js"></script>
+        <script src="assets/js/vendors/selectize.min.js"></script>
+        <script src="assets/js/vendors/jquery.tablesorter.min.js"></script>
+        <script src="assets/js/vendors/circle-progress.min.js"></script>
+        <script src="assets/plugins/rating/jquery.rating-stars.js"></script>
+
+        <!-- Charts Plugin -->
+        <script src="assets/plugins/chart/Chart.bundle.js"></script>
+        <script src="assets/plugins/chart/utils.js"></script>
+
+        <!-- Input Mask Plugin -->
+        <script src="assets/plugins/input-mask/jquery.mask.min.js"></script>
+
+        <!-- Custom scroll bar Js-->
+        <script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Index Scripts -->
+        <script src="assets/js/index4.js"></script>
+
+        <!-- Custom-->
+        <script src="assets/js/custom.js"></script>
+        <script src="custom-js/sweet-alert.min.js"></script>
+
+        <script src="custom-js/Dashboard.js"></script>
+        <!-- application script for Charisma demo -->
+        <script type="text/javascript">
+                                                    window.onload = maxWindow;
+                                                    var currentTab = 0;
+                                                    var currenModal = 0;
+                                                    var searchCommand = 1;
+                                                    var mainMenuCommand = 0;
+                                                    var loc = window.location.href;
+                                                    var split = loc.split("?pid=");
+                                                    var id = split[1];
+
+                                                    if (id && id !== "") {
+                                                        document.getElementById("productIdForUpdate").value = id;
+                                                        $("#fetchDatabtn").click();
+                                                    }
+
+
+
+                                                    window.onkeydown = function (evnt) {
+
+                                                        //alert(evnt.which);
+                                                        if (evnt.keyCode === 9 || evnt.keyCode === 38 ||
+                                                                evnt.keyCode === 40 || evnt.keyCode === 37 || evnt.keyCode === 39 || evnt.keyCode === 13) {
+                                                            try {
+                                                                document.getElementById("dateAddTxt").style.border = '';
+                                                                document.getElementById("companyFilterTxt").style.border = '';
+                                                                document.getElementById("formulaFilterTxt").style.border = '';
+                                                                document.getElementById("batchNoFilterTxt").style.border = '';
+                                                            } catch (err) {
+
+                                                            }
+                                                            if (mainMenuCommand === 1) {
+                                                                document.getElementById("menu1").style.border = '';
+                                                                document.getElementById("menu2").style.border = '';
+                                                                document.getElementById("menu3").style.border = '';
+                                                                document.getElementById("menu4").style.border = '';
+                                                                document.getElementById("menu5").style.border = '';
+                                                                document.getElementById("menu6").style.border = '';
+                                                                document.getElementById("menu7").style.border = '';
+                                                                document.getElementById("menu8").style.border = '';
+                                                                document.getElementById("menu9").style.border = '';
+
+
+                                                                document.getElementById("menu" + currentTab).focus();
+                                                                document.getElementById("menu" + currentTab).style.border = '0.3em solid orange';
+
+
+                                                                currentTab++;
+
+                                                                if (currentTab === 10) {
+                                                                    currentTab = 1;
+                                                                }
+
+                                                            } else if (currenModal === 0) {
+
+                                                                if (evnt.keyCode === 39 || evnt.keyCode === 9 || evnt.keyCode === 13) {
+                                                                    if ((document.getElementById("bpelInstSummayTabBody3").children[0].children.length) !== currentTab) {
+                                                                        currentTab++;
+                                                                    }
+                                                                }
+
+                                                                if (evnt.keyCode === 37) {
+                                                                    //alert(currentTab);
+                                                                    //alert(document.getElementById("bpelInstSummayTabBody3").children[0].children.length);
+                                                                    if (currentTab !== 1) {
+                                                                        currentTab--;
+                                                                    } else if (currentTab !== 1) {
+                                                                        currentTab++;
+                                                                    }
+                                                                }
+
+                                                                if (evnt.keyCode === 40) {
+                                                                    if (currentRowIndex < document.getElementById("bpelInstSummayTabBody3").children.length - 1) {
+                                                                        currentRowIndex++;
+                                                                    }
+                                                                }
+
+                                                                if (evnt.keyCode === 38) {
+                                                                    if (currentRowIndex > 0) {
+                                                                        currentRowIndex--;
+                                                                    }
+                                                                }
+
+                                                                var tableRowRountInst = document.getElementById("bpelInstSummayTabBody3").children[0].children.length;
+                                                                try {
+                                                                    tableRowRountInst = document.getElementById("bpelInstSummayTabBody3").children[currentRowIndex].children.length;
+                                                                } catch (err) {
+
+                                                                }
+
+                                                                for (var j1 = 0; j1 < document.getElementById("bpelInstSummayTabBody3").children.length; j1++) {
+                                                                    for (var i1 = 0; i1 < document.getElementById("bpelInstSummayTabBody3").children[j1].children.length; i1++) {
+                                                                        document.getElementById("bpelInstSummayTabBody3").children[j1].children[i1].style.border = "";
+                                                                        document.getElementById("bpelInstSummayTabBody3").children[j1].children[i1].style.backgroundColor = "#ffffff";
+                                                                    }
+                                                                }
+
+                                                                //alert(currentTab);
+                                                                //alert(document.getElementById("bpelInstSummayTabBody3").children[0].children[currentTab - 1].children[0]);
+                                                                try {
+                                                                    document.getElementById("bpelInstSummayTabBody3").children[currentRowIndex].children[currentTab - 1].children[0].focus();
+                                                                    document.getElementById("bpelInstSummayTabBody3").children[currentRowIndex].children[currentTab - 1].style.border = '0.3em solid black';
+                                                                    document.getElementById("bpelInstSummayTabBody3").children[currentRowIndex].children[currentTab - 1].style.backgroundColor = '#6DFD2A';
+
+                                                                    if (currentTab !== 11) {
+                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentRowIndex].children[currentTab - 1].children[0].select();
+                                                                    }
+                                                                } catch (err) {
+
+                                                                }
+
+                                                                if (currentTab > tableRowRountInst) {
+                                                                    currentTab = 1;
+                                                                }
+
+                                                            }
+                                                            if (evnt.keyCode !== 13) {
+                                                                return false;
+                                                            }
+                                                        } else if (evnt.keyCode === 27) {
+                                                            return false;
+                                                        } else if (evnt.ctrlKey && evnt.which === 65) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                            //alert('Ctrl+S!');
+                                                            //if (finalBilling === 0) {
+                                                            $("#saveProductBtn").click();
+                                                            window.scrollTo(0, 0);
+                                                            //}
+                                                            return false;
+                                                        } else if (evnt.ctrlKey && evnt.which === 85) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                            //alert('Ctrl+S!');
+
+                                                            $("#updateProductBtn").click();
+                                                            window.scrollTo(0, 0);
+
+                                                            return false;
+                                                        } else if (evnt.ctrlKey && evnt.which === 73) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                            //alert('Ctrl+S!');
+                                                            $("#btnGenerateFinalBill2").click();
+                                                            window.scrollTo(0, 0);
+                                                            return false;
+                                                        } else if (evnt.ctrlKey && evnt.which === 77) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                            //alert('Ctrl+S!');
+                                                            mainMenuCommand = 1;
+                                                            searchCommand = 0;
+                                                            currentTab = 1;
+                                                            try {
+                                                                document.getElementById("productNameFilterTxt").style.border = '';
+                                                                document.getElementById("companyFilterTxt").style.border = '';
+                                                                document.getElementById("formulaFilterTxt").style.border = '';
+                                                                document.getElementById("batchNoFilterTxt").style.border = '';
+                                                            } catch (err) {
+
+                                                            }
+
+                                                            document.getElementById("menu1").focus();
+                                                            document.getElementById("menu1").style.border = '0.2em solid black';
+                                                            window.scrollTo(0, 0);
+
+                                                            return false;
+                                                        } else if (evnt.ctrlKey && evnt.which === 70) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                            //alert('Ctrl+S!');
+                                                            searchCommand = 1;
+                                                            mainMenuCommand = 0;
+                                                            currentTab = 1;
+
+                                                            try {
+                                                                document.getElementById("productNameFilterTxt").style.border = '';
+                                                                document.getElementById("companyFilterTxt").style.border = '';
+                                                                document.getElementById("formulaFilterTxt").style.border = '';
+                                                                document.getElementById("batchNoFilterTxt").style.border = '';
+                                                            } catch (err) {
+
+                                                            }
+                                                            document.getElementById("menu1").style.border = '';
+                                                            document.getElementById("menu2").style.border = '';
+                                                            document.getElementById("menu3").style.border = '';
+                                                            document.getElementById("menu4").style.border = '';
+                                                            document.getElementById("menu5").style.border = '';
+                                                            document.getElementById("menu6").style.border = '';
+                                                            document.getElementById("menu7").style.border = '';
+                                                            document.getElementById("menu8").style.border = '';
+                                                            document.getElementById("menu9").style.border = '';
+
+                                                            document.getElementById("productNameFilterTxt").focus();
+                                                            document.getElementById("productNameFilterTxt").style.border = '0.2em solid black';
+                                                            window.scrollTo(0, 0);
+
+                                                            return false;
+                                                        } else if (evnt.ctrlKey && evnt.which === 81) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+
+                                                            $("#productNameFilterTxt").val("");
+                                                            $("#productNameFilterTxt").text("");
+
+                                                            $("#companyFilterTxt").val("");
+                                                            $("#companyFilterTxt").text("");
+
+                                                            $("#formulaFilterTxt").val("");
+                                                            $("#formulaFilterTxt").text("");
+
+                                                            $("#batchNoFilterTxt").val("");
+                                                            $("#batchNoFilterTxt").text("");
+                                                            searchCommand = 1;
+                                                            mainMenuCommand = 0;
+                                                            currentTab = 1;
+                                                            isSearchedProduct = 0;
+                                                            // if (productDetailDT) {
+                                                            //   productDetailDT.destroy();
+                                                            // }
+
+                                                            //document.getElementById("bpelInstSummayTabBody3").innerHTML = "";
+                                                            document.getElementById("productNameFilterTxt").focus();
+                                                            document.getElementById("productNameFilterTxt").style.border = '0.2em solid black';
+
+                                                            /**/
+
+                                                            //$('#testInst tr').slice(1).remove();
+
+                                                            window.scrollTo(0, 0);
+                                                            return false;
+                                                        }
+                                                    }
+
+                                                    function maxWindow() {
+                                                        window.moveTo(0, 0);
+                                                        if (document.all) {
+                                                            top.window.resizeTo(screen.availWidth, screen.availHeight);
+                                                        } else if (document.layers || document.getElementById) {
+                                                            if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
+                                                                top.window.outerHeight = screen.availHeight;
+                                                                top.window.outerWidth = screen.availWidth;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    $('#myMessageTrackingWindow')
+                                                            .on('hide', function () {
+
+                                                            })
+                                                            .on('hidden', function () {
+                                                                currentTab = 0;
+                                                                currenModal = 0;
+                                                            })
+                                                            .on('show', function () {
+
+                                                            })
+                                                            .on('shown', function () {
+                                                                currentTab = 0;
+                                                                currenModal = 1;
+                                                            });
+
+        </script> 
+
+
+
+    </body>
+
+    <!-- Mirrored from www.spruko.com/demo/viboon/html/Viboon_teal/Horizontal-Light-Headerfix/index4.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Dec 2018 19:18:57 GMT -->
+</html>

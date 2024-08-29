@@ -1,0 +1,21 @@
+/*
+BSA DEMO STYLES
+*/
+#bsa-banner .clear{ height:0px; width:100%; overflow:hidden; visibility: hidden; display:block; }
+#bsa-banner{ z-index:100; background: #1a1a1a; padding:10px 0; width:100%; display:block; }
+	#bsa-banner.transparent{ background-color:transparent; }
+	#bsa-banner.above{ position:absolute; top:0; left:0; }
+#bsa-banner .logo-zone{ height:auto; clear:left; float:left;overflow:hidden;}
+			#bsa-banner h1#logo-link{height:57px; width:160px; margin:21px 12px 12px 12px; background: url('http://static.buildinternet.com/theme-files/images/build-internet-logo-shadow.png') no-repeat top left;}
+				#bsa-banner h1#logo-link a{text-indent:-9999px; display:block; height:100%; width:100%; text-decoration:none;}
+#bsa-adpack{ float:right; width:400px; }
+body .adpacks{background:#fff;padding:10px;margin:15px 0 0;border:3px solid #eee; }
+body .one .bsa_it_ad{background:transparent;border:none;font-family:inherit;padding:0 15px 0 0px;margin:0;text-align:right;}
+body .one .bsa_it_ad:hover img{-moz-box-shadow:0 0 3px #000;-webkit-box-shadow:0 0 3px #000;box-shadow:0 0 3px #000;}
+body .one .bsa_it_ad .bsa_it_i{ padding:0;float:left;margin:0 15px 0 15px;}
+body .one .bsa_it_ad .bsa_it_i img{padding:0;border:none;}
+body .one .bsa_it_ad .bsa_it_t{padding:6px 0 0 0; color:#eee; font:bold 13px "Helvetica Neue", Helvetica, Arial, sans-serif;}
+body .one .bsa_it_ad .bsa_it_d{padding:6px 0 0 0; color:#bbb; font:11px "Helvetica Neue", Helvetica, Arial, sans-serif;}
+body .one .bsa_it_p{display:none; }
+body #bsap_aplink,body #bsap_aplink:hover, #bsap_aplink:visited{color:#73CCF2; display:block;font-size:10px;margin:12px 15px 0;text-align:right; font:11px "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	#bsap_aplink:hover{ text-decoration:none; }		

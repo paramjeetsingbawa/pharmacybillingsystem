@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <style type="text/css" media="print">
+            @page {
+                size: auto;   /* auto is the initial value */
+                margin: 0;  /* this affects the margin in the printer settings */
+            }
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/sweet-alert.css" />
+        <script src="custom-js/jquery.min.js"></script>
+        <script src="custom-js/bootstrap.min.js"></script>
+        <script src="custom-js/sweet-alert.min.js"></script>
+    </head>
+
+    <body style="font-family: sans-serif;font-weight: 700;" onload="getInvoice(1)">
+    <center>
+        <table style="border: #000003 solid thin;margin-top: 20px;width:94%;text-align: center; margin-left: 8px;padding-left: 10px;font-weight: 700;" cellpadding="10">
+            <tr>
+                <td>
+                    <div style="border-width: 1px; border-color: black; width: 100%;">
+                        <center>
+                            <h5 style="font-weight: 700;width:100%;margin-left: -68px;font-size: 18px;font-weight: 700;position: absolute;top: 15px;font-weight: 700;">
+                                <div>&nbsp;&nbsp;AVON PHARMA MEDICAL CORNER</div>
+                                <div style="font-weight: 700;font-size: 15px;margin-top: 5px;">&nbsp;&nbsp;(TAX-INVOICE)</div>
+                            </h5>
+                            <!--<hr style="background-color: black; height: 1px; border: 0; width: 100%;margin-top: -3px;" />-->
+                        </center>
+
+                        <table style="font-size: 12px;font-weight: 500;width:100%;margin-top: 3px;font-weight: 700;" border="0" >
+                            <tr id="shopAdd1" style="font-size: 12px;font-weight: 700;">
+                                <td style="font-size: 12px;font-weight: 700;">
+                                    <div>&nbsp;&nbsp;ADDRESS: HOSPITAL CHOWK, <br />&nbsp;&nbsp;SATNA  M.P. 485001</div>
+                                </td>
+                                <td>
+
+                                </td>
+                                <td style="text-align: right;margin-right: 200px;font-size: 12px;vertical-align: top;font-weight: 700;" >
+                                    <div>GSTIN : 23APEPS2411Q1ZQ&nbsp;&nbsp;</div>
+                                </td>
+
+                            </tr>
+                            <tr id="shopAdd2" style="font-size: 12px;margin-top: -5px;font-weight: 700;">
+                                <td>
+                                    <div>&nbsp;&nbsp;PHONE NUMBER: 409511, CENTRES : 511 </div>
+                                </td>
+                                <td>
+
+                                </td>
+                                <td  style="text-align: right;margin-right: 200px;font-size: 12px;font-weight: 700;">
+                                    <div>D.L. NO. : 13/DL R/86, 14/DL R/86&nbsp;&nbsp;</div>
+                                </td>
+
+                            </tr>
+
+                        </table>
+
+
+                        <br />
+                        <table id="invHeaderTable" style="width:100%;font-size: 12px;font-weight: 700;line-height: 20px;" border="0" >
+
+                            <tr>
+                                <td>
+                                    <div>&nbsp;&nbsp;CUSTOMER NAME : <span id="custname"></span><input type="text" id="custnameTxt" style="background-color:#FAFB9E;width:200px;height:30px;font-weight: 600;font-size: 8px;display: none;" placeholder="CUSTOMER NAME"/></div>
+                                </td>
+                                <td>
+                                    <div>DOCTOR NAME : <span id="prescribername"></span></div>
+                                </td>
+                            
+                                <td style="text-align: right;font-size: 12px;font-weight: 700;;">
+                                    <div>INVOICE NO. : <span id="billPrintNo"></span>&nbsp;&nbsp;</div>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;font-size: 12px;font-weight: 700;">
+                                    <div>&nbsp;&nbsp;CUSTOMER PHONE : <span id="custmobile"></span> <input type="text" id="custmobileTxt" style="background-color:#FAFB9E;width:200px;height:30px;font-weight: 600;font-size: 8px;display: none;" placeholder="CUSTOMER MOIBLE"/> </div>
+                                </td>
+                                <td style="text-align: left;font-size: 12px;font-weight: 700;">
+                                    <div>PAYMENT TYPE : <span id="paymentTypeM"></span>&nbsp;&nbsp;</div>
+                                </td>
+                                
+                                <td style="text-align: right;margin-right: 150px;font-size: 12px;font-weight: 700;">
+                                    <div>BILL DATE : <span id="billPrintDate"></span>&nbsp;&nbsp;</div>
+                                </td>   
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;font-size: 12px;font-weight: 700;">
+                                    <div>&nbsp;&nbsp;CUSTOMER D.L.NO. : <span id="custdlno2"></span> <input type="text" id="custdlno2Txt" style="background-color:#FAFB9E;width:200px;height:30px;font-weight: 600;font-size: 8px;display: none;" placeholder="Customer D.L. No."/> </div>
+                                </td>
+                                <td style="text-align: left;font-size: 12px;font-weight: 700;">
+                                    <div>CUSTOMER GSTIN : <span id="custGSTTIN"></span>&nbsp;&nbsp;</div>
+                                </td>
+                            </tr>
+                            <tr style="display:none;width:0px;height:0px;font-weight: 700;">
+                                <td>
+                                    <div>Customer Contact : <span id="custmobile"></span> <input type="text" id="custmobileTxt" style="background-color:#FAFB9E;width:200px;height:30px;font-weight: 600;font-size: 8px;display: none;" placeholder="CUSTOMER MOIBLE"/> </div>
+                                </td>
+                                <td>
+                                    <div>Prescription Written Date : <span id="prescriptionDate"></span></div>
+                                </td>
+                                <td>
+                                    <div>Total Products : <span id="invoicenumber2"></span></div>
+                                </td>                                
+                            </tr>
+                            <tr style="display:none;width:100px;height:10px;font-weight: 700;">
+                                <td>
+                                    <div>Customer Address : <span id="custaddress"></span></div>
+                                </td>
+                                <td>
+                                    <div>Tracking Sale ID  : <span id="invoicenumber"></span></div>
+                                </td>
+                                <td>
+                                    <div>Payment Method : <span id="paymentType" style="font-size: 8px;font-weight:700;"></span>
+                                        <select class="form-control" id="paymentTypeTxt" style="background-color:#FAFB9E;width:200px;height:40px;font-weight: 600;font-size: 8px;display: none;">
+                                            <option value="" selected="selected">PAYMENT TYPE</option>
+                                            <option value="CASH">CASH</option>
+                                            <option value="CARD-PAYMENT">CARD PAYMENT</option>
+                                            <option value="CREDIT">CREDIT</option>
+                                        </select>
+
+
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <br />
+                        <table style="font-weight: 700;width:97%;text-align: left;border-width: 2px;padding-bottom: 5px;line-height: 20px;margin-left: 10px;margin-right: -10px;">
+                            <tr id="tabBpelVariableListHead" style="font-size: 12px;">
+                                <th align="left">SR</th>
+                                <th align='left' style="width: 20%;">PRODUCT</th>
+                                <th align='left'>BATCH</th>
+                                <!--<th align='left'>COMPANY</th>-->
+                                <th align='left'>PACKING</th>
+                                <th align='left'>EXPIRY</th>
+                                <th align='right' style="text-align: right;">MRP</th>
+                                <th align='right' style="text-align: right;">QTY</th>
+                                <th align='right' style="text-align: right;">AMT/UNIT</th>
+                                <th align='right' style="text-align: right;">TAXABLE</th>
+                                <th align='right' style="text-align: right;">CGST</th>
+                                <th align='right' style="text-align: right;">SGST</th>    
+
+
+
+                                <!--                                <th align='left'>CGST (%)</th>
+                                                                <th align='left'>SGST (%)</th>
+                                                                <th align='left'>IGST (%)</th>-->
+
+                                <th align='right' style="text-align: right;">FINAL AMT.</th>
+                            </tr>  
+
+                            <tbody id='tabBpelVariableListBody' style="font-size: 12px;font-weight: 700;margin-top: 5px;"> 
+
+
+                            </tbody>
+                        </table> 
+                        <br />
+                        <table style="width: 100%;font-size: 12px;font-weight: 700;margin-top: -20px;" border="0" class="table table-striped">
+                            <tr>
+                                <th style="font-size: 12px;font-weight: 700;text-align: left;">Total Taxable: <span style="font-size: 13px;font-weight: 700;" id="totalTaxableTdFinal"></span> </th>
+                                <th style="font-size: 12px;font-weight: 700;text-align: right;">Total CGST: <span style="font-size: 13px;font-weight: 700;" id="totalCGSTTdFinal"></span></th>
+                                <th style="font-size: 12px;font-weight: 700;text-align: right;">Total SGST: <span style="font-size: 13px;font-weight: 700;" id="totalSGSTTdFinal"></span></th>
+                                <th style="font-size: 12px;font-weight: 700;text-align: right;">Sub Total: <span style="font-size: 13px;font-weight: 700;" id="totalsubTotalTdFinal"></span></th>
+                                <th style="font-size: 12px;font-weight: 700;text-align: right;">Discount: <span style="font-size: 13px;font-weight: 700;" id="totalDiscountTdFinal"></span></th>
+                                <th style="font-size: 12px;font-weight: 700;text-align: right;text-decoration: underline;">Grand Total: <span style="font-size: 15px;font-weight: 700;" id="totalGrandTotalTdFinal"></span><span id="totalGrandTotalTdFinal"></span></th>
+                            </tr>
+                        </table>
+
+                        <div style="font-size: 9px;text-align: left;font-family: sans-serif;margin-top: -20px;">
+
+                            &nbsp;&nbsp;* SOLD GOODS ARE NOT RETURNED. <br />
+                            &nbsp;&nbsp;* BY MISTAKE IF ANY AMOUNT IS CHARGED IN EXCESS WILL BE REFUNDED UNDER DRUG (PRICE CONTROL) ORDER 1970.  <br />
+                            &nbsp;&nbsp;* SUBJECT TO 'SATNA' JURISDICTION ONLY.  <br />
+                            &nbsp;&nbsp;* E.& O.E.
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function myFunction() {
+            document.getElementById("p2").style.display = "none";
+            document.getElementById("p1").style.display = "none";
+            document.getElementById("p3").style.display = "none";
+            document.getElementById("tabBpelVariableListBody").style.fontSize = "8px";
+            document.getElementById("tabBpelVariableListHead").style.fontSize = "8px";
+            document.getElementById("invHeaderTable").style.fontSize = "10px";
+            document.getElementById("creditStatus").style.fontSize = "12px";
+            document.getElementById("creditAmount").style.fontSize = "12px";
+            document.getElementById("paymentType").style.fontSize = "12px";
+
+            document.getElementById("shopName").style.fontSize = "15px";
+            document.getElementById("shopName").style.fontWeight = 700;
+
+            document.getElementById("shopAdd1").style.fontSize = "11px";
+            document.getElementById("shopAdd2").style.fontSize = "11px";
+            document.getElementById("shopGstin").style.fontSize = "11px";
+            document.getElementById("shopDl1").style.fontSize = "11px";
+            document.getElementById("shopDl2").style.fontSize = "11px";
+
+            //
+            document.getElementById("shopAdd1_1").style.fontSize = "12px";
+            document.getElementById("shopAdd2_1").style.fontSize = "12px";
+            document.getElementById("shopGstin_1").style.fontSize = "12px";
+
+
+            document.getElementById("invHeader2").style.fontSize = "11px";
+            document.getElementById("invHeader2").style.fontWeight = 600;
+
+
+
+            document.getElementById("row_unit_total_totalAmountPaid_a0").style.fontSize = "10px";
+            document.getElementById("row_unit_total_totalAmountPaid_a00").style.fontSize = "10px";
+            document.getElementById("row_AddDis_total_totalAmountPaid_a1").style.fontSize = "10px";
+            document.getElementById("row_AddDis_total_totalAmountPaid_a11").style.fontSize = "10px";
+            document.getElementById("row_Grand_total_totalAmountPaid_a2").style.fontSize = "10px";
+            document.getElementById("row_Grand_total_totalAmountPaid_a22").style.fontSize = "10px";
+            window.print();
+        }
+    </script>
+    <script src="custom-js/SalesData.js"></script>
+</body>
+</html>

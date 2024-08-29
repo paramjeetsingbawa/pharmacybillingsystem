@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="msapplication-TileColor" content="#0061da">
+        <meta name="theme-color" content="#1643a3">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+        <!-- Title -->
+        <title>KiteRx Reports</title>
+        <link rel="stylesheet" href="assets/fonts/fonts/font-awesome.min.css">
+
+        <!-- Font family -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+        <!-- Dashboard Css -->
+        <link href="assets/css/dashboard.css" rel="stylesheet" />
+
+
+        <!-- c3.js Charts Plugin -->
+        <link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
+
+        <!-- Custom scroll bar css-->
+        <link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+        <link href="assets/plugins/date-picker/spectrum.css" rel="stylesheet" />
+
+        <!---Font icons-->
+        <link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/sweet-alert.css" />
+
+    </head>
+    <body class="">
+        <div id="global-loader" ></div>
+        <div class="page" >
+            <div class="page-main">
+                <div class="header py-1">
+                    <div class="container">
+                        <div class="d-flex">
+                            <a class="header-brand" href="#">
+                                <!--								<img src="assets/images/brand/logo.png" class="header-brand-img" alt="Viboon logo">-->
+                                <img src="img/logo_3.png" style="position: absolute;top: -15px;">
+                            </a>
+                            <div class="d-flex order-lg-2 ml-auto">
+                                <div class="dropdown d-none d-md-flex mt-4" >
+                                    <h3 style="color: white;">  Window view : Sale Report </h3>
+                                </div>
+                                <div class="dropdown d-none d-md-flex mt-1" >
+                                    <a  class="nav-link icon full-screen-link">
+                                        <i class="fe fe-maximize floating"  id="fullscreen-button"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown d-none d-md-flex mt-1" >
+                                    <a  class="nav-link icon full-screen-link">
+                                        <i class="fe fe-star floating"  id="buttonAside"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-bell floating"></i>
+                                        <span class="nav-unread bg-danger"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-thumbs-o-up"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Someone likes our posts.</strong>
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-commenting-o"></i>
+                                            </div>
+                                            <div>
+                                                <strong> 3 New Comments</strong>
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-cogs"></i>
+                                            </div>
+                                            <div>
+                                                <strong> Server Rebooted.</strong>
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">View all Notification</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-mail floating"></i>
+                                        <span class=" nav-unread badge badge-warning  badge-pill">2</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item text-center">2 New Messages</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/male/41.jpg)"></span>
+                                            <div>
+                                                <strong>Madeleine</strong> Hey! there I' am available....
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/1.jpg)"></span>
+                                            <div>
+                                                <strong>Anthony</strong> New product Launching...
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/18.jpg)"></span>
+                                            <div>
+                                                <strong>Olivia</strong> New Schedule Realease......
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">See all Messages</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown mt-1">
+                                    <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                                        <span class="avatar avatar-md brround" style="background-image: url(img/user_images/user_1.jpg)"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow ">
+                                        <div class="text-center">
+                                            <a href="#" class="dropdown-item text-center font-weight-sembold user" id="username">Manish Soin</a>
+                                            <span class="text-center user-semi-title text-dark" id="userRole">Pharmacy Director</span>
+                                            <div class="dropdown-divider"></div>
+                                        </div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-account-outline "></i> Profile
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon  mdi mdi-settings"></i> Settings
+                                        </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?
+                                        </a>
+                                        <a class="dropdown-item" href="login.html">
+                                            <i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                                <span class="header-toggler-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-navbar" id="headerMenuCollapse">
+                    <div class="container">
+                        <ul class="nav">
+                            <li class="nav-item with-sub">
+                                <a class="nav-link " href="#"><i class="fa fa-bar-chart"></i> <span>Billing</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductSaleEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Sales Entry</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html"><i class="fa fa-check"></i>Old Sale Bill (Complete product list)</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Purchase Bill</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html">Tagged Billing</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sale return</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Purchase return</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link " href="index4.html">
+                                    <i class="fa fa-home"></i>
+                                    <span>DASHBOARD</span>
+                                </a>
+                                <!--                                <div class="sub-item">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="index.html">Dashboard 1</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index2.html">Dashboard 2</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index3.html">Dashboard 3</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index4.html">Dashboard 4</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index5.html">Dashboard 5</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> sub-item -->
+                            </li>
+
+                            <li class="nav-item with-sub">
+                                <a class="nav-link active" href="#"><i class="fa fa-snowflake-o"></i> <span>Reports</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="SaleReportV2.html"><i class="fa fa-check"></i>Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductSalesReportV2.html"><i class="fa fa-check"></i>Product Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="PurchaseReportV2.html"><i class="fa fa-check"></i>Purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleReportV2.html?paymentTypeFilter=CREDIT"> <i class="fa fa-check"></i> Credit report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Inventory report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Return items</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-file-text-o"></i> <span>Stocks</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseV2.html"><i class="fa fa-check"></i>Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2_Stock.html"><i class="fa fa-check"></i>Current Stock</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2.html"><i class="fa fa-check"></i>Sales chart</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Expired products</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub ">
+                                <a class="nav-link " data-toggle="dropdown" href="#"><i class="fa fa-cubes"></i> <span>Accounts</span></a>
+                                <div class="sub-item">
+                                    <ul>
+
+                                        <li>
+                                            <a href="new-customer.html"><i class="fa fa-check"></i>New Customer</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-credit-account.html"><i class="fa fa-check"></i>New Credit Account</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="CustomerListV2.html"><i class="fa fa-check"></i>Manage Customers & Payments</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?isCreditSearch=1"><i class="fa fa-check"></i>Credit Account List</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?onlyPending=1"><i class="fa fa-check"></i>Pending Payments To me</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-bandcamp"></i> <span>System Management</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="salesHistory.html">Export Product Sheet</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export expiry</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Database Backup</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="my-3 my-md-5">
+                    <div class="container">
+
+                        <div id="popupaside" style="position:absolute;left:-2000px;top:10px;z-index: 10000;width:80%;height:100%;
+                             margin-top: -10px;background-color: 
+                             #ebebeb;color: #393939; font-family: monospace;border-style: solid;border-width: 2px;border-color: black;">
+                            <center><h1>Tutorial for billing guideline<button class="btn btn-round pull-right" style="position:absolute;font-size: 16px;margin-top: 5px;" id="buttonAside2" onclick="asideHelp()">X</button> </h1></center>
+                            <br />
+
+                            <h4> Search Product for billing </h4>
+
+                            <h6 style="margin-left: 10px; text-align: justify;margin-right: 10px;">
+                                To Search for a product: Type product name (partial or exact), or Batch number or Company name and Press Enter key.
+
+                                <br />Use arrow keys or tab key to move in selected products
+                                <br />To select and enter quantity of purchase, press enter or click using mouse
+                            </h6>
+
+                            <h4> Product Amount and Purchase Quantity </h4>
+
+                            <h6 style="margin-left: 10px; text-align: justify;margin-right: 10px;">
+                                Press Arrow or Tab key to start typing. User can change sale date only with mouse. 
+
+                                <br />Amount per unit is calculated based on MRP entered originally while inserting product information
+                                <br /><font style="font-weight: 700">Profit Calculation </font>: Profile is calculated based on purchase rate And Tax information
+                                <br />If user entered amount per unit manually, The System will check for loss, and Give Alert symbol if the product may give loss in invoice.
+                                <br />If the entered amount per unit and quantity is giving, No profit and No loss, then yellow alert will come in screen
+                            </h6>
+
+                            <h4> Invoice Generation and Save Sales Data </h4>
+                            <h6 style="margin-left: 10px; text-align: justify;margin-right: 10px;">
+                                <br />Enter customer name, customer contact, doctor who prescribes for this medications.
+                                <br />You can give additional discount on the final amount.
+                                <br />Remember to check the profit calculation at the bottom of generate invoice pop-up window. 
+                                <br />Ctrl+I will save the sales details and update quantities of products sold automatically in database. 
+                            </h6>
+
+                            <h4>Page Shortcuts</h4>
+                            <h6 style="margin-left: 10px; text-align: justify;margin-right: 10px;">
+                                <br />Ctrl+F----To Focus the cursor one product name filter.
+                                <br />Ctrl+H----To Focus the selection one header.
+                                <br />Ctrl+P----To preview the selected product items ready for billing.
+                                <br />Ctrl+I/G--To generate the invoice, Enter customer name, mobile, prescriber details etc. 
+                                <br />Ctrl+I----To save and print the invoice details in database.
+                                <br />Ctrl+E----To open the edit window of selected product. 
+                                <br />F1--------To open page help.
+                                <br />F2-------To get product statics, sale analysis for the selected product.
+                                <br />F4--------To deleted the selected product.
+                                <br />F5--------To update the product quantity to Zero.
+                                <br />F10--------Hide Sale entry
+                            </h6> 
+
+                        </div>
+
+
+
+                        <div id="popupasideprodAnalysis" style="position:absolute;left:-2000px;top:10px;z-index: 10000;width:90%;height:100%;
+                             margin-top: -10px;background-color: 
+                             #FAFB9E;color: #393939; font-family: monospace;border-style: solid;border-width: 2px;border-color: black;">
+                            <center><h1>Product Analysis For Product Batch : <span id="asidebatchHeader"></span> 
+                                    <button class="btn btn-round pull-right" style="position:absolute;font-size: 20px;margin-top: 5px;" 
+                                            id="buttonAside3" onclick="asideStat()">X</button></h1></center>
+                        </div>
+                        <div class="box span12" >
+                            <div class="row-fluid" style="overflow: auto">
+                                <div id = "filterDiv">
+                                    <center>
+                                        <table style="width:99%">
+                                            <tr>
+                                                <td>
+                                                    <div class="input-group" style="margin-top: -15px;">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text">
+                                                                <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
+                                                            </div>
+                                                        </div><input class="form-control" id="datepickerNoOfMonths" placeholder="DD/MM/YYYY" type="text">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+
+                                                        <input type="text" id="custNameFilterTxt" placeholder="Customer Name" style="width: 100%;height:35px;" autofocus  autocomplete="off" />
+
+                                                        <div id="nameListDiv" style="visibility: hidden;position:absolute;background-color: #21584e;color:white;font-size:14px;z-index: 20000;
+                                                             overflow: scroll;height:200px;width:200px;border-style: solid;border-width: 2px;border-color: black;">
+                                                            <table id="custNameList" class="table card-table table-vcenter text-nowrap">
+
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+
+                                                        <input type="text" id="custMobileFilterTxt" placeholder="Customer Mobile" style="width: 100%;height:35px;"/>
+
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <select class="form-control" id="paymentTypeTxt">
+                                                            <option value="" selected="selected">Payment Type</option>
+                                                            <option value="CASH">CASH</option>
+                                                            <option value="CARD-PAYMENT">CARD PAYMENT</option>
+                                                            <option value="CREDIT">CREDIT</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                
+                                                <td>                                                    
+                                                    <button id="fetchBtn" class="btn btn-primary" onclick="getCustomerInstances('', '')" style="margin-top: -18px;"> Fetch Report</button>
+                                                    <a id="downloadexportbtn" class="btn btn-primary" style="margin-top: -18px;" href="/AvonMedicalService/rest/CoreService/downloadSalesfile?filePath=">Download Sale Report</a>
+                                                    <input type="checkbox" id="hiddenCheckBox1" style="margin-top: -50px;"/><span id="hiddenCheckBox1Text">ONLY HIDDEN </span>
+                                                    <input type="checkbox" id="hiddenCheckBox3" style="margin-top: -50px;"/><span id="hiddenCheckBox3Text">WITH HIDDEN</span>
+                                                    --> 'F10' - To Hide, 'F11' - To unhide
+                                                </td>
+
+                                            </tr>
+                                        </table>
+
+
+                                    </center>
+                                </div>
+
+                                <table style="width:90%" border="0" >
+                                    <tr>
+                                        <th colspan="2" align="left">
+
+                                            <h4>Pharmacy Sale Report <span id="filterSpn"></span> <!--<button onclick="getCustomerInstances(1)">Export All Sales Data</button>--></h4> 
+
+                                        </th>
+                                    </tr>
+                                </table>
+
+                                <h3 class="pull-right" style="color: darkolivegreen; font-weight: 700;">, Total Sale : <span id="totalSale"></span></h3>
+                                <h3 class="pull-right" style="color: tomato; font-weight: 700;">Pending Pay : <span id="totalCreditPending"></span></h3>
+                                <div id="demo" class="collapse">
+                                    <center>
+                                        <input type="text" id="expDateFiltertxt" value="" style="width:50%;height:30px;font-weight: 500;background-color:#FAFB9E;" />
+                                        <br />
+                                        <div>
+                                            <div id="calendar" style="curson:pointer;width:350px;height:300px"></div>
+
+                                        </div>
+                                    </center>
+                                </div>
+                               
+                                <center><img id="pageLoadingImg" style='position: absolute;top: 50%;left: 40%;' src="img/ajax-loaders/ajax-loader-8.gif" width="300" height="70" /></center>
+
+
+                                <table  border="0" class="table card-table table-vcenter text-nowrap" id="testInst" style="cursor: pointer">
+                                    <tr style="font-size: 12px;font-weight: 800;">
+                                        <th align="left">ACT</th>
+                                        <th align='left'>BILL-NO</th>
+                                        <th align='left'>TRACKING ID</th>
+                                        <th align='left'>SALE DATE</th>
+                                        <th align='left'>#</th>
+                                        <th align='left'>PAY</th>
+                                        <th align='left' style="width:150px;">STATUS</th>
+                                        <th align='left'>CREDIT</th>
+                                        <th align='left'>CUSTOMER</th>
+                                        <th align='right'>TAXABLE</th>
+                                        <th align='right'>CGST</th>
+                                        <th align='right'>SGST</th>                                        
+                                        <th align='right' style="text-align: right;">DISCOUNT</th> 
+                                        <th align='right' style="text-align: right;">TOTAL</th>
+                                    </tr>  
+
+                                    <tbody id='tabReportBody' style="font-size: 12px;"> 
+
+
+                                    </tbody>
+
+
+                                </table> 
+                                
+                                
+                                
+                                <table border="0" class="table card-table table-vcenter text-nowrap" id="testInst" style="cursor: pointer">
+                                    <tr style="font-size: 14px;font-weight: 800;">
+                                        <th align="left"></th>
+                                        <th align='left'></th>
+                                        <th align='left'></th>
+                                        <th align='left'></th>
+                                        <th align='left'></th>
+                                        <th align='left'></th>
+                                        <th align='left' style="width:150px;"></th>
+                                        <th align='left'></th>
+                                        <th align='left'></th>
+                                        <th align='right'></th>
+                                        <!--                    <th align='right'>TOTAL SGST</th>
+                                                            <th align='right'>TOTAL CGST</th>
+                                                            <th align='right'>TOTAL IGST</th>-->
+                                        <!--<th align='right'>TOTAL PRODUCT DISCOUNT</th>--> 
+                                        <th align='right' style="text-align: right;"></th> 
+                                        <th align='right' style="text-align: right;"></th>
+                                    </tr>  
+
+                                    <tbody id='tabReportBodyFinal' style="font-size: 13px;"> 
+
+
+                                    </tbody>
+
+
+                                </table> 
+
+                                
+
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p class="pull-left"><font color='black'>&copy; BTech Software Pvt. Ltd.</a> 2018-2019</p>
+                <p class="pull-right"><font color='black' >Developed by: <a href="https://www.facebook.com/param.cool2008"  target="_blank">Paramjeet Singh.</a></p>
+                <marquee behavior="scroll" direction="left">In case of any doubt on the product operation, feel free to contact us on +91 9986881500, or sent email to paramjeetsinghbawa@gmail.com </marquee>
+            </footer>
+            <!-- End Footer-->
+        </div>
+        <!-- Back to top -->
+        <a href="#top" id="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
+
+        <!-- Dashboard Core -->
+        <script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+        <script src="custom-js/jquery-ui-1.8.21.custom.min.js"></script>
+        <!-- transition / effect library -->
+        <script src="custom-js/bootstrap-transition.js"></script>
+        <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/vendors/jquery.sparkline.min.js"></script>
+        <script src="assets/js/vendors/selectize.min.js"></script>
+        <script src="assets/js/vendors/jquery.tablesorter.min.js"></script>
+        <script src="assets/js/vendors/circle-progress.min.js"></script>
+        <script src="assets/plugins/rating/jquery.rating-stars.js"></script>
+
+        <!-- Charts Plugin -->
+        <script src="assets/plugins/chart/Chart.bundle.js"></script>
+        <script src="assets/plugins/chart/utils.js"></script>
+
+        <!-- Input Mask Plugin -->
+        <script src="assets/plugins/input-mask/jquery.mask.min.js"></script>
+
+        <!-- Custom scroll bar Js-->
+        <script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Datepicker js -->
+        <script src="assets/plugins/date-picker/spectrum.js"></script>
+        <script src="assets/plugins/date-picker/jquery-ui.js"></script>
+        <script src="assets/plugins/input-mask/jquery.maskedinput.js"></script>
+
+        <!-- Index Scripts -->
+        <script src="assets/js/index4.js"></script>
+
+        <!-- Custom-->
+        <script src="assets/js/custom.js"></script>
+        <script src="custom-js/sweet-alert.min.js"></script>
+        <!-- application script for Charisma demo -->
+        <script>
+
+                                                        function myFunction() {
+                                                            document.getElementById("p2").style.display = "none";
+                                                            document.getElementById("filterDiv").style.display = "none";
+                                                            window.print();
+                                                        }
+        </script>
+        <script src='custom-js/fullcalendar.min.js'></script>
+        <script src="custom-js/MonthlyReportData.js"></script>
+
+
+
+        <script type="text/javascript">
+
+                                                        $(function () {
+                                                            'use strict'
+                                                            $('#datepickerNoOfMonths').datepicker({
+                                                                showOtherMonths: true,
+                                                                selectOtherMonths: true,
+                                                                numberOfMonths: 2,
+                                                                dateFormat: 'dd/mm/yy'
+                                                            });
+
+
+
+                                                        });
+
+                                                        /*var win = $(window);
+                                                        var doc = $(document);
+                                                        win.scroll(function () {
+                                                            console.log("doc.height() - win.height() === win.scrollTop() : " + (doc.height() - win.height() === win.scrollTop()));
+
+                                                            console.log("doc.height() : " + doc.height());
+                                                            console.log("win.height() : " + win.height());
+                                                            console.log("win.scrollTop() : " + win.scrollTop());
+
+                                                            if (doc.height() - win.height() <= (win.scrollTop() + 100)) {
+                                                              document.getElementById("pageLoadingImg").style.display="block";
+                                                              pageNo++;
+                                                              getCustomerInstances(10);
+                                                            }
+                                                        });
+                                                            */
+
+                                                        window.onload = maxWindow;
+
+                                                        var searchCommand = 1;
+                                                        var mainMenuCommand = 0;
+                                                        var tableRowRountInst = 0;
+                                                        var gCmd = 0;
+//            document.getElementById("productNameFilterTxt").focus();
+//            document.getElementById("productNameFilterTxt").style.border = '0.17em solid orange';
+//            var orgStatDivContent = document.getElementById("popupasideprodAnalysis").innerHTML;
+                                                        //swal("Update", "user account successfully updated");
+                                                        document.getElementById("custNameFilterTxt").style.border = '0.2em solid orange';
+
+                                                        var userRole = localStorage.getItem("userRole");
+
+                                                        if (userRole !== 'superadmin') {
+                                                            document.getElementById("hiddenCheckBox1").style.visibility = "hidden";
+                                                            document.getElementById("hiddenCheckBox3").style.visibility = "hidden";
+                                                            document.getElementById("hiddenCheckBox1Text").style.visibility = "hidden";
+                                                            document.getElementById("hiddenCheckBox3Text").style.visibility = "hidden";
+                                                        } else {
+                                                            document.getElementById("hiddenCheckBox1").style.visibility = "visible";
+                                                            document.getElementById("hiddenCheckBox3").style.visibility = "visible";
+                                                            document.getElementById("hiddenCheckBox1Text").style.visibility = "visible";
+                                                            document.getElementById("hiddenCheckBox3Text").style.visibility = "visible";
+                                                        }
+
+
+                                                        window.onkeydown = function (evnt) {
+
+                                                            //alert(evnt.which);
+                                                            //alert(currenModal);
+                                                            if (evnt.keyCode === 38 || evnt.keyCode === 40
+                                                                    || evnt.keyCode === 37 || evnt.keyCode === 39 || evnt.keyCode === 27) {
+
+                                                                if (updateWindow === 1) {
+                                                                    if (evnt.keyCode === 27) {
+                                                                        document.getElementById("custNameFilterTxt").style.border = '';
+                                                                        document.getElementById("custMobileFilterTxt").style.border = '';
+                                                                        document.getElementById("custNameFilterTxt").style.border = '';
+                                                                        document.getElementById("fetchBtn").style.border = '';
+                                                                        document.getElementById("custMobileFilterTxt").focus();
+                                                                        document.getElementById("custMobileFilterTxt").style.border = '0.2em solid orange';
+                                                                        document.getElementById("nameListDiv").style.visibility = "hidden";
+                                                                        updateWindow = 2;
+                                                                        currentTab = 1;
+                                                                        return;
+                                                                    }
+
+                                                                    if (evnt.keyCode === 40) {
+                                                                        document.getElementById("nameListDiv").style.visibility = "hidden";
+                                                                        updateWindow = -4;
+                                                                        currentTab = 1;
+
+                                                                        document.getElementById("tabReportBody").children[currentTab - 1].style.border = '0.4em solid orange';
+                                                                        //document.getElementById("tabReportBody").children[currentTab - 1].style.backgroundColor = '#6DFD2A';
+
+                                                                        //document.getElementById("tabReportBody").children[currentTab - 1].children[1].style.fontSize = '15px';
+                                                                        //document.getElementById("tabReportBody").children[currentTab - 1].children[1].style.color = '#8b0000';
+                                                                        document.getElementById("tabReportBody").children[currentTab - 1].children[2].style.fontWeight = '800';
+                                                                        // alert(document.getElementById("tabReportBody").children[currentTab - 1].children[2].children[1])
+                                                                        document.getElementById("tabReportBody").children[currentTab - 1].children[2].children[0].focus();
+                                                                        return;
+                                                                    }
+
+
+                                                                    if (evnt.keyCode === 38 || evnt.keyCode === 40) {
+
+                                                                        if (evnt.keyCode === 40) {
+                                                                            if (currenNameListIndex < document.getElementById("custNameList").children.length) {
+                                                                                currenNameListIndex++;
+                                                                            }
+                                                                        }
+
+                                                                        if (evnt.keyCode === 38) {
+                                                                            if (currenNameListIndex > 1) {
+                                                                                currenNameListIndex--;
+                                                                            }
+                                                                        }
+
+                                                                        for (var i1 = 0; i1 < document.getElementById("custNameList").children.length; i1++) {
+                                                                            document.getElementById("custNameList").children[i1].style.border = "";
+                                                                            document.getElementById("custNameList").children[i1].style.backgroundColor = "#21584e";
+                                                                            //document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].style.fontSize = '14px';
+                                                                        }
+
+                                                                        if (evnt.keyCode === 40 || evnt.keyCode === 38) {
+                                                                            document.getElementById("custNameList").children[currenNameListIndex - 1].children[0].children[0].focus();
+                                                                            document.getElementById("custNameList").children[currenNameListIndex - 1].style.border = '0.2em solid black';
+                                                                            document.getElementById("custNameList").children[currenNameListIndex - 1].style.backgroundColor = '	#006400';
+                                                                        }
+                                                                        return false;
+
+                                                                    } else if (evnt.keyCode === 9) {
+
+
+                                                                    }
+                                                                } else if (updateWindow === 2) {
+                                                                    document.getElementById("custNameFilterTxt").style.border = '';
+                                                                    document.getElementById("custMobileFilterTxt").style.border = '';
+                                                                    document.getElementById("paymentTypeTxt").style.border = '';
+                                                                    document.getElementById("fetchBtn").style.border = '';
+
+                                                                    if (evnt.keyCode === 39) {
+                                                                        currentTab++;
+                                                                    }
+
+                                                                    if (evnt.keyCode === 37) {
+                                                                        if (currentTab !== -1) {
+                                                                            currentTab--;
+                                                                        } else {
+                                                                            currentTab = 0;
+                                                                        }
+                                                                    }
+                                                                    if (currentTab === 1) {
+                                                                        //custMobileFilterTxt
+                                                                        document.getElementById("custMobileFilterTxt").style.border = '0.2em solid orange';
+                                                                        document.getElementById("custMobileFilterTxt").focus();
+                                                                    } else if (currentTab === 2) {
+                                                                        //custMobileFilterTxt
+                                                                        document.getElementById("paymentTypeTxt").style.border = '0.2em solid orange';
+                                                                        document.getElementById("paymentTypeTxt").focus();
+                                                                    } else if (currentTab === 3) {
+                                                                        //custMobileFilterTxt
+                                                                        document.getElementById("fetchBtn").style.border = '0.2em solid orange';
+                                                                        document.getElementById("fetchBtn").focus();
+                                                                    } else if (currentTab === 0) {
+                                                                        //custMobileFilterTxt
+                                                                        document.getElementById("custNameFilterTxt").style.border = '0.2em solid orange';
+                                                                        document.getElementById("custNameFilterTxt").focus();
+
+                                                                    }
+
+                                                                    if (currentTab === 3) {
+                                                                        currentTab = -1;
+                                                                    }
+
+                                                                    return false;
+
+                                                                } else {
+                                                                    if (evnt.keyCode === 40 || evnt.keyCode === 9) {
+                                                                        if (currentTab < tableRowRountInst) {
+                                                                            currentTab++;
+                                                                        }
+                                                                    }
+
+                                                                    if (evnt.keyCode === 38) {
+                                                                        if (currentTab !== 0) {
+                                                                            currentTab--;
+                                                                        } else {
+                                                                            currentTab++;
+                                                                        }
+                                                                    }
+                                                                    tableRowRountInst = document.getElementById("tabReportBody").children.length;
+                                                                    //alert(tableRowRountInst);
+                                                                    //alert(document.getElementById("bpelInstSummayTabBody3").children.length);
+                                                                    for (var i1 = 0; i1 < document.getElementById("tabReportBody").children.length; i1++) {
+                                                                        document.getElementById("tabReportBody").children[i1].style.border = "";
+                                                                        //document.getElementById("tabReportBody").children[i1].children[1].style.fontSize = '14px';
+                                                                        //document.getElementById("tabReportBody").children[i1].children[1].style.color = '#8b0000';
+                                                                        document.getElementById("tabReportBody").children[i1].children[2].style.fontWeight = '600';
+                                                                        //document.getElementById("tabReportBody").children[currentTab - 1].children[2].style.fontWeight = '800';
+                                                                    }
+
+
+                                                                    //document.getElementById("tabReportBody").children[currentTab - 1].children[0].children[0].focus();
+                                                                    document.getElementById("tabReportBody").children[currentTab - 1].style.border = '0.4em solid orange';
+                                                                    //document.getElementById("tabReportBody").children[currentTab - 1].style.backgroundColor = '#6DFD2A';
+
+                                                                    //document.getElementById("tabReportBody").children[currentTab - 1].children[1].style.fontSize = '15px';
+                                                                    //document.getElementById("tabReportBody").children[currentTab - 1].children[1].style.color = '#8b0000';
+                                                                    document.getElementById("tabReportBody").children[currentTab - 1].children[2].style.fontWeight = '800';
+                                                                    document.getElementById("tabReportBody").children[currentTab - 1].children[2].children[0].focus();
+
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[4].style.fontSize = '13px';
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[4].style.color = '#8b0000';
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[4].style.fontWeight = '800';
+//
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[6].style.fontSize = '15px';
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[6].style.color = '#8b0000';
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[6].style.fontWeight = '800';
+//
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[8].style.fontSize = '13px';
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[8].style.color = '#8b0000';
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[8].style.fontWeight = '800';
+//
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[9].style.fontSize = '13px';
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[9].style.color = '#8b0000';
+//                                                                        document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[9].style.fontWeight = '800';
+
+
+                                                                    if (currentTab > tableRowRountInst) {
+                                                                        currentTab = 0;
+                                                                    }
+                                                                }
+                                                                //return false;
+                                                            } else if (evnt.which === 121) {
+                                                                // alert("F10");
+
+                                                                var userRole = localStorage.getItem("userRole");
+
+                                                                if (userRole === 'superadmin') {
+
+                                                                    swal({
+                                                                        title: "Are you sure to hide selected sale entries?",
+                                                                        text: "You will not be able to see these entries in sale list!",
+                                                                        type: "warning",
+                                                                        showCancelButton: true,
+                                                                        confirmButtonClass: "btn-danger",
+                                                                        confirmButtonText: "Yes, hide these entries!",
+                                                                        closeOnConfirm: true
+                                                                    },
+                                                                            function () {
+                                                                                try {
+                                                                                    var totalHiddenEntires = 0;
+                                                                                    var totalTableRef = document.getElementById("tabReportBody");
+                                                                                    //alert(totalTableRef.children.length);
+                                                                                    //alert(totalTableRef.children[1].children.length);
+                                                                                    for (var i1 = 0; i1 < totalTableRef.children.length; i1++) {
+
+                                                                                        //alert(totalTableRef.children[i1].children[0].children[0].checked);
+                                                                                        try {
+                                                                                            if (totalTableRef.children[i1].children[0].children[0].checked) {
+                                                                                                //alert(totalTableRef.children[i1].id + ", Hidding this bill no from list");
+                                                                                                var urlString = "/AvonMedicalService/rest/CoreService/hideSaleEntry?billNo=" + totalTableRef.children[i1].id;
+                                                                                                $.ajax({
+                                                                                                    url: urlString
+                                                                                                }).then(function (data) {
+
+                                                                                                });
+                                                                                                totalHiddenEntires++;
+                                                                                            }
+                                                                                        } catch (err) {
+                                                                                        }
+                                                                                        //alert("Now Quantity : " + quantityInShop);
+                                                                                    }
+                                                                                    if (totalHiddenEntires > 0) {
+                                                                                        swalParam({title: "Sale entries Hidden", text: "" + totalHiddenEntires});
+                                                                                    }
+                                                                                } catch (Err) {
+
+                                                                                }
+
+                                                                            });
+
+                                                                    return false;
+
+                                                                } else {
+                                                                    swal({title: "Not Allowed to hide sale entries", text: "Your role is not allowed to hide sale entry!!"});
+                                                                }
+                                                            } else if (evnt.which === 122) {
+                                                                var userRole = localStorage.getItem("userRole");
+
+                                                                if (userRole === 'superadmin') {
+
+                                                                    swal({
+                                                                        title: "Are you sure to unhide selected sale entries?",
+                                                                        text: "You will be able to see these entries in sale report list!",
+                                                                        type: "warning",
+                                                                        showCancelButton: true,
+                                                                        confirmButtonClass: "btn-danger",
+                                                                        confirmButtonText: "Yes, unhide these sale records!",
+                                                                        closeOnConfirm: true
+                                                                    },
+                                                                            function () {
+                                                                                try {
+                                                                                    var totalHiddenEntires = 0;
+                                                                                    var totalTableRef = document.getElementById("tabReportBody");
+                                                                                    //alert(totalTableRef.children.length);
+                                                                                    //alert(totalTableRef.children[1].children.length);
+                                                                                    for (var i1 = 0; i1 < totalTableRef.children.length; i1++) {
+
+                                                                                        //alert(totalTableRef.children[i1].children[0].children[0].checked);
+                                                                                        try {
+                                                                                            if (totalTableRef.children[i1].children[0].children[0].checked) {
+                                                                                                //alert(totalTableRef.children[i1].id + ", Hidding this bill no from list");
+                                                                                                var urlString = "/AvonMedicalService/rest/CoreService/unhideSaleEntry?billNo=" + totalTableRef.children[i1].id;
+                                                                                                $.ajax({
+                                                                                                    url: urlString
+                                                                                                }).then(function (data) {
+
+                                                                                                });
+                                                                                                totalHiddenEntires++;
+                                                                                            }
+                                                                                        } catch (err) {
+                                                                                        }
+                                                                                        //alert("Now Quantity : " + quantityInShop);
+                                                                                    }
+                                                                                    if (totalHiddenEntires > 0) {
+                                                                                        swalParam({title: "Sale entries will be shown now in sale report", text: "" + totalHiddenEntires});
+                                                                                    }
+                                                                                } catch (Err) {
+
+                                                                                }
+
+                                                                            });
+
+                                                                    return false;
+
+                                                                } else {
+                                                                    swal({title: "Not Allowed to unhide sale entries", text: "Your role is not allowed to unhide sale entry!!"});
+                                                                }
+                                                                
+                                                                return false;
+            
+                                                            }else if (evnt.keyCode === 27) {
+                                                                document.getElementById("nameListDiv").style.visibility = "hidden";
+                                                                asideHelp();
+
+
+                                                                return false;
+                                                            } else if (evnt.keyCode === 173) {
+
+                                                                $("#buttonAside").click();//popupasideprodAnalysis
+
+                                                                return false;
+                                                            } else if (evnt.keyCode === 174) {
+                                                                document.getElementById("popupasideprodAnalysis").innerHTML = '';
+                                                                document.getElementById("popupasideprodAnalysis").innerHTML = orgStatDivContent;
+                                                                try {
+                                                                    var prodId = '';
+                                                                    if (currentTab !== 0) {
+                                                                        prodId = document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[6].innerHTML;
+                                                                    } else {
+                                                                        prodId = document.getElementById("bpelInstSummayTabBody3").children[currentTab].children[6].innerHTML;
+                                                                    }
+                                                                    //alert(prodId);
+                                                                    //alert(currentTab);
+                                                                    if (prodId !== '') {
+                                                                        document.getElementById("popupasideprodAnalysis").innerHTML += '<iframe style="width:100%;height:100%;" src="monthlySaleReportAnalysis.html?batch=' + prodId + '" ></iframe>';
+                                                                        $("#popupasideprodAnalysis").animate({left: '0px'});
+                                                                        document.getElementById("asidebatchHeader").innerHTML = prodId;
+                                                                    } else {
+                                                                        swal({title: "Info", text: "Select a product to get its stats"}, function () {
+                                                                        });
+                                                                    }
+                                                                } catch (err) {
+                                                                    swal({title: "Info", text: "Select a product to get its stats"}, function () {
+                                                                    });
+                                                                }
+                                                                return false;
+                                                            } else if (evnt.keyCode === 177) {
+                                                                swal({
+                                                                    title: "Are you sure to delete entry?",
+                                                                    text: "Your will not be able to recover this product!",
+                                                                    type: "warning",
+                                                                    showCancelButton: true,
+                                                                    confirmButtonClass: "btn-danger",
+                                                                    confirmButtonText: "Yes, delete this product!",
+                                                                    closeOnConfirm: true
+                                                                },
+                                                                        function () {
+                                                                            var prodID;
+                                                                            if (currentTab !== 0) {
+                                                                                prodID = document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].id;
+                                                                            } else {
+                                                                                prodID = document.getElementById("bpelInstSummayTabBody3").children[currentTab].id;
+                                                                            }
+                                                                            var urlString = "/AvonMedicalService/rest/CoreService/deleteProductDetail?productId=" + prodID;
+                                                                            $.ajax({
+                                                                                url: urlString
+                                                                            }).then(function (data) {
+                                                                                if (data === true || data === 'true') {
+                                                                                    swal({title: "Deleted", text: "Product Data Deleted"});
+                                                                                } else {
+                                                                                    swal({title: "Not Deleted", text: "Product Data Not Deleted Due to some error!!"});
+                                                                                }
+                                                                            });
+                                                                        });
+
+                                                                return false;
+                                                            } else if (evnt.keyCode === 179) {
+
+                                                                swal({
+                                                                    title: "Are you sure to update product Quantity to 0 ?",
+                                                                    text: "Your will not be able to recover this update!",
+                                                                    type: "warning",
+                                                                    showCancelButton: true,
+                                                                    confirmButtonClass: "btn-danger",
+                                                                    confirmButtonText: "Yes, update this product quantity to 0",
+                                                                    closeOnConfirm: true
+                                                                },
+                                                                        function () {
+                                                                            var prodID;
+                                                                            if (currentTab !== 0) {
+                                                                                prodID = document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].id;
+                                                                            } else {
+                                                                                prodID = document.getElementById("bpelInstSummayTabBody3").children[currentTab].id;
+                                                                            }
+                                                                            var urlString = "/AvonMedicalService/rest/CoreService/updateProductDetailQuantityZero?productId=" + prodID;
+                                                                            $.ajax({
+                                                                                url: urlString
+                                                                            }).then(function (data) {
+                                                                                if (data === true || data === 'true') {
+                                                                                    swal({title: "Update Quantity to 0 ", text: "Product Data updated"});
+                                                                                } else {
+                                                                                    swal({title: "Not Updated!", text: "Product Data Not updated Due to some error!!"});
+                                                                                }
+                                                                            });
+                                                                        });
+
+                                                                return false;
+                                                            } else if (evnt.ctrlKey && evnt.which === 80) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+
+                                                                if (finalBilling === 0) {
+                                                                    $("#saveBillBtn").click();
+                                                                    window.scrollTo(0, 0);
+                                                                }
+                                                                return false;
+                                                            } else if (evnt.ctrlKey && evnt.which === 71) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                                //alert('Ctrl+S!');
+                                                                gCmd = 1;
+                                                                $("#btnGenerateBill").click();
+                                                                window.scrollTo(0, 0);
+
+                                                                return false;
+                                                            } else if (evnt.ctrlKey && evnt.which === 73) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                                //alert('Ctrl+S!');
+                                                                if (gCmd === 1) {
+                                                                    $("#btnGenerateFinalBill2").click();
+                                                                    window.scrollTo(0, 0);
+                                                                    gCmd = 0;
+                                                                } else {
+                                                                    gCmd = 1;
+                                                                    $("#btnGenerateBill").click();
+                                                                    window.scrollTo(0, 0);
+                                                                }
+                                                                return false;
+                                                            } else if (evnt.ctrlKey && evnt.which === 77) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                                //alert('Ctrl+S!');
+                                                                mainMenuCommand = 1;
+                                                                searchCommand = 0;
+                                                                currentTab = 1;
+                                                                document.getElementById("custNameFilterTxt").style.border = '';
+                                                                document.getElementById("custMobileFilterTxt").style.border = '';
+                                                                document.getElementById("paymentTypeTxt").style.border = '';
+
+                                                                document.getElementById("menu1").focus();
+                                                                document.getElementById("menu1").style.border = '0.17em solid orange';
+                                                                window.scrollTo(0, 0);
+
+                                                                return false;
+                                                            } else if (evnt.ctrlKey && evnt.which === 69) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                                //alert('Ctrl+S!');
+                                                                var pid = document.getElementById("bpelID").innerHTML;
+
+                                                                window.open("addOrUpdateProduct.html?pid=" + pid, "_blank");
+
+                                                                return false;
+                                                            } else if (evnt.ctrlKey && evnt.which === 70) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                                //alert('Ctrl+S!');
+                                                                searchCommand = 1;
+                                                                mainMenuCommand = 0;
+                                                                currentTab = 1;
+                                                                isSearchedProduct = 0;
+                                                                document.getElementById("custNameFilterTxt").style.border = '';
+                                                                document.getElementById("custMobileFilterTxt").style.border = '';
+                                                                document.getElementById("paymentTypeTxt").style.border = '';
+
+                                                                document.getElementById("custNameFilterTxt").focus();
+                                                                document.getElementById("custNameFilterTxt").style.border = '0.17em solid orange';
+                                                                window.scrollTo(0, 0);
+
+                                                                return false;
+                                                            } else if (evnt.ctrlKey && evnt.which === 81) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+
+                                                                $("#productNameFilterTxt").val("");
+                                                                $("#productNameFilterTxt").text("");
+
+                                                                $("#companyFilterTxt").val("");
+                                                                $("#companyFilterTxt").text("");
+
+                                                                $("#formulaFilterTxt").val("");
+                                                                $("#formulaFilterTxt").text("");
+
+                                                                $("#batchNoFilterTxt").val("");
+                                                                $("#batchNoFilterTxt").text("");
+                                                                searchCommand = 1;
+                                                                mainMenuCommand = 0;
+                                                                currentTab = 1;
+                                                                isSearchedProduct = 0;
+                                                                // if (productDetailDT) {
+                                                                //   productDetailDT.destroy();
+                                                                // }
+
+                                                                //document.getElementById("bpelInstSummayTabBody3").innerHTML = "";
+                                                                document.getElementById("productNameFilterTxt").focus();
+                                                                document.getElementById("productNameFilterTxt").style.border = '0.17em solid orange';
+
+                                                                /**/
+
+                                                                //$('#testInst tr').slice(1).remove();
+
+                                                                window.scrollTo(0, 0);
+                                                                return false;
+                                                            }
+
+                                                        }
+
+                                                        function maxWindow() {
+                                                            window.moveTo(0, 0);
+
+
+                                                            if (document.all) {
+                                                                top.window.resizeTo(screen.availWidth, screen.availHeight);
+                                                            } else if (document.layers || document.getElementById) {
+                                                                if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
+                                                                    top.window.outerHeight = screen.availHeight;
+                                                                    top.window.outerWidth = screen.availWidth;
+                                                                }
+                                                            }
+                                                        }
+
+                                                        $('#myMessageTrackingWindow').on('hidden.bs.modal', function () {
+                                                            // do something…
+                                                            currentTab = 0;
+                                                            currenModal = 0;
+                                                            gCmd = 0;
+                                                            finalBilling = 0;
+                                                        });
+
+                                                        $('#myMessageTrackingWindow').on('shown.bs.modal', function () {
+                                                            // do something…
+                                                            currentTab = 0;
+                                                            currenModal = 1;
+                                                        });
+
+
+//            $('#myMessageTrackingWindow')
+//                    .on('hide', function () {
+//
+//                    })
+//                    .on('hidden', function () {
+//
+//                    })
+//                    .on('show', function () {
+//
+//                    })
+//                    .on('shown', function () {
+//
+//                        currentTab = 0;
+//                        currenModal = 1;
+//                    });
+
+        </script> 
+
+
+
+    </body>
+
+    <!-- Mirrored from www.spruko.com/demo/viboon/html/Viboon_teal/Horizontal-Light-Headerfix/index4.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Dec 2018 19:18:57 GMT -->
+</html>

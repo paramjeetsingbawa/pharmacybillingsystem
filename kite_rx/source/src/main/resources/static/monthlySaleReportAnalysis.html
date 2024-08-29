@@ -1,0 +1,714 @@
+<html>
+    <head>
+        <style type="text/css" media="print">
+            @page {
+                size: auto;   /* auto is the initial value */
+                margin: 0;  /* this affects the margin in the printer settings */
+            }
+
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.3.3.7.min.css">
+        <script src="custom-js/jquery-3.2.1.min.js"></script>
+        <script src="custom-js/bootstrap.3.3.7.min.js"></script>
+        <link href='css/fullcalendar.css' rel='stylesheet'>
+        <link href='css/fullcalendar.print.css' rel='stylesheet' media='print'>
+        <script src="custom-js/Highcharts-7.1.1/code/highcharts.js"></script>
+        <style type="text/css">
+            #calendar .fc-day-number {
+                text-decoration: underline;
+                width: 15px;
+                height: 16px;
+                text-align: right;
+            }
+
+            #calendar .fc-day-number:hover {
+                cursor: pointer;
+            }
+
+            #calendar .my-cell-overlay-day-corner {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 19px;
+                height: 16px;
+                cursor: pointer;
+            }
+            ul{
+                margin-left: -15px;
+            }
+
+            ul li{
+                display: inline;
+                font-size: 13px;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+
+    <body style="font-family: 'Rubik', sans-serif; margin-left: 20px;" onload="getInvoice()">
+
+        <div>
+            <center><a id="p2" onclick="myFunction()" class="btn btn-danger" style="width:115px;height:40px;text-align: center;vertical-align: middle">Print Report</a><a id="menu1" href="SaleBillV2.html" class="btn btn-success" style="width:315px;height:40px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 15px;">Go Back To Sale & Billing Application</font></a></center>  
+
+            <div id = "filterDiv">
+                <center>
+                    <br />
+                    <table style="width:100%">
+                        <tr>
+                            <td>
+                                <div class="form-group">
+
+                                    <select class="form-control" id="Year" style="width:95%;height:40px;font-weight: 600;font-size: 25px;">
+                                        <option value="" selected="selected">Select Year</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+
+                                    <select class="form-control" id="Month" style="width:95%;height:40px;font-weight: 600;font-size: 20px;">
+                                        <option value="" selected="selected">Select Month</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+
+                                    <select class="form-control" id="Date" style="width:95%;height:40px;font-weight: 600;font-size: 20px;">
+                                        <option value="" selected="selected">Select Date</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+
+                                    <input type="text" id="productNameFilterTxt" style="width:95%;height:40px;font-weight: 600;font-size: 20px;" placeholder="Product Name"/>
+
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+
+                                    <input type="text" id="batchFilterTxt" style="width:95%;height:40px;font-weight: 600;font-size: 20px;" placeholder="Batch number"/>
+
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn-primary" id="fetchButton" style="width:95%;height:40px;font-weight: 600;font-size: 25px;margin-top: -15px;text-align: center;vertical-align: central" onclick="getProductSalesData()"> Fetch Sale Report</button>
+                            </td>
+
+                        </tr>
+                    </table>
+
+
+                </center>
+            </div>
+
+            <hr />
+
+            <table style="width:100%;">
+                <tr>
+                    <td>
+                        <div id="container2" style="width:100%; height:400px;"></div>
+                    </td>
+                    <td>
+                        <div id="container" style="width:100%; height:400px;"></div>
+                    </td>
+                </tr>
+            </table>
+
+            <hr />
+
+
+            <table style="width:100%;">
+                <tr>
+                    <td>
+
+                <center><h2>PRODUCT SELL ANALYSIS</h2></center>
+
+                <table  border="2"  class="table" style="width:100%;text-align: left;margin-left: -18px;cursor: pointer;" id="testInst" >
+                    <tr style="font-size: 13px;">
+                        <th align="left">SR. NO </th>
+                        <th align='left'>PRODUCT-NAME</th>
+                        <th align='left'>BATCH-NO</th>
+                        <th align='left'>EXPIRE-DATE</th>
+                        <th align='left'>MRP</th>
+                        <th align='left'>PACKING</th>
+                        <th align='left'>COMPANY</th>
+                        <th align='left'>DISTUBUTER-NAME</th>
+                        <th align='left' style="font-size:22px;font-weight: 700;text-align:center;color:red;">SALE COUNT</th>
+                        <th align='left' style="font-size:22px;font-weight: 700;text-align:center;color:red;">TOTAL SALE QUANTITY</th>
+                        <th align='left' style="font-size:22px;font-weight: 700;text-align:center;color:red;">TOTAL SALE AMOUNT</th>
+                    </tr>  
+
+                    <tbody id='tabReportBody' style="font-size: 13px;"> 
+
+
+                    </tbody>
+
+
+                </table> 
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                <center><h2>SALE DATA DAILY ANALYSIS</h2></center>
+                <table  border="2"  class="table" style="width:100%;text-align: left;margin-left: -18px;cursor: pointer;vertical-align: top;" id="testInst2" >
+                    <tr style="font-size: 13px;">
+                        <th align="left" style="font-size:22px;font-weight: 700;text-align:center;color:red;">SR. NO </th>
+                        <th align='left' style="font-size:22px;font-weight: 700;text-align:center;color:red;">SALE-DATE</th>
+                        <th align='left' style="font-size:22px;font-weight: 700;text-align:center;color:red;">SALE AMOUNT</th>
+                    </tr>  
+
+                    <tbody id='tabReportBody2' style="font-size: 13px;"> 
+
+
+                    </tbody>
+
+
+                </table> 
+                </td>
+                </tr>
+
+            </table>
+
+
+
+
+
+        </div>
+
+        <script>
+
+            for (var i = 2019; i < 2030; i++) {
+                document.getElementById("Year").innerHTML = document.getElementById("Year").innerHTML + "<option value='" + i + "'>" + i + "</option>";
+            }
+
+            for (var i = 1; i <= 31; i++) {
+                document.getElementById("Date").innerHTML = document.getElementById("Date").innerHTML + "<option value='" + i + "'>" + i + "</option>";
+            }
+
+            for (var i = 1; i <= 12; i++) {
+                var str = '';
+                if (i === 1) {
+                    str = "JAN";
+                } else if (i === 2) {
+                    str = "FEB";
+                } else if (i === 3) {
+                    str = "MAR";
+                } else if (i === 4) {
+                    str = "APR";
+                } else if (i === 5) {
+                    str = "MAY";
+                } else if (i === 6) {
+                    str = "JUN";
+                } else if (i === 7) {
+                    str = "JUL";
+                } else if (i === 8) {
+                    str = "AUG";
+                } else if (i === 9) {
+                    str = "SEP";
+                } else if (i === 10) {
+                    str = "OCT";
+                } else if (i === 11) {
+                    str = "NOV";
+                } else if (i === 12) {
+                    str = "DEC";
+                }
+                if (i < 10) {
+                    document.getElementById("Month").innerHTML = document.getElementById("Month").innerHTML + "<option value='0" + i + "'>" + str + "</option>";
+                } else {
+                    document.getElementById("Month").innerHTML = document.getElementById("Month").innerHTML + "<option value='" + i + "'>" + str + "</option>";
+                }
+            }
+
+
+
+            function myFunction() {
+                document.getElementById("p2").style.display = "none";
+                document.getElementById("filterDiv").style.display = "none";
+                window.print();
+            }
+        </script>
+        <script src='custom-js/fullcalendar.min.js'></script>
+        <!--<script src="custom-js/MonthlyReportData.js"></script>-->
+
+        <script>
+
+            Highcharts.createElement('link', {
+                href: 'https://fonts.googleapis.com/css?family=Unica+One',
+                rel: 'stylesheet',
+                type: 'text/css'
+            }, null, document.getElementsByTagName('head')[0]);
+
+            Highcharts.theme = {
+                colors: ['#2b908f', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066',
+                    '#eeaaee', '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
+                chart: {
+                    backgroundColor: {
+                        linearGradient: {x1: 0, y1: 0, x2: 1, y2: 1},
+                        stops: [
+                            [0, '#2a2a2b'],
+                            [1, '#3e3e40']
+                        ]
+                    },
+                    style: {
+                        fontFamily: '\'Unica One\', sans-serif'
+                    },
+                    plotBorderColor: '#606063'
+                },
+                title: {
+                    style: {
+                        color: '#E0E0E3',
+                        textTransform: 'uppercase',
+                        fontSize: '20px'
+                    }
+                },
+                subtitle: {
+                    style: {
+                        color: '#E0E0E3',
+                        textTransform: 'uppercase'
+                    }
+                },
+                xAxis: {
+                    gridLineColor: '#707073',
+                    labels: {
+                        style: {
+                            color: '#E0E0E3'
+                        }
+                    },
+                    lineColor: '#707073',
+                    minorGridLineColor: '#505053',
+                    tickColor: '#707073',
+                    title: {
+                        style: {
+                            color: '#A0A0A3'
+
+                        }
+                    }
+                },
+                yAxis: {
+                    gridLineColor: '#707073',
+                    labels: {
+                        style: {
+                            color: '#E0E0E3'
+                        }
+                    },
+                    lineColor: '#707073',
+                    minorGridLineColor: '#505053',
+                    tickColor: '#707073',
+                    tickWidth: 1,
+                    title: {
+                        style: {
+                            color: '#A0A0A3'
+                        }
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.85)',
+                    style: {
+                        color: '#F0F0F0'
+                    }
+                },
+                plotOptions: {
+                    series: {
+                        dataLabels: {
+                            color: '#B0B0B3'
+                        },
+                        marker: {
+                            lineColor: '#333'
+                        }
+                    },
+                    boxplot: {
+                        fillColor: '#505053'
+                    },
+                    candlestick: {
+                        lineColor: 'white'
+                    },
+                    errorbar: {
+                        color: 'white'
+                    }
+                },
+                legend: {
+                    itemStyle: {
+                        color: '#E0E0E3'
+                    },
+                    itemHoverStyle: {
+                        color: '#FFF'
+                    },
+                    itemHiddenStyle: {
+                        color: '#606063'
+                    }
+                },
+                credits: {
+                    style: {
+                        color: '#666'
+                    }
+                },
+                labels: {
+                    style: {
+                        color: '#707073'
+                    }
+                },
+
+                drilldown: {
+                    activeAxisLabelStyle: {
+                        color: '#F0F0F3'
+                    },
+                    activeDataLabelStyle: {
+                        color: '#F0F0F3'
+                    }
+                },
+
+                navigation: {
+                    buttonOptions: {
+                        symbolStroke: '#DDDDDD',
+                        theme: {
+                            fill: '#505053'
+                        }
+                    }
+                },
+
+                // scroll charts
+                rangeSelector: {
+                    buttonTheme: {
+                        fill: '#505053',
+                        stroke: '#000000',
+                        style: {
+                            color: '#CCC'
+                        },
+                        states: {
+                            hover: {
+                                fill: '#707073',
+                                stroke: '#000000',
+                                style: {
+                                    color: 'white'
+                                }
+                            },
+                            select: {
+                                fill: '#000003',
+                                stroke: '#000000',
+                                style: {
+                                    color: 'white'
+                                }
+                            }
+                        }
+                    },
+                    inputBoxBorderColor: '#505053',
+                    inputStyle: {
+                        backgroundColor: '#333',
+                        color: 'silver'
+                    },
+                    labelStyle: {
+                        color: 'silver'
+                    }
+                },
+
+                navigator: {
+                    handles: {
+                        backgroundColor: '#666',
+                        borderColor: '#AAA'
+                    },
+                    outlineColor: '#CCC',
+                    maskFill: 'rgba(255,255,255,0.1)',
+                    series: {
+                        color: '#7798BF',
+                        lineColor: '#A6C7ED'
+                    },
+                    xAxis: {
+                        gridLineColor: '#505053'
+                    }
+                },
+
+                scrollbar: {
+                    barBackgroundColor: '#808083',
+                    barBorderColor: '#808083',
+                    buttonArrowColor: '#CCC',
+                    buttonBackgroundColor: '#606063',
+                    buttonBorderColor: '#606063',
+                    rifleColor: '#FFF',
+                    trackBackgroundColor: '#404043',
+                    trackBorderColor: '#404043'
+                },
+
+                // special colors for some of the
+                legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
+                background2: '#505053',
+                dataLabelsColor: '#B0B0B3',
+                textColor: '#C0C0C0',
+                contrastTextColor: '#F0F0F3',
+                maskColor: 'rgba(255,255,255,0.3)'
+            };
+
+            Highcharts.setOptions(Highcharts.theme);
+
+            getProductSalesData();
+
+            var monthlySale = [];
+            var categoriesArr = [];
+
+
+            getSalesData();
+
+            function getSalesData() {
+                var url = "/AvonMedicalService/rest/CoreService/getSalesDataForChart?";
+
+                var yearTxtValue = document.getElementById("Year");
+                if (yearTxtValue) {
+                    if ($.trim(yearTxtValue.value) !== "") {
+                        var monthTxtValue = document.getElementById("Month");
+                        if (monthTxtValue) {
+                            if ($.trim(monthTxtValue.value) !== "") {
+                                var dateTxtValue = document.getElementById("Date");
+                                if (dateTxtValue) {
+                                    if ($.trim(dateTxtValue.value) !== "") {
+                                        url += "&dateFilter=" + dateTxtValue.value + "/" + monthTxtValue.value + "/" + yearTxtValue.value;
+                                    } else {
+                                        url += "&dateFilter=" + monthTxtValue.value + "/" + yearTxtValue.value;
+                                    }
+                                } else {
+                                    url += "&dateFilter=" + monthTxtValue.value + "/" + yearTxtValue.value;
+                                }
+                            }
+                        }
+                        //bpelFilterTxtValue.value = "";
+                    }
+                }
+                
+                var batchFilterApplied = 0;
+                var batchFilterTxt = document.getElementById("batchFilterTxt");
+                if (batchFilterTxt) {
+                    if ($.trim(batchFilterTxt.value) !== "") {
+                        url += "&batch=" + batchFilterTxt.value;
+                        batchFilterApplied = 1;
+                    }
+                    //bpelFilterTxtValue.value = "";
+                }
+                if (batchFilterApplied === 0) {
+                    try {
+                        var location = window.location.href;
+                        var locationA = location.split("?batch=");
+                        if(locationA[1] && locationA[1] !== ''){
+                            url = url + "batch=" + locationA[1];
+                        }
+                        document.getElementById("p2").style.display = "none";
+                        document.getElementById("menu1").style.display = "none";
+                        document.getElementById("Year").style.display = "none";
+                        document.getElementById("Month").style.display = "none";
+                        document.getElementById("Date").style.display = "none";
+                        document.getElementById("productNameFilterTxt").style.display = "none";
+                        document.getElementById("batchFilterTxt").style.display = "none";
+                        document.getElementById("fetchButton").style.display = "none";
+                       // document.getElementById("Month").style.display = "none";
+                    } catch (err) {
+
+                    }
+                }
+
+                var dataPointsTemp = [];
+                var dataPointsHumidity = [];
+
+                $.getJSON(url, function (data) {
+                    var sno = 1;
+                    for (var i = data.length - 1; i >= 0; i--) {
+                        dataPointsTemp.push({label: data[i].billDate, y: data[i].sa});
+                        dataPointsHumidity.push({label: data[i].billDate, y: data[i].sa});
+
+
+                        categoriesArr.push(data[i].billDate);
+                        monthlySale.push(data[i].sa);
+
+
+                        var rowid = i;
+                        var row;
+                        row = $("<tr id='" + rowid + "'></tr>");
+
+                        row.append($("<td id='" + rowid + "_custName" + "' style='font-size:22px;font-weight: 700;text-align:center;color:green;'>").text(sno++));
+                        row.append($("<td id='" + rowid + "name" + "' style='font-size:22px;font-weight: 700;text-align:center;color:green;'>").text(data[i].billDate));
+                        row.append($("<td id='" + rowid + "y" + "' style='font-size:22px;font-weight: 700;text-align:center;color:green;'>").text(data[i].sa));
+
+
+
+                        $("#tabReportBody2").append(row);
+
+
+                    }
+
+                    // Chart with label + y values
+
+                    Highcharts.chart('container', {
+                        chart: {
+                            type: 'line'
+                        },
+                        title: {
+                            text: 'Sales Performance Daily'
+                        },
+                        subtitle: {
+                            text: 'Source: Avon medical pharmacy database'
+                        },
+                        xAxis: {
+                            categories: categoriesArr
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Sales in amount'
+                            }
+                        },
+                        plotOptions: {
+                            line: {
+                                dataLabels: {
+                                    enabled: true
+                                },
+                                enableMouseTracking: false
+                            }
+                        },
+                        series: [{
+                                name: 'Product Sales',
+                                data: monthlySale
+                            }]
+                    });
+
+
+
+
+                });
+            }
+
+
+
+
+            function getProductSalesData() {
+                var url = "/AvonMedicalService/rest/CoreService/getProductDataForChart?";
+
+
+                var yearTxtValue = document.getElementById("Year");
+                if (yearTxtValue) {
+                    if ($.trim(yearTxtValue.value) !== "") {
+                        var monthTxtValue = document.getElementById("Month");
+                        if (monthTxtValue) {
+                            if ($.trim(monthTxtValue.value) !== "") {
+                                var dateTxtValue = document.getElementById("Date");
+                                if (dateTxtValue) {
+                                    if ($.trim(dateTxtValue.value) !== "") {
+                                        url += "&dateFilter=" + dateTxtValue.value + "/" + monthTxtValue.value + "/" + yearTxtValue.value;
+                                    } else {
+                                        url += "&dateFilter=" + monthTxtValue.value + "/" + yearTxtValue.value;
+                                    }
+                                } else {
+                                    url += "&dateFilter=" + monthTxtValue.value + "/" + yearTxtValue.value;
+                                }
+                            }
+                        }
+                        //bpelFilterTxtValue.value = "";
+                    }
+                }
+
+
+                var productNameFilterTxt = document.getElementById("productNameFilterTxt");
+                if (productNameFilterTxt) {
+                    if ($.trim(productNameFilterTxt.value) !== "") {
+                        url += "&productName=" + productNameFilterTxt.value;
+                    }
+                    //statusFilterTxtValue.value = "";
+                }
+                var batchFilterApplied = 0;
+                var batchFilterTxt = document.getElementById("batchFilterTxt");
+                if (batchFilterTxt) {
+                    if ($.trim(batchFilterTxt.value) !== "") {
+                        url += "&batch=" + batchFilterTxt.value;
+                        batchFilterApplied = 1;
+                    }
+                    //bpelFilterTxtValue.value = "";
+                }
+                if (batchFilterApplied === 0) {
+                    try {
+                        var location = window.location.href;
+                        var locationA = location.split("?batch=");
+                        if(locationA[1] && locationA[1] !== ''){
+                            url = url + "batch=" + locationA[1];
+                        }
+                    } catch (err) {
+
+                    }
+                }
+
+
+                var dataPointsTemp = [];
+                var dataPointsHumidity = [];
+
+                $.getJSON(url, function (data) {
+
+                    var summary = data;
+
+                    document.getElementById("tabReportBody").innerHTML = "";
+                    totalBPELInstances = summary.length;
+
+                    var sno = 1;
+                    var totalPrice = 0.0;
+                    var totalCGST = 0.0;
+                    var totalSGST = 0.0;
+                    var totalIGST = 0.0;
+                    $.each(summary, function (i, theItem) {
+                        var rowid = i;
+                        var row;
+                        row = $("<tr id='" + rowid + "'></tr>");
+
+                        row.append($("<td id='" + rowid + "_custName" + "'>").text(sno++));
+                        row.append($("<td id='" + rowid + "name" + "'>").text(theItem["name"]));
+                        row.append($("<td id='" + rowid + "batchNo" + "'>").text(theItem["batchNo"]));
+                        row.append($("<td id='" + rowid + "expireDate" + "'>").text(theItem["expireDate"]));
+                        row.append($("<td id='" + rowid + "mrp" + "'>").text(theItem["mrp"]));
+                        row.append($("<td id='" + rowid + "packing" + "'>").text(theItem["packing"]));
+                        row.append($("<td id='" + rowid + "company" + "'>").text(theItem["company"]));
+                        row.append($("<td id='" + rowid + "distubuterName" + "'>").text(theItem["distubuterName"]));
+                        row.append($("<td id='" + rowid + "y" + "' style='font-size:22px;font-weight: 700;color:green;text-align:center;'>").text(theItem["y"]));
+                        row.append($("<td id='" + rowid + "totalQuantity" + "'  style='font-size:22px;font-weight: 700;color:green;text-align:center;'>").text(theItem["totalQuantity"]));
+                        row.append($("<td id='" + rowid + "totalAmount" + "'  style='font-size:22px;font-weight: 700;color:green;text-align:center;'>").text(parseFloat(theItem["totalAmount"]).toFixed(2)));
+
+
+                        $("#tabReportBody").append(row);
+                    });
+
+                    Highcharts.chart('container2', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: 'Most selling product of avon pharmacy'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                                name: 'Product Sales Analys',
+                                colorByPoint: true,
+                                data: data
+                            }]
+                    });
+
+                });
+            }
+
+
+
+
+        </script>
+    </body>
+</html>

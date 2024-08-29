@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="msapplication-TileColor" content="#0061da">
+        <meta name="theme-color" content="#1643a3">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+        <!-- Title -->
+        <title>KiteRx Reports</title>
+        <link rel="stylesheet" href="assets/fonts/fonts/font-awesome.min.css">
+
+        <!-- Font family -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+        <!-- Dashboard Css -->
+        <link href="assets/css/dashboard.css" rel="stylesheet" />
+
+
+        <!-- c3.js Charts Plugin -->
+        <link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
+
+        <!-- Custom scroll bar css-->
+        <link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+        <!---Font icons-->
+        <link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/sweet-alert.css" />
+
+    </head>
+    <body class="">
+        <div id="global-loader" ></div>
+        <div class="page" >
+            <div class="page-main">
+                <div class="header py-1">
+                    <div class="container">
+                        <div class="d-flex">
+                            <a class="header-brand" href="#">
+                                <!--								<img src="assets/images/brand/logo.png" class="header-brand-img" alt="Viboon logo">-->
+                                <img src="img/logo_3.png" style="position: absolute;top: -15px;">
+                            </a>
+                            <div class="d-flex order-lg-2 ml-auto">
+                                <div class="dropdown d-none d-md-flex mt-4" >
+                                    <h3 style="color: white;">  Window view : Purchase report </h3>
+                                </div>
+                                <div class="dropdown d-none d-md-flex mt-1" >
+                                    <a  class="nav-link icon full-screen-link">
+                                        <i class="fe fe-maximize floating"  id="fullscreen-button"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown d-none d-md-flex mt-1" >
+                                    <a  class="nav-link icon full-screen-link">
+                                        <i class="fe fe-star floating"  id="buttonAside"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-bell floating"></i>
+                                        <span class="nav-unread bg-danger"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-thumbs-o-up"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Someone likes our posts.</strong>
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-commenting-o"></i>
+                                            </div>
+                                            <div>
+                                                <strong> 3 New Comments</strong>
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-cogs"></i>
+                                            </div>
+                                            <div>
+                                                <strong> Server Rebooted.</strong>
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">View all Notification</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-mail floating"></i>
+                                        <span class=" nav-unread badge badge-warning  badge-pill">2</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item text-center">2 New Messages</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/male/41.jpg)"></span>
+                                            <div>
+                                                <strong>Madeleine</strong> Hey! there I' am available....
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/1.jpg)"></span>
+                                            <div>
+                                                <strong>Anthony</strong> New product Launching...
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/18.jpg)"></span>
+                                            <div>
+                                                <strong>Olivia</strong> New Schedule Realease......
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">See all Messages</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown mt-1">
+                                    <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                                        <span class="avatar avatar-md brround" style="background-image: url(img/user_images/user_1.jpg)"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow ">
+                                        <div class="text-center">
+                                            <a href="#" class="dropdown-item text-center font-weight-sembold user" id="username">Manish Soin</a>
+                                            <span class="text-center user-semi-title text-dark" id="userRole">Pharmacy Director</span>
+                                            <div class="dropdown-divider"></div>
+                                        </div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-account-outline "></i> Profile
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon  mdi mdi-settings"></i> Settings
+                                        </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?
+                                        </a>
+                                        <a class="dropdown-item" href="login.html">
+                                            <i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                                <span class="header-toggler-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-navbar" id="headerMenuCollapse">
+                    <div class="container">
+                        <ul class="nav">
+                            <li class="nav-item with-sub">
+                                <a class="nav-link " href="#"><i class="fa fa-bar-chart"></i> <span>Billing</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductSaleEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Sales Entry</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html"><i class="fa fa-check"></i>Old Sale Bill (Complete product list)</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Purchase Bill</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html">Tagged Billing</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sale return</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Purchase return</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link " href="index4.html">
+                                    <i class="fa fa-home"></i>
+                                    <span>DASHBOARD</span>
+                                </a>
+                                <!--                                <div class="sub-item">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="index.html">Dashboard 1</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index2.html">Dashboard 2</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index3.html">Dashboard 3</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index4.html">Dashboard 4</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index5.html">Dashboard 5</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> sub-item -->
+                            </li>
+
+                            <li class="nav-item with-sub">
+                                <a class="nav-link active" href="#"><i class="fa fa-snowflake-o"></i> <span>Reports</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="SaleReportV2.html"><i class="fa fa-check"></i>Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductSalesReportV2.html"><i class="fa fa-check"></i>Product Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="PurchaseReportV2.html"><i class="fa fa-check"></i>Purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleReportV2.html?paymentTypeFilter=CREDIT"> <i class="fa fa-check"></i> Credit report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Inventory report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Return items</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-file-text-o"></i> <span>Stocks</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseV2.html"><i class="fa fa-check"></i>Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2_Stock.html"><i class="fa fa-check"></i>Current Stock</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2.html"><i class="fa fa-check"></i>Sales chart</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Expired products</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub ">
+                                <a class="nav-link " data-toggle="dropdown" href="#"><i class="fa fa-cubes"></i> <span>Accounts</span></a>
+                                <div class="sub-item">
+                                    <ul>
+<!--                                        <li>
+                                            <a href="new-company.html"><i class="fa fa-check"></i>New Company</a>
+                                        </li>-->
+                                        <li>
+                                            <a href="new-customer.html"><i class="fa fa-check"></i>New Customer</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-credit-account.html"><i class="fa fa-check"></i>New Credit Account</a>
+                                        </li>
+<!--                                        <li>
+                                            <a href="#">Company list</a>
+                                        </li>-->
+                                        <li>
+                                            <a href="CustomerListV2.html"><i class="fa fa-check"></i>Manage Customers & Payments</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?isCreditSearch=1"><i class="fa fa-check"></i>Credit Account List</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?onlyPending=1"><i class="fa fa-check"></i>Pending Payments To me</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-bandcamp"></i> <span>System Management</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="salesHistory.html">Export Product Sheet</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export expiry</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Database Backup</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="my-3 my-md-5">
+                    <div class="container">
+
+                        <div id="popupaside" style="position:absolute;left:-2000px;top:10px;z-index: 10000;width:80%;height:100%;
+                             margin-top: -10px;background-color: 
+                             #ebebeb;color: #393939; font-family: monospace;border-style: solid;border-width: 2px;border-color: black;">
+                            <center><h1>Tutorial for billing guideline<button class="btn btn-round pull-right" style="position:absolute;font-size: 16px;margin-top: 5px;" id="buttonAside2" onclick="asideHelp()">X</button> </h1></center>
+                            <br />
+
+                            <h4> Search Product for billing </h4>
+
+                            <h6 style="margin-left: 10px; text-align: justify;margin-right: 10px;">
+                                To Search for a product: Type product name (partial or exact), or Batch number or Company name and Press Enter key.
+
+                                <br />Use arrow keys or tab key to move in selected products
+                                <br />To select and enter quantity of purchase, press enter or click using mouse
+                            </h6>
+
+                            <h4> Product Amount and Purchase Quantity </h4>
+
+                            <h6 style="margin-left: 10px; text-align: justify;margin-right: 10px;">
+                                Press Arrow or Tab key to start typing. User can change sale date only with mouse. 
+
+                                <br />Amount per unit is calculated based on MRP entered originally while inserting product information
+                                <br /><font style="font-weight: 700">Profit Calculation </font>: Profile is calculated based on purchase rate And Tax information
+                                <br />If user entered amount per unit manually, The System will check for loss, and Give Alert symbol if the product may give loss in invoice.
+                                <br />If the entered amount per unit and quantity is giving, No profit and No loss, then yellow alert will come in screen
+                            </h6>
+
+                            <h4> Invoice Generation and Save Sales Data </h4>
+                            <h6 style="margin-left: 10px; text-align: justify;margin-right: 10px;">
+                                <br />Enter customer name, customer contact, doctor who prescribes for this medications.
+                                <br />You can give additional discount on the final amount.
+                                <br />Remember to check the profit calculation at the bottom of generate invoice pop-up window. 
+                                <br />Ctrl+I will save the sales details and update quantities of products sold automatically in database. 
+                            </h6>
+
+                            <h4>Page Shortcuts</h4>
+                            <h6 style="margin-left: 10px; text-align: justify;margin-right: 10px;">
+                                <br />Ctrl+F----To Focus the cursor one product name filter.
+                                <br />Ctrl+H----To Focus the selection one header.
+                                <br />Ctrl+P----To preview the selected product items ready for billing.
+                                <br />Ctrl+I/G--To generate the invoice, Enter customer name, mobile, prescriber details etc. 
+                                <br />Ctrl+I----To save and print the invoice details in database.
+                                <br />Ctrl+E----To open the edit window of selected product. 
+                                <br />F1--------To open page help.
+                                <br />F2-------To get product statics, sale analysis for the selected product.
+                                <br />F4--------To deleted the selected product.
+                                <br />F5--------To update the product quantity to Zero.
+                            </h6> 
+
+                        </div>
+
+
+
+                        <div id="popupasideprodAnalysis" style="position:absolute;left:-2000px;top:10px;z-index: 10000;width:90%;height:100%;
+                             margin-top: -10px;background-color: 
+                             #FAFB9E;color: #393939; font-family: monospace;border-style: solid;border-width: 2px;border-color: black;">
+                            <center><h1>Product Analysis For Product Batch : <span id="asidebatchHeader"></span> 
+                                    <button class="btn btn-round pull-right" style="position:absolute;font-size: 20px;margin-top: 5px;" id="buttonAside3" onclick="asideStat()">X</button></h1></center>
+                        </div>
+
+                        <div class="row-fluid"> 
+                            <div class="box span12" >
+
+                                <div class="row-fluid" style="overflow: auto">
+
+
+                                    <div id = "filterDiv">
+                                        <center>
+                                            <br />
+                                            <table style="width:98%">
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+
+                                                            <select class="form-control" id="Year" >
+                                                                <option value="" selected="selected">Year</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+
+                                                            <select class="form-control" id="Month">
+                                                                <option value="" selected="selected">Month</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+
+                                                            <select class="form-control" id="Date">
+                                                                <option value="" selected="selected">Date</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+
+                                                            <input type="text" id="productName" style="width:95%;height:35px;" placeholder="Product Name"/>
+
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+
+                                                            <input type="text" id="batch" style="width:95%;height:35px;" placeholder="Batch Number"/>
+
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+
+                                                            <input type="text" id="distributerName" style="width:95%;height:35px;" placeholder="Distributer"/>
+
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+
+                                                            <input type="text" id="company" style="width:100%;height:35px;" placeholder="Company"/>
+
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-primary" onclick="getCustomerInstances('', '',1)" style="margin-top: -18px;"> Fetch Report</button>
+                                                    </td>
+
+                                                </tr>
+                                            </table>
+
+
+                                        </center>
+                                    </div>
+
+                                    <table style="width:90%" border="0" >
+                                        <tr>
+                                            <th colspan="2" align="left">
+
+                                                <h3>Purchase Report <span id="filterSpn"></span> <!--<button onclick="getCustomerInstances(1)">Export All Sales Data</button>--></h3> 
+
+                                            </th>
+                                        </tr>
+                                    </table>
+
+                                    <br />
+                                    <div id="demo" class="collapse">
+                                        <center>
+                                            <input type="text" id="expDateFiltertxt" value="" style="width:50%;height:30px;font-weight: 500;background-color:#FAFB9E;" />
+                                            <br />
+                                            <div>
+                                                <div id="calendar" style="curson:pointer;width:350px;height:300px"></div>
+
+                                            </div>
+                                        </center>
+                                    </div>
+                                   
+                                    <center><img id="pageLoadingImg" style='position: absolute;top: 50%;left: 40%;' src="img/ajax-loaders/ajax-loader-8.gif" width="300" height="70" /></center>
+                                    <table  border="0"  class="table card-table table-vcenter text-nowrap" id="testInst" >
+                                        <tr style="font-size: 14px;">
+                                            <th align="left">S.NO </th>
+                                            <th align='left'>DATE</th>
+                                            <th align='left'>PRODUCT-NAME</th>
+                                            <th align='left'>BATCH</th>
+                                            <th align='left'>QTY</th>
+                                            <th align='left'>FREE</th>
+                                            <th align='left'>RATE</th>
+                                            <th align='left'>MRP</th>
+                                            <th align='left'>EXPIRY</th>
+                                            <th align='left'>DISTRIBUTER NAME</th>
+                                            <th align='left'>DISTRIBUTER NO</th>
+                                            <th align='left'>COMPANY</th>
+                                            <th align='right'>DISCOUNT</th> 
+                                        </tr>  
+
+                                        <tbody id='tabReportBody' style="font-size: 13px;"> 
+
+
+                                        </tbody>
+
+
+                                    </table> 
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p class="pull-left"><font color='black'>&copy; BTech Software Pvt. Ltd.</a> 2018-2019</p>
+                <p class="pull-right"><font color='black' >Developed by: <a href="https://www.facebook.com/param.cool2008"  target="_blank">Paramjeet Singh.</a></p>
+                <marquee behavior="scroll" direction="left">In case of any doubt on the product operation, feel free to contact us on +91 9986881500, or sent email to paramjeetsinghbawa@gmail.com </marquee>
+            </footer>
+            <!-- End Footer-->
+        </div>
+        <!-- Back to top -->
+        <a href="#top" id="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
+
+        <!-- Dashboard Core -->
+        <script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+        <script src="custom-js/jquery-ui-1.8.21.custom.min.js"></script>
+        <!-- transition / effect library -->
+        <script src="custom-js/bootstrap-transition.js"></script>
+        <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/vendors/jquery.sparkline.min.js"></script>
+        <script src="assets/js/vendors/selectize.min.js"></script>
+        <script src="assets/js/vendors/jquery.tablesorter.min.js"></script>
+        <script src="assets/js/vendors/circle-progress.min.js"></script>
+        <script src="assets/plugins/rating/jquery.rating-stars.js"></script>
+
+        <!-- Charts Plugin -->
+        <script src="assets/plugins/chart/Chart.bundle.js"></script>
+        <script src="assets/plugins/chart/utils.js"></script>
+
+        <!-- Input Mask Plugin -->
+        <script src="assets/plugins/input-mask/jquery.mask.min.js"></script>
+
+        <!-- Custom scroll bar Js-->
+        <script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Index Scripts -->
+        <script src="assets/js/index4.js"></script>
+
+        <!-- Custom-->
+        <script src="assets/js/custom.js"></script>
+        <script src="custom-js/sweet-alert.min.js"></script>
+        <!-- application script for Charisma demo -->
+        <script>
+
+            for (var i = 2019; i < 2030; i++) {
+                document.getElementById("Year").innerHTML = document.getElementById("Year").innerHTML + "<option value='" + i + "'>" + i + "</option>";
+            }
+            
+            for (var i = 1; i <= 31; i++) {
+                document.getElementById("Date").innerHTML = document.getElementById("Date").innerHTML + "<option value='" + i + "'>" + i + "</option>";
+            }
+            
+            for (var i = 1; i <= 12; i++) {
+                var str = '';
+                if(i === 1){
+                    str = "JAN";
+                }else if(i === 2){
+                    str = "FEB";
+                }else if(i === 3){
+                    str = "MAR";
+                }else if(i === 4){
+                    str = "APR";
+                }else if(i === 5){
+                    str = "MAY";
+                }else if(i === 6){
+                    str = "JUN";
+                }else if(i === 7){
+                    str = "JUL";
+                }else if(i === 8){
+                    str = "AUG";
+                }else if(i === 9){
+                    str = "SEP";
+                }else if(i === 10){
+                    str = "OCT";
+                }else if(i === 11){
+                    str = "NOV";
+                }else if(i === 12){
+                    str = "DEC";
+                }
+                if( i < 10 ){
+                    document.getElementById("Month").innerHTML = document.getElementById("Month").innerHTML + "<option value='0" + i + "'>" + str + "</option>";
+                }else{
+                    document.getElementById("Month").innerHTML = document.getElementById("Month").innerHTML + "<option value='" + i + "'>" + str + "</option>";
+                }
+            }
+            
+
+
+            function myFunction() {
+                document.getElementById("p2").style.display = "none";
+                document.getElementById("filterDiv").style.display = "none";
+                window.print();
+            }
+        </script>
+        <script src='custom-js/fullcalendar.min.js'></script>
+        <script src="custom-js/MonthlyPurchasetData.js"></script>
+
+    </body>
+
+    <!-- Mirrored from www.spruko.com/demo/viboon/html/Viboon_teal/Horizontal-Light-Headerfix/index4.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Dec 2018 19:18:57 GMT -->
+</html>

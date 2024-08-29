@@ -1,0 +1,705 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+        <title>AVON PHARMA MEDICAL CORNER</title>
+
+        <link class="include" rel="stylesheet" type="text/css" href="./Animated Charts_files/jquery.jqplot.min.css">
+        <link rel="stylesheet" type="text/css" href="./Animated Charts_files/examples.min.css">
+        <link type="text/css" rel="stylesheet" href="./Animated Charts_files/shCoreDefault.min.css">
+        <link type="text/css" rel="stylesheet" href="./Animated Charts_files/shThemejqPlot.min.css">
+
+
+        <link id="bs-css" href="css/bootstrap-slate.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-bottom: 40px;
+            }
+            .sidebar-nav {
+                padding: 9px 0;
+            }
+            ul{
+                margin-left: -15px;
+            }
+
+            ul li{
+                display: inline;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            .myListenerParam{
+                
+            }
+            
+            .myMrpListenerParam{
+                
+            }
+        </style>
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="css/charisma-app.css" rel="stylesheet">
+        <link href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+        <link href='css/fullcalendar.css' rel='stylesheet'>
+        <link href='css/fullcalendar.print.css' rel='stylesheet'  media='print'>
+        <link href='css/chosen.css' rel='stylesheet'>
+        <link href='css/uniform.default.css' rel='stylesheet'>
+        <link href='css/colorbox.css' rel='stylesheet'>
+        <link href='css/jquery.cleditor.css' rel='stylesheet'>
+        <link href='css/jquery.noty.css' rel='stylesheet'>
+        <link href='css/noty_theme_default.css' rel='stylesheet'>
+        <link href='css/elfinder.min.css' rel='stylesheet'>
+        <link href='css/elfinder.theme.css' rel='stylesheet'>
+        <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+        <link href='css/opa-icons.css' rel='stylesheet'>
+        <link href='css/uploadify.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./css/demo.css">
+        <link rel="stylesheet" href="css/sweet-alert.css" />
+
+
+
+        <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../excanvas.js"></script><![endif]-->
+
+
+
+    </head>
+    <body style="background-repeat:x-repeat;background-size: 100% auto;
+          background-position: center top;background-attachment: fixed;background-color:white;color:black">
+
+        <script type="text/javascript">
+            jQuery.noConflict();
+        </script>
+
+        <script type="text/javascript">
+            $(function () {
+                $('#vertical-ticker').totemticker({
+                    row_height: '100px',
+                    next: '#ticker-next',
+                    previous: '#ticker-previous',
+                    stop: '#stop',
+                    start: '#start',
+                    mousestop: true
+                });
+            });
+        </script>
+        <div>
+            <div>
+                <div id="content">
+                    <div class="modal" id="myModal" style="position:absolute;">
+                        <button type="button" class="close" data-dismiss="modal" style="background-color: #393939;"></button>
+                        <center>
+                            <div class="modal-body">
+                                <img src="img/red_loader.gif" width="100" height="100" />
+                                <h1>Please wait... Loading product into database</h1>
+                            </div>
+                        </center>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="box span12">
+                            <div class="well" style="cursor: default; font-size: 18px;padding-left: 8px;padding-top: 8px;">
+                                <ul>
+                                    
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;margin-left: 10px;">
+                                        <a id="menu1" href="SaleBillV2.html" class="btn btn-success" style="width:110px;height:30px;text-align: center;vertical-align: middle;"><font color="white" style="cursor: pointer; font-size: 13px;">Sales & Billing</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu2" href="purchaseOrder.html" class="btn btn-success" style="width:130px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Product Purchase</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu3" href="addOrUpdateProduct.html" class="btn btn-danger" style="width:140px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Product Maintenance</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu4" href="salesHistory.html" class="btn btn-success" style="width:130px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Advanced Options</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu5" href="monthlyPurchaseReport.html" target="_blank" class="btn btn-success" style="width:110px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Purchase Report</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu6" href="monthlySaleReport.html" target="_blank" class="btn btn-success" style="width:110px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Sale Reports</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu7" href="monthlySaleReportAnalysis.html" class="btn btn-success" style="width:110px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Sales Summary</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu8" href="saleschart.htm" class="btn btn-success" style="width:110px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Sales chart</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu9" href="tour.html" id="menu1" class="btn btn-success" style="width:110px;height:30px;text-align: center;vertical-align: middle"><span class="hidden-tablet" style="cursor: pointer; font-size: 13px;"><font color="white" >Guide</font></span></a>
+                                    </li>
+                                
+                                </ul>
+                            </div>
+                            <br />
+                            <table class="table " style="font-size : 22px;cursor:pointer;width:50%"> <tr><td> Product ID : </td> <td style="width:100px;">  <input type = 'text' id='productIdForUpdate' style = "width:100%;height:40px;font-weight: 700;color: tomato;font-size: 22px;margin-top: -5px;" /> </td><td> <button type="button" style = "width:100%;height:40px;font-weight: 700;color: white;font-size: 22px;margin-top: -5px;" id="fetchDatabtn" class="btn btn-success" data-toggle="collapse" onclick='fetchData()' data-target="#demo">Fetch Product</button> </td>
+                                </tr></table>
+                            <center><img src="img/red_loader.gif" width="100" height="100" id="loaderGif" style="position: absolute;display: none"/></center>
+                            <div class="row-fluid">
+
+
+                                <div class="table-responsive" style="overflow: scroll;">
+
+                                    <table border="2" id="testInst" class="table" style="width:2000px;font-size : 12px;cursor:pointer;overflow: scroll;">
+                                        <thead style="height: 10px;">
+                                            <tr style="background-color: white">
+                                                <!--<th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>DATE </p>
+                                                </th>-->
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>ENTRY DATE</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>PRODUCT</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>PACKING </p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>QUANTITY</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>FREE</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>BATCH</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>EXP</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>MRP</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>AMOUNT PER UNIT</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>DRUG SCHEDULE</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>PURCHASE RATE</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>TAX</p>
+                                                </th>  
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>MARGIN</p>
+                                                </th>  
+                                                <!--                                                <th style='vertical-align:top'>
+                                                                                                    <p align='left' style='color:black'>CGST</p>
+                                                                                                </th>
+                                                                                                <th style='vertical-align:top'>
+                                                                                                    <p align='left' style='color:black'>SGST</p>
+                                                                                                </th>
+                                                                                                <th style='vertical-align:top'>
+                                                                                                    <p align='left' style='color:black'>IGST</p>
+                                                                                                </th>-->
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>DISCOUNT</p>
+                                                </th>                                                
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>COMPANY</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>FORMULA</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>DISTRIBUTER NAME</p>
+                                                </th>
+                                                <th style='vertical-align:top'>
+                                                    <p align='left' style='color:black'>DISTRIBUTER NO</p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="bpelInstSummayTabBody3" style="font-size : 12px;cursor:pointer">
+                                            <tr>
+                                                <td>
+                                                    <input type = 'text' id='dateAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" />
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='productNameAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 250px;" placeholder="Product Name"/>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='packingAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Packing" onkeyup="keychangemrp(this)"/>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='quantityAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder=
+                                                           "Quantity"/>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='freeAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Free"/>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='batchNoAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Batch number"/>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='ExpiryDateAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Expiry date"/>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='mrpAddTxt' class="myMrpListenerParam" style ="width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="MRP" onkeyup="keychangemrp(this)"/>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='amountAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Per unit purchase price" />
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='scheduleAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Schedule" />
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='prateAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="P.Rate" onkeyup="keychangemrp(this)"/>
+                                                </td>
+                                                <td>
+                                                    <select class="form-control myListenerParam" id="taxesAddTxt" style="width:70px;height:40px;font-weight: 600;font-size: 20px;background-color: #FAFB9E;" onchange="onchangetax(this)">
+                                                        <option value="0" selected="selected">0</option>
+                                                        <option value="5">5</option>
+                                                        <option value="12">12</option>
+                                                        <option value="18">18</option>
+                                                        <option value="28">28</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='marginTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Margin" disabled="true"/>
+                                                </td>
+                                                <!--                                                <td>
+                                                                                                    <input type = 'text' id='cgstAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="CGST in percentage"/>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <input type = 'text' id='sgstAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="SGST in percentage"/>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <input type = 'text' id='igstAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="IGST in percentage"/>
+                                                                                                </td>-->
+                                                <td>
+                                                    <input type = 'text' id='discountAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Discount"/>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='companyAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Company name"/>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='formulaAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Formula"/>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='disNameAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Distributer name"/>
+                                                </td>
+                                                <td>
+                                                    <input type = 'text' id='disNoAddTxt' style = "width:100%;height:40px;font-weight: 700;background-color: peachpuff;margin-left: -6px;margin-right: 50px;" placeholder="Distributer contact number"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button class="btn btn-round" style="font-size: 30px;" onclick="addNewProductEntryRow()">+</button> <button class="btn btn-round" style="font-size: 40px" onclick="removeNewProductEntryRow()"><span style="margin-top: -20px;">-</span></button>
+                                    <br/><hr/>
+                                    
+                                    
+                                    <table id="tabBpelInstSum1" class="" style="font-size : 12px;cursor:pointer;width:40%">
+                                        <tbody id="myTable1">
+                                            <tr id='insertButton1' >
+                                                <td>
+                                                    <div class="demo flowchart-demo"  style="cursor:pointer">			
+                                                        <button id="saveProductBtn" class="btn btn-warning" onclick="addProduct()"><strong>Add Product</strong></button>(Ctrl + a)
+                                                    </div>	
+                                                </td>
+                                                <td>
+                                                    <div class="demo flowchart-demo"  style="cursor:pointer">			                                                        		
+                                                        <button id="updateProductBtn" class="btn btn-warning" onclick="updateProduct()"><strong>Update Product</strong></button>(Ctrl + u)
+                                                    </div>																
+
+                                                </td>
+                                                <td>
+                                                    <div class="demo flowchart-demo"  style="cursor:pointer">			                                                        		
+                                                        <button id="showDeleteFilterBtn" class="btn btn-danger" onclick="deleteProduct()"><strong>Delete Product</strong></button>
+                                                    </div>																
+
+                                                </td>
+                                            </tr>
+
+                                    </table>
+
+                                    <br /> <hr /> 
+                                    <p align='left' style='color:black'> Product CSV File Uploader</p>
+                                    <span class="" id='pr1span' style='width:100%'>
+
+                                        <form  enctype="multipart/form-data">
+                                            <table><tr><td>
+                                                        <input name="file" type="file" id="uploadFile" onchange="get_filename(this);"/></td>
+                                                </tr>
+                                                <tr><td><input type="text" name="fileName" id="fileName" style='width:300px;height:40px;font-weight: 650' /></td></tr>
+                                                <tr><td><input type="button" id="uploadButton" value="Upload Products" class = "blue btn bold" /></td></tr>
+
+                                            </table>
+                                        </form>
+                                        <span id="pr1" style="visibility:hidden"> 
+                                            Uploading file to server. This might take some minute. Please hang on!!<br />
+                                            <img src="img/red_loader.gif" width="50" height="50" />
+                                        </span>
+                                        <!--<progress id="pr1" style="visibility:hidden"></progress>-->
+
+                                    </span>
+                                    <h5>Want to delete product? Please enter PRODUCT ID in following text, this must exists in database</h5>
+
+                                    <h5><input type="text" id="deleteProductTxt" style="width:28%;height:25px;font-weight: 700;" placeholder="Product id (not name)" />
+                                        <br /><br /></h5><br />
+
+
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid" >
+
+
+                    </div>
+
+                    <hr>
+                    
+                    <footer>
+                        <p class="pull-left"><font color='black'>&copy; BTech Software Pvt. Ltd.</a> 2018-2019</p>
+                        <p class="pull-right"><font color='black' >Developed by: <a href="https://www.facebook.com/param.cool2008">Paramjeet Singh.</a></p>
+                        <marquee behavior="scroll" direction="left">In case of any doubt on the product operation, feel free to contact us on +91 9986881500, or sent email to paramjeetsinghbawa@gmail.com </marquee>
+                    </footer>
+
+                    <!-- external javascript
+                    ================================================== -->
+                    <!-- Placed at the end of the document so the pages load faster -->
+
+                    <!-- jQuery -->
+                    <!-- external javascript
+                    ================================================== -->
+                    <!-- Placed at the end of the document so the pages load faster -->
+
+                    <!-- jQuery -->
+                    <script src="custom-js/jquery-1.7.2.min.js"></script>
+                    <!-- jQuery UI -->
+                    <script src="custom-js/jquery-ui-1.8.21.custom.min.js"></script>
+                    <!-- transition / effect library -->
+                    <script src="custom-js/bootstrap-transition.js"></script>
+                    <!-- alert enhancer library -->
+                    <script src="custom-js/bootstrap-alert.js"></script>
+                    <!-- modal / dialog library -->
+                    <script src="custom-js/bootstrap-modal.js"></script>
+                    <!-- custom dropdown library -->
+                    <script src="custom-js/bootstrap-dropdown.js"></script>
+                    <!-- scrolspy library -->
+                    <script src="custom-js/bootstrap-scrollspy.js"></script>
+                    <!-- library for creating tabs -->
+                    <script src="custom-js/bootstrap-tab.js"></script>
+                    <!-- library for advanced tooltip -->
+                    <script src="custom-js/bootstrap-tooltip.js"></script>
+                    <!-- popover effect library -->
+                    <script src="custom-js/bootstrap-popover.js"></script>
+                    <!-- button enhancer library -->
+                    <script src="custom-js/bootstrap-button.js"></script>
+                    <!-- accordion library (optional, not used in demo) -->
+                    <script src="custom-js/bootstrap-collapse.js"></script>
+                    <!-- carousel slideshow library (optional, not used in demo) -->
+                    <script src="custom-js/bootstrap-carousel.js"></script>
+                    <!-- autocomplete library -->
+                    <script src="custom-js/bootstrap-typeahead.js"></script>
+                    <!-- tour library -->
+                    <script src="custom-js/bootstrap-tour.js"></script>
+                    <!-- library for cookie management -->
+                    <script src="custom-js/jquery.cookie.js"></script>
+                    <!-- calander plugin -->
+                    <script src='custom-js/fullcalendar.min.js'></script>
+                    <!-- data table plugin -->
+                    <script src='custom-js/jquery.dataTables.min.js'></script>
+
+                    <!-- chart libraries start -->
+                    <script src="custom-js/excanvas.js"></script>
+                    <script src="custom-js/jquery.flot.min.js"></script>
+                    <script src="custom-js/jquery.flot.pie.min.js"></script>
+                    <script src="custom-js/jquery.flot.stack.js"></script>
+                    <script src="custom-js/jquery.flot.resize.min.js"></script>
+                    <!-- chart libraries end -->
+
+                    <!-- select or dropdown enhancer -->
+                    <script src="custom-js/jquery.chosen.min.js"></script>
+                    <!-- checkbox, radio, and file input styler -->
+                    <script src="custom-js/jquery.uniform.min.js"></script>
+                    <!-- plugin for gallery image view -->
+                    <script src="custom-js/jquery.colorbox.min.js"></script>
+                    <!-- rich text editor library -->
+                    <script src="custom-js/jquery.cleditor.min.js"></script>
+                    <!-- notification plugin -->
+                    <script src="custom-js/jquery.noty.js"></script>
+                    <!-- file manager library -->
+                    <script src="custom-js/jquery.elfinder.min.js"></script>
+                    <!-- star rating plugin -->
+                    <script src="custom-js/jquery.raty.min.js"></script>
+                    <!-- for iOS style toggle switch -->
+                    <script src="custom-js/jquery.iphone.toggle.js"></script>
+                    <!-- autogrowing textarea plugin -->
+                    <script src="custom-js/jquery.autogrow-textarea.js"></script>
+                    <!-- multiple file upload plugin -->
+                    <script src="custom-js/jquery.uploadify-3.1.min.js"></script>
+                    <!-- history.js for cross-browser state change on ajax -->
+                    <script src="custom-js/jquery.history.js"></script>
+                    <script type="text/javascript" src="./Totem Ticker_files/jquery.totemticker.js"></script>
+                    <script src="custom-js/sweet-alert.min.js"></script>
+                    <!-- application script for Charisma demo -->
+                    <script src="custom-js/Dashboard.js"></script>
+                    <script src="custom-js/messageTracking.js"></script>
+
+                    <script src="custom-js/dom.jsPlumb-1.6.0-min.js"></script>
+                    <!--<script src="http://matthewlein.com/js/jquery.easing.1.3.js"></script>-->
+
+                    <script src="custom-js/demo.js"></script>
+                    <script type="text/javascript">
+                                                            window.onload = maxWindow;
+                                                            var currentTab = 0;
+                                                            var currenModal = 0;
+                                                            var searchCommand = 1;
+                                                            var mainMenuCommand = 0;
+                                                            var loc = window.location.href;
+                                                            var split = loc.split("?pid=");
+                                                            var id = split[1];
+                                                            
+                                                            if (id && id !== "") {
+                                                                document.getElementById("productIdForUpdate").value = id;
+                                                                $("#fetchDatabtn").click();
+                                                            }
+
+
+
+                                                            window.onkeydown = function (evnt) {
+
+                                                                //alert(evnt.which);
+                                                                if (evnt.keyCode === 9 || evnt.keyCode === 38 || 
+                                                                        evnt.keyCode === 40 || evnt.keyCode === 37 || evnt.keyCode === 39 || evnt.keyCode === 13) {
+                                                                    try {
+                                                                        document.getElementById("dateAddTxt").style.border = '';
+                                                                        document.getElementById("companyFilterTxt").style.border = '';
+                                                                        document.getElementById("formulaFilterTxt").style.border = '';
+                                                                        document.getElementById("batchNoFilterTxt").style.border = '';
+                                                                    } catch (err) {
+
+                                                                    }
+                                                                    if (mainMenuCommand === 1) {
+                                                                        document.getElementById("menu1").style.border = '';
+                                                                        document.getElementById("menu2").style.border = '';
+                                                                        document.getElementById("menu3").style.border = '';
+                                                                        document.getElementById("menu4").style.border = '';
+                                                                        document.getElementById("menu5").style.border = '';
+                                                                        document.getElementById("menu6").style.border = '';
+                                                                        document.getElementById("menu7").style.border = '';
+                                                                        document.getElementById("menu8").style.border = '';
+                                                                        document.getElementById("menu9").style.border = '';
+
+
+                                                                        document.getElementById("menu" + currentTab).focus();
+                                                                        document.getElementById("menu" + currentTab).style.border = '0.3em solid orange';
+
+
+                                                                        currentTab++;
+
+                                                                        if (currentTab === 10) {
+                                                                            currentTab = 1;
+                                                                        }
+
+                                                                    } else if (currenModal === 0) {
+
+                                                                        if (evnt.keyCode === 39 || evnt.keyCode === 9 || evnt.keyCode === 13) {
+                                                                            if( (document.getElementById("bpelInstSummayTabBody3").children[0].children.length) !== currentTab){
+                                                                                currentTab++;
+                                                                            }
+                                                                        }
+
+                                                                        if (evnt.keyCode === 37) {
+                                                                            //alert(currentTab);
+                                                                            //alert(document.getElementById("bpelInstSummayTabBody3").children[0].children.length);
+                                                                            if (currentTab !== 1) {
+                                                                                currentTab--;
+                                                                            } else if (currentTab !== 1){
+                                                                                currentTab++;
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        if(evnt.keyCode === 40){
+                                                                            if(currentRowIndex < document.getElementById("bpelInstSummayTabBody3").children.length - 1){
+                                                                                currentRowIndex++;
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        if(evnt.keyCode === 38){
+                                                                            if( currentRowIndex > 0){
+                                                                                currentRowIndex--;
+                                                                            }
+                                                                        }
+
+                                                                        var tableRowRountInst = document.getElementById("bpelInstSummayTabBody3").children[0].children.length;
+                                                                        try{
+                                                                            tableRowRountInst = document.getElementById("bpelInstSummayTabBody3").children[currentRowIndex].children.length;
+                                                                        }catch(err){
+                                                                            
+                                                                        }
+                                                                        
+                                                                        for(var j1 = 0 ; j1 < document.getElementById("bpelInstSummayTabBody3").children.length; j1++ ){
+                                                                            for (var i1 = 0; i1 < document.getElementById("bpelInstSummayTabBody3").children[j1].children.length; i1++) {
+                                                                                document.getElementById("bpelInstSummayTabBody3").children[j1].children[i1].style.border = "";
+                                                                                document.getElementById("bpelInstSummayTabBody3").children[j1].children[i1].style.backgroundColor = "#ffffff";
+                                                                            }
+                                                                        }
+
+                                                                        //alert(currentTab);
+                                                                        //alert(document.getElementById("bpelInstSummayTabBody3").children[0].children[currentTab - 1].children[0]);
+                                                                        try {
+                                                                            document.getElementById("bpelInstSummayTabBody3").children[currentRowIndex].children[currentTab - 1].children[0].focus();
+                                                                            document.getElementById("bpelInstSummayTabBody3").children[currentRowIndex].children[currentTab - 1].style.border = '0.3em solid black';
+                                                                            document.getElementById("bpelInstSummayTabBody3").children[currentRowIndex].children[currentTab - 1].style.backgroundColor = '#6DFD2A';
+                                                                            
+                                                                            if(currentTab !== 11){
+                                                                                  document.getElementById("bpelInstSummayTabBody3").children[currentRowIndex].children[currentTab - 1].children[0].select();
+                                                                             }
+                            
+                                                                            
+                                                                        } catch (err) {
+
+                                                                        }
+
+                                                                        if (currentTab > tableRowRountInst) {
+                                                                            currentTab = 1;
+                                                                        }
+
+                                                                    }
+                                                                    if(evnt.keyCode !== 13){
+                                                                        return false;
+                                                                    }
+                                                                } else if (evnt.keyCode === 27) {
+                                                                    return false;
+                                                                } else if (evnt.ctrlKey && evnt.which === 65) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                                    //alert('Ctrl+S!');
+                                                                    //if (finalBilling === 0) {
+                                                                    $("#saveProductBtn").click();
+                                                                    window.scrollTo(0, 0);
+                                                                    //}
+                                                                    return false;
+                                                                } else if (evnt.ctrlKey && evnt.which === 85) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                                    //alert('Ctrl+S!');
+
+                                                                    $("#updateProductBtn").click();
+                                                                    window.scrollTo(0, 0);
+
+                                                                    return false;
+                                                                } else if (evnt.ctrlKey && evnt.which === 73) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                                    //alert('Ctrl+S!');
+                                                                    $("#btnGenerateFinalBill2").click();
+                                                                    window.scrollTo(0, 0);
+                                                                    return false;
+                                                                } else if (evnt.ctrlKey && evnt.which === 77) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                                    //alert('Ctrl+S!');
+                                                                    mainMenuCommand = 1;
+                                                                    searchCommand = 0;
+                                                                    currentTab = 1;
+                                                                    try {
+                                                                        document.getElementById("productNameFilterTxt").style.border = '';
+                                                                        document.getElementById("companyFilterTxt").style.border = '';
+                                                                        document.getElementById("formulaFilterTxt").style.border = '';
+                                                                        document.getElementById("batchNoFilterTxt").style.border = '';
+                                                                    } catch (err) {
+
+                                                                    }
+
+                                                                    document.getElementById("menu1").focus();
+                                                                    document.getElementById("menu1").style.border = '0.2em solid black';
+                                                                    window.scrollTo(0, 0);
+
+                                                                    return false;
+                                                                } else if (evnt.ctrlKey && evnt.which === 70) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                                    //alert('Ctrl+S!');
+                                                                    searchCommand = 1;
+                                                                    mainMenuCommand = 0;
+                                                                    currentTab = 1;
+
+                                                                    try {
+                                                                        document.getElementById("productNameFilterTxt").style.border = '';
+                                                                        document.getElementById("companyFilterTxt").style.border = '';
+                                                                        document.getElementById("formulaFilterTxt").style.border = '';
+                                                                        document.getElementById("batchNoFilterTxt").style.border = '';
+                                                                    } catch (err) {
+
+                                                                    }
+                                                                    document.getElementById("menu1").style.border = '';
+                                                                    document.getElementById("menu2").style.border = '';
+                                                                    document.getElementById("menu3").style.border = '';
+                                                                    document.getElementById("menu4").style.border = '';
+                                                                    document.getElementById("menu5").style.border = '';
+                                                                    document.getElementById("menu6").style.border = '';
+                                                                    document.getElementById("menu7").style.border = '';
+                                                                    document.getElementById("menu8").style.border = '';
+                                                                    document.getElementById("menu9").style.border = '';
+
+                                                                    document.getElementById("productNameFilterTxt").focus();
+                                                                    document.getElementById("productNameFilterTxt").style.border = '0.2em solid black';
+                                                                    window.scrollTo(0, 0);
+
+                                                                    return false;
+                                                                } else if (evnt.ctrlKey && evnt.which === 81) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+
+                                                                    $("#productNameFilterTxt").val("");
+                                                                    $("#productNameFilterTxt").text("");
+
+                                                                    $("#companyFilterTxt").val("");
+                                                                    $("#companyFilterTxt").text("");
+
+                                                                    $("#formulaFilterTxt").val("");
+                                                                    $("#formulaFilterTxt").text("");
+
+                                                                    $("#batchNoFilterTxt").val("");
+                                                                    $("#batchNoFilterTxt").text("");
+                                                                    searchCommand = 1;
+                                                                    mainMenuCommand = 0;
+                                                                    currentTab = 1;
+                                                                    isSearchedProduct = 0;
+                                                                    // if (productDetailDT) {
+                                                                    //   productDetailDT.destroy();
+                                                                    // }
+
+                                                                    //document.getElementById("bpelInstSummayTabBody3").innerHTML = "";
+                                                                    document.getElementById("productNameFilterTxt").focus();
+                                                                    document.getElementById("productNameFilterTxt").style.border = '0.2em solid black';
+
+                                                                    /**/
+
+                                                                    //$('#testInst tr').slice(1).remove();
+
+                                                                    window.scrollTo(0, 0);
+                                                                    return false;
+                                                                }
+
+                                                            }
+
+                                                            function maxWindow() {
+                                                                window.moveTo(0, 0);
+
+
+                                                                if (document.all) {
+                                                                    top.window.resizeTo(screen.availWidth, screen.availHeight);
+                                                                } else if (document.layers || document.getElementById) {
+                                                                    if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
+                                                                        top.window.outerHeight = screen.availHeight;
+                                                                        top.window.outerWidth = screen.availWidth;
+                                                                    }
+                                                                }
+                                                            }
+
+
+
+                                                            $('#myMessageTrackingWindow')
+                                                                    .on('hide', function () {
+
+                                                                    })
+                                                                    .on('hidden', function () {
+                                                                        currentTab = 0;
+                                                                        currenModal = 0;
+                                                                    })
+                                                                    .on('show', function () {
+
+                                                                    })
+                                                                    .on('shown', function () {
+                                                                        currentTab = 0;
+                                                                        currenModal = 1;
+                                                                    });
+
+                    </script> 
+
+                    </body>
+
+                    </html>

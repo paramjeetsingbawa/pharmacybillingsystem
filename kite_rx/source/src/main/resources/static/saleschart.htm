@@ -1,0 +1,660 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AVON PHARMA MEDICAL CORNER</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="BPEL Monitoring Tool">
+        <meta name="author" content="Paramjeet Singh">
+
+        <!-- The styles -->
+        <link id="bs-css" href="css/bootstrap-slate.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-bottom: 40px;
+            }
+            .sidebar-nav {
+                padding: 9px 0;
+            }
+            ul{
+                margin-left: -15px;
+            }
+
+            ul li{
+                display: inline;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        </style>
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="css/charisma-app.css" rel="stylesheet">
+        <link href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+        <link href='css/fullcalendar.css' rel='stylesheet'>
+        <link href='css/fullcalendar.print.css' rel='stylesheet'  media='print'>
+        <link href='css/chosen.css' rel='stylesheet'>
+        <link href='css/uniform.default.css' rel='stylesheet'>
+        <link href='css/colorbox.css' rel='stylesheet'>
+        <link href='css/jquery.cleditor.css' rel='stylesheet'>
+        <link href='css/jquery.noty.css' rel='stylesheet'>
+        <link href='css/noty_theme_default.css' rel='stylesheet'>
+        <link href='css/elfinder.min.css' rel='stylesheet'>
+        <link href='css/elfinder.theme.css' rel='stylesheet'>
+        <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+        <link href='css/opa-icons.css' rel='stylesheet'>
+        <link href='css/uploadify.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./css/demo.css">
+        <link href='css/dataTables.bootstrap.min.css' rel='stylesheet' />
+
+
+        <link rel="shortcut icon" href="img/favicon.ico">
+    </head>
+
+    <body style="background-repeat:x-repeat;background-size: 100% auto;
+          background-position: center top;background-attachment: fixed;background-color:white;color:black">
+
+        <script type="text/javascript">
+            jQuery.noConflict();
+        </script>
+
+        <script type="text/javascript">
+            $(function () {
+                $('#vertical-ticker').totemticker({
+                    row_height: '100px',
+                    next: '#ticker-next',
+                    previous: '#ticker-previous',
+                    stop: '#stop',
+                    start: '#start',
+                    mousestop: true
+                });
+            });
+        </script>
+        <div>
+            <div>
+                <div id="content">
+                    <div class="row-fluid">
+                        <div class="box span12">
+                            <div class="well" style="cursor: default; font-size: 18px;padding-left: 8px;padding-top: 8px;">
+                                <ul>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;margin-left: 10px;">
+                                        <a id="menu1" href="SaleBillV2.html" class="btn btn-success" style="width:110px;height:30px;text-align: center;vertical-align: middle;"><font color="white" style="cursor: pointer; font-size: 13px;">Sales & Billing</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu2" href="purchaseOrder.html" class="btn btn-success" style="width:130px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Product Purchase</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu3" href="addOrUpdateProduct.html" class="btn btn-success" style="width:140px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Product Maintenance</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu4" href="salesHistory.html" class="btn btn-success" style="width:130px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Advanced Options</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu5" href="monthlyPurchaseReport.html" target="_blank" class="btn btn-success" style="width:110px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Purchase Report</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu6" href="monthlySaleReport.html" target="_blank" class="btn btn-success" style="width:110px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Sale Reports</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu7" href="monthlySaleReportAnalysis.html" class="btn btn-success" style="width:110px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Sales Summary</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu8" href="saleschart.htm" class="btn btn-danger" style="width:110px;height:30px;text-align: center;vertical-align: middle"><font color="white" style="cursor: pointer; font-size: 13px;">Sales chart</font></a>
+                                    </li>
+                                    <li style="background-color: #BA0600;color: whitesmoke;width: 100px;height: 60px;">
+                                        <a id="menu9" href="tour.html" id="menu1" class="btn btn-success" style="width:110px;height:30px;text-align: center;vertical-align: middle"><span class="hidden-tablet" style="cursor: pointer; font-size: 13px;"><font color="white" >Guide</font></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div id = "filterDiv">
+                                <center>
+                                    <br />
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+
+                                                    <select class="form-control" id="Year" style="width:95%;height:40px;font-weight: 600;font-size: 25px;">
+                                                        <option value="" selected="selected">Select Year</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+
+                                                    <select class="form-control" id="Month" style="width:95%;height:40px;font-weight: 600;font-size: 20px;">
+                                                        <option value="" selected="selected">Select Month</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+
+                                                    <select class="form-control" id="Date" style="width:95%;height:40px;font-weight: 600;font-size: 20px;">
+                                                        <option value="" selected="selected">Select Date</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                <button class="btn btn-primary" style="width:95%;height:40px;font-weight: 600;font-size: 25px;margin-top: -15px;text-align: center;vertical-align: central" onclick="getSalesData()"> Fetch Sale Report</button>
+                            </td>
+                                        </tr>
+                                    </table>
+
+
+                                </center>
+                            </div>
+
+                            <hr />
+                            <center>
+                            <div class="box-content ">
+                                <div id="chartContainer1" style="width: 70%; height: 400px;background-color: black"></div>
+                            </div>
+                            </center>
+                        </div>
+                    </div>
+                    <!-- content ends -->
+                </div><!--/#content.span10-->
+                <hr />
+
+                <footer>
+                    <p class="pull-left"><font color='black'>&copy; BTech Software Pvt. Ltd.</a> 2018-2019</p>
+                    <p class="pull-right"><font color='black' >Developed by: <a href="https://www.facebook.com/param.cool2008">Paramjeet Singh.</a></p>
+                    <marquee behavior="scroll" direction="left">In case of any doubt on the product operation, feel free to contact us on +91 9986881500, or sent email to paramjeetsinghbawa@gmail.com </marquee>
+                </footer>
+            </div>
+
+            <!-- external javascript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+
+            <!-- jQuery -->
+            <script src="custom-js/jquery-1.7.2.min.js"></script>
+            <!-- jQuery UI -->
+            <script src="custom-js/jquery-ui-1.8.21.custom.min.js"></script>
+            <!-- transition / effect library -->
+            <script src="custom-js/bootstrap-transition.js"></script>
+            <!-- alert enhancer library -->
+            <script src="custom-js/bootstrap-alert.js"></script>
+            <!-- modal / dialog library -->
+            <script src="custom-js/bootstrap-modal.js"></script>
+            <!-- custom dropdown library -->
+            <script src="custom-js/bootstrap-dropdown.js"></script>
+            <!-- scrolspy library -->
+            <script src="custom-js/bootstrap-scrollspy.js"></script>
+            <!-- library for creating tabs -->
+            <script src="custom-js/bootstrap-tab.js"></script>
+            <!-- library for advanced tooltip -->
+            <script src="custom-js/bootstrap-tooltip.js"></script>
+            <!-- popover effect library -->
+            <script src="custom-js/bootstrap-popover.js"></script>
+            <!-- button enhancer library -->
+            <script src="custom-js/bootstrap-button.js"></script>
+            <!-- accordion library (optional, not used in demo) -->
+            <script src="custom-js/bootstrap-collapse.js"></script>
+            <!-- carousel slideshow library (optional, not used in demo) -->
+            <script src="custom-js/bootstrap-carousel.js"></script>
+            <!-- autocomplete library -->
+            <script src="custom-js/bootstrap-typeahead.js"></script>
+            <!-- tour library -->
+            <script src="custom-js/bootstrap-tour.js"></script>
+            <!-- library for cookie management -->
+            <script src="custom-js/jquery.cookie.js"></script>
+            <!-- calander plugin -->
+            <script src='custom-js/fullcalendar.min.js'></script>
+            <!-- data table plugin -->
+            <script src='custom-js/jquery.dataTables.min.js'></script>
+
+            <!-- chart libraries start -->
+            <script src="custom-js/excanvas.js"></script>
+            <script src="custom-js/jquery.flot.min.js"></script>
+            <script src="custom-js/jquery.flot.pie.min.js"></script>
+            <script src="custom-js/jquery.flot.stack.js"></script>
+            <script src="custom-js/jquery.flot.resize.min.js"></script>
+            <!-- chart libraries end -->
+
+            <!-- select or dropdown enhancer -->
+            <script src="custom-js/jquery.chosen.min.js"></script>
+            <!-- checkbox, radio, and file input styler -->
+            <script src="custom-js/jquery.uniform.min.js"></script>
+            <!-- plugin for gallery image view -->
+            <script src="custom-js/jquery.colorbox.min.js"></script>
+            <!-- rich text editor library -->
+            <script src="custom-js/jquery.cleditor.min.js"></script>
+            <!-- notification plugin -->
+            <script src="custom-js/jquery.noty.js"></script>
+            <!-- file manager library -->
+            <script src="custom-js/jquery.elfinder.min.js"></script>
+            <!-- star rating plugin -->
+            <script src="custom-js/jquery.raty.min.js"></script>
+            <!-- for iOS style toggle switch -->
+            <script src="custom-js/jquery.iphone.toggle.js"></script>
+            <!-- autogrowing textarea plugin -->
+            <script src="custom-js/jquery.autogrow-textarea.js"></script>
+            <!-- multiple file upload plugin -->
+            <script src="custom-js/jquery.uploadify-3.1.min.js"></script>
+            <!-- history.js for cross-browser state change on ajax -->
+            <script src="custom-js/jquery.history.js"></script>
+            <script type="text/javascript" src="./Totem Ticker_files/jquery.totemticker.js"></script>
+            <script src="custom-js/jquery.dataTables.min.js" type="text/javascript"></script>
+            <script src="custom-js/dataTables.bootstrap.min.js" type="text/javascript"></script>
+            <!-- application script for Charisma demo -->
+            <!--<script src="custom-js/Dashboard.js"></script>-->
+            <script src="custom-js/messageTracking.js"></script>
+
+            <script src="custom-js/dom.jsPlumb-1.6.0-min.js"></script>
+            <script src="custom-js/demo.js"></script>
+
+            <script type="text/javascript" src="custom-js/jquery.js"></script>
+            <script type="text/javascript" src="CanvasJS/source/canvasjs.js"></script>	
+            <script type="text/javascript">
+
+            for (var i = 2019; i < 2030; i++) {
+                document.getElementById("Year").innerHTML = document.getElementById("Year").innerHTML + "<option value='" + i + "'>" + i + "</option>";
+            }
+
+            for (var i = 1; i <= 31; i++) {
+                document.getElementById("Date").innerHTML = document.getElementById("Date").innerHTML + "<option value='" + i + "'>" + i + "</option>";
+            }
+
+            for (var i = 1; i <= 12; i++) {
+                var str = '';
+                if (i === 1) {
+                    str = "JAN";
+                } else if (i === 2) {
+                    str = "FEB";
+                } else if (i === 3) {
+                    str = "MAR";
+                } else if (i === 4) {
+                    str = "APR";
+                } else if (i === 5) {
+                    str = "MAY";
+                } else if (i === 6) {
+                    str = "JUN";
+                } else if (i === 7) {
+                    str = "JUL";
+                } else if (i === 8) {
+                    str = "AUG";
+                } else if (i === 9) {
+                    str = "SEP";
+                } else if (i === 10) {
+                    str = "OCT";
+                } else if (i === 11) {
+                    str = "NOV";
+                } else if (i === 12) {
+                    str = "DEC";
+                }
+                if (i < 10) {
+                    document.getElementById("Month").innerHTML = document.getElementById("Month").innerHTML + "<option value='0" + i + "'>" + str + "</option>";
+                } else {
+                    document.getElementById("Month").innerHTML = document.getElementById("Month").innerHTML + "<option value='" + i + "'>" + str + "</option>";
+                }
+            }
+
+
+            $(document).ready(function () {
+
+
+
+// Ajax request for getting JSON data
+                getSalesData();
+
+            });
+            
+            
+
+            function getSalesData() {
+                var url = "/AvonMedicalService/rest/CoreService/getSalesDataForChart?";
+
+                var yearTxtValue = document.getElementById("Year");
+                if (yearTxtValue) {
+                    if ($.trim(yearTxtValue.value) !== "") {
+                        var monthTxtValue = document.getElementById("Month");
+                        if (monthTxtValue) {
+                            if ($.trim(monthTxtValue.value) !== "") {
+                                var dateTxtValue = document.getElementById("Date");
+                                if (dateTxtValue) {
+                                    if ($.trim(dateTxtValue.value) !== "") {
+                                        url += "&dateFilter=" + dateTxtValue.value + "/" + monthTxtValue.value + "/" + yearTxtValue.value;
+                                    } else {
+                                        url += "&dateFilter=" + monthTxtValue.value + "/" + yearTxtValue.value;
+                                    }
+                                } else {
+                                    url += "&dateFilter=" + monthTxtValue.value + "/" + yearTxtValue.value;
+                                }
+                            }
+                        }
+                        //bpelFilterTxtValue.value = "";
+                    }
+                }
+
+                var dataPointsTemp = [];
+                var dataPointsHumidity = [];
+
+                $.getJSON(url, function (data) {
+                    for (var i = data.length - 1; i >= 0; i--) {
+                        dataPointsTemp.push({label: data[i].billDate, y: data[i].sa});
+                        dataPointsHumidity.push({label: data[i].billDate, y: data[i].sa});
+                    }
+
+                    // Chart with label + y values
+
+                    var chart = new CanvasJS.Chart("chartContainer1",
+                            {
+                                theme: "theme6",
+                                animationEnabled: true,
+                                title: {
+                                    text: "AVON-PHARMACY-DAILY-SALES-ANALYSIS"
+                                },
+                                data: [
+                                    {
+                                        type: "column",
+                                        dataPoints: dataPointsTemp
+                                    }]
+                            });
+                    chart.render();
+
+
+                });
+            }
+
+            </script>
+
+            <script type="text/javascript">
+                window.onload = maxWindow;
+                var currentTab = 1;
+                var currenModal = 0;
+                var searchCommand = 0;
+                var mainMenuCommand = 1;
+                window.onkeydown = function (evnt) {
+
+                    //alert(evnt.which);
+                    if (evnt.keyCode === 9) {
+                        try {
+                            document.getElementById("productNameFilterTxt").style.border = '';
+                            document.getElementById("companyFilterTxt").style.border = '';
+                            document.getElementById("formulaFilterTxt").style.border = '';
+                            document.getElementById("batchNoFilterTxt").style.border = '';
+                        } catch (err) {
+
+                        }
+                        if (mainMenuCommand === 1) {
+                            document.getElementById("menu1").style.border = '';
+                            document.getElementById("menu2").style.border = '';
+                            document.getElementById("menu3").style.border = '';
+                            document.getElementById("menu4").style.border = '';
+                            document.getElementById("menu5").style.border = '';
+                            document.getElementById("menu6").style.border = '';
+                            document.getElementById("menu7").style.border = '';
+                            document.getElementById("menu8").style.border = '';
+                            document.getElementById("menu9").style.border = '';
+
+
+                            document.getElementById("menu" + currentTab).focus();
+                            document.getElementById("menu" + currentTab).style.border = '0.3em solid orange';
+
+
+                            currentTab++;
+
+                            if (currentTab === 10) {
+                                currentTab = 1;
+                            }
+
+                        } else if (currenModal === 1 && searchCommand === 1) {
+                            if (finalBilling === 0) {
+                                document.getElementById("amountPerUnit").style.border = '';
+                                document.getElementById("addQuantityForBillingTxt").style.border = '';
+                                if (currentTab === 0) {
+                                    document.getElementById("amountPerUnit").focus();
+                                    document.getElementById("amountPerUnit").style.border = '0.2em solid black';
+                                }
+
+                                if (currentTab === 1) {
+                                    document.getElementById("addQuantityForBillingTxt").focus();
+                                    document.getElementById("addQuantityForBillingTxt").style.border = '0.2em solid black';
+                                }
+
+                                currentTab++;
+
+                                if (currentTab === 2) {
+                                    currentTab = 0;
+                                }
+                            }
+
+                            if (finalBilling === 1) {
+
+                                document.getElementById("prescriberNameForBillingTxt").style.border = '';
+                                document.getElementById("prescriptionDateTxt").style.border = '';
+                                document.getElementById("custNameForBillingTxt").style.border = '';
+                                document.getElementById("custNameMobileNumberTxt").style.border = '';
+                                document.getElementById("additionalDicount").style.border = '';
+                                document.getElementById("btnGenerateFinalBill2").style.border = '';
+
+
+                                if (currentTab === 0) {
+                                    document.getElementById("prescriberNameForBillingTxt").focus();
+                                    document.getElementById("prescriberNameForBillingTxt").style.border = '0.2em solid black';
+                                }
+
+                                if (currentTab === 1) {
+                                    document.getElementById("prescriptionDateTxt").focus();
+                                    document.getElementById("prescriptionDateTxt").style.border = '0.2em solid black';
+                                }
+
+                                if (currentTab === 2) {
+                                    document.getElementById("custNameForBillingTxt").focus();
+                                    document.getElementById("custNameForBillingTxt").style.border = '0.2em solid black';
+                                }
+
+                                if (currentTab === 3) {
+                                    document.getElementById("custNameMobileNumberTxt").focus();
+                                    document.getElementById("custNameMobileNumberTxt").style.border = '0.2em solid black';
+                                }
+
+                                if (currentTab === 4) {
+                                    document.getElementById("additionalDicount").focus();
+                                    document.getElementById("additionalDicount").style.border = '0.2em solid black';
+                                }
+
+                                if (currentTab === 5) {
+                                    document.getElementById("btnGenerateFinalBill2").focus();
+                                    document.getElementById("btnGenerateFinalBill2").style.border = '0.2em solid black';
+                                }
+
+                                currentTab++;
+
+                                if (currentTab === 6) {
+                                    currentTab = 0;
+                                }
+                            }
+
+                        } else if (currenModal === 0) {
+
+                            if (isSearchedProduct === 0) {
+
+                                document.getElementById("productNameFilterTxt").style.border = '';
+                                document.getElementById("companyFilterTxt").style.border = '';
+                                document.getElementById("formulaFilterTxt").style.border = '';
+                                document.getElementById("batchNoFilterTxt").style.border = '';
+
+                                if (currentTab === 0) {
+                                    document.getElementById("productNameFilterTxt").focus();
+                                    document.getElementById("productNameFilterTxt").style.border = '0.2em solid black';
+                                }
+
+                                if (currentTab === 1) {
+                                    document.getElementById("companyFilterTxt").focus();
+                                    document.getElementById("companyFilterTxt").style.border = '0.2em solid black';
+                                }
+
+                                if (currentTab === 2) {
+                                    document.getElementById("formulaFilterTxt").focus();
+                                    document.getElementById("formulaFilterTxt").style.border = '0.2em solid black';
+                                }
+
+                                if (currentTab === 3) {
+                                    document.getElementById("batchNoFilterTxt").focus();
+                                    document.getElementById("batchNoFilterTxt").style.border = '0.2em solid black';
+                                }
+
+                                currentTab++;
+
+                                if (currentTab === 4) {
+                                    currentTab = 0;
+                                }
+                            } else {
+                                currentTab++;
+                                //alert(document.getElementById("bpelInstSummayTabBody3").children.length);
+                                for (var i1 = 0; i1 < document.getElementById("bpelInstSummayTabBody3").children.length; i1++) {
+                                    document.getElementById("bpelInstSummayTabBody3").children[i1].style.border = "";
+                                    document.getElementById("bpelInstSummayTabBody3").children[i1].style.backgroundColor = "#ffffff";
+                                }
+
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[0].children[0].focus();
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].style.border = '0.3em solid black';
+                                document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].style.backgroundColor = '#6DFD2A';
+
+
+                                if (currentTab >= tableRowRountInst) {
+                                    currentTab = 0;
+                                }
+                            }
+                        }
+                        return false;
+                    } else if (evnt.keyCode === 27) {
+                        return false;
+                    } else if (evnt.ctrlKey && evnt.which === 80) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                        //alert('Ctrl+S!');
+                        if (finalBilling === 0) {
+                            $("#saveBillBtn").click();
+                            window.scrollTo(0, 0);
+                        }
+                        return false;
+                    } else if (evnt.ctrlKey && evnt.which === 71) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                        //alert('Ctrl+S!');
+
+                        $("#btnGenerateBill").click();
+                        window.scrollTo(0, 0);
+
+                        return false;
+                    } else if (evnt.ctrlKey && evnt.which === 73) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                        //alert('Ctrl+S!');
+                        $("#btnGenerateFinalBill2").click();
+                        window.scrollTo(0, 0);
+                        return false;
+                    } else if (evnt.ctrlKey && evnt.which === 77) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                        //alert('Ctrl+S!');
+                        mainMenuCommand = 1;
+                        searchCommand = 0;
+                        currentTab = 1;
+                        try {
+                            document.getElementById("productNameFilterTxt").style.border = '';
+                            document.getElementById("companyFilterTxt").style.border = '';
+                            document.getElementById("formulaFilterTxt").style.border = '';
+                            document.getElementById("batchNoFilterTxt").style.border = '';
+                        } catch (err) {
+
+                        }
+
+                        document.getElementById("menu1").focus();
+                        document.getElementById("menu1").style.border = '0.2em solid black';
+                        window.scrollTo(0, 0);
+
+                        return false;
+                    } else if (evnt.ctrlKey && evnt.which === 70) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                        //alert('Ctrl+S!');
+                        searchCommand = 1;
+                        mainMenuCommand = 0;
+                        currentTab = 1;
+
+                        try {
+                            document.getElementById("productNameFilterTxt").style.border = '';
+                            document.getElementById("companyFilterTxt").style.border = '';
+                            document.getElementById("formulaFilterTxt").style.border = '';
+                            document.getElementById("batchNoFilterTxt").style.border = '';
+                        } catch (err) {
+
+                        }
+                        document.getElementById("menu1").style.border = '';
+                        document.getElementById("menu2").style.border = '';
+                        document.getElementById("menu3").style.border = '';
+                        document.getElementById("menu4").style.border = '';
+                        document.getElementById("menu5").style.border = '';
+                        document.getElementById("menu6").style.border = '';
+                        document.getElementById("menu7").style.border = '';
+                        document.getElementById("menu8").style.border = '';
+                        document.getElementById("menu9").style.border = '';
+
+                        document.getElementById("productNameFilterTxt").focus();
+                        document.getElementById("productNameFilterTxt").style.border = '0.2em solid black';
+                        window.scrollTo(0, 0);
+
+                        return false;
+                    } else if (evnt.ctrlKey && evnt.which === 81) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+
+                        $("#productNameFilterTxt").val("");
+                        $("#productNameFilterTxt").text("");
+
+                        $("#companyFilterTxt").val("");
+                        $("#companyFilterTxt").text("");
+
+                        $("#formulaFilterTxt").val("");
+                        $("#formulaFilterTxt").text("");
+
+                        $("#batchNoFilterTxt").val("");
+                        $("#batchNoFilterTxt").text("");
+                        searchCommand = 1;
+                        mainMenuCommand = 0;
+                        currentTab = 1;
+                        isSearchedProduct = 0;
+                        // if (productDetailDT) {
+                        //   productDetailDT.destroy();
+                        // }
+
+                        //document.getElementById("bpelInstSummayTabBody3").innerHTML = "";
+                        document.getElementById("productNameFilterTxt").focus();
+                        document.getElementById("productNameFilterTxt").style.border = '0.2em solid black';
+
+                        /**/
+
+                        //$('#testInst tr').slice(1).remove();
+
+                        window.scrollTo(0, 0);
+                        return false;
+                    }
+
+                }
+
+                function maxWindow() {
+                    window.moveTo(0, 0);
+
+
+                    if (document.all) {
+                        top.window.resizeTo(screen.availWidth, screen.availHeight);
+                    } else if (document.layers || document.getElementById) {
+                        if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
+                            top.window.outerHeight = screen.availHeight;
+                            top.window.outerWidth = screen.availWidth;
+                        }
+                    }
+                }
+
+
+
+                $('#myMessageTrackingWindow')
+                        .on('hide', function () {
+
+                        })
+                        .on('hidden', function () {
+                            currentTab = 0;
+                            currenModal = 0;
+                        })
+                        .on('show', function () {
+
+                        })
+                        .on('shown', function () {
+                            currentTab = 0;
+                            currenModal = 1;
+                        });
+
+            </script> 
+    </body>
+</html>

@@ -1,0 +1,87 @@
+.flowchart-demo .window { border:1px solid #346789;
+box-shadow: 2px 2px 19px #aaa;
+   -o-box-shadow: 2px 2px 19px #aaa;
+   -webkit-box-shadow: 2px 2px 19px #aaa;
+   -moz-box-shadow: 2px 2px 19px #aaa;
+-moz-border-radius:0.5em;
+border-radius:0.5em;
+opacity:0.8;
+filter:alpha(opacity=80);
+text-align:center;
+vertical-align : middle;
+z-index:20;
+color:white;
+background-color:#eeeeef;
+font-family:helvetica;padding:0.5em;
+font-size:1em;
+}
+
+.flowchart-demo .window:hover {
+	box-shadow: 2px 2px 19px #444;
+   -o-box-shadow: 2px 2px 19px #444;
+   -webkit-box-shadow: 2px 2px 19px #444;
+   -moz-box-shadow: 2px 2px 19px #444;
+    opacity:0.6;
+	filter:alpha(opacity=60);
+}
+
+.flowchart-demo .active {
+	border:1px dotted green;
+}
+.flowchart-demo .hover {
+	border:1px dotted red;
+}
+
+#flowchartWindow1 { top:10em;left:5em;}
+#flowchartWindow2 { top:15em; left:15em;}
+#flowchartWindow3 { top:22em; left:30em; }
+#flowchartWindow4 { top:30em; left:30em;}
+#flowchartWindow5 { top:30em; left:24em;}
+
+#myMessageTrackingWindow {
+	z-index: 10000;
+	background-color:#FFFFFF;
+	position:fixed; top:0px; left:0px; width:90%; height:0%; color:#FFFFFF; text-align:left; vertical-align:middle;
+        margin: 0px;
+	overflow:scroll;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#myMessageTrackingWindowDiagram2 {
+	z-index: 10000;
+	filter: alpha(opacity=50); /*older IE*/
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE */
+	-moz-opacity: .40; /*older Mozilla*/
+	-khtml-opacity: 0.40;   /*older Safari*/
+	opacity: 0.40;   /*supported by current Mozilla, Safari, and Opera*/
+	background-color:#FFFFFF;
+	position:fixed; top:0px; left:0px; width:0%; height:100%; color:#FFFFFF; ; vertical-align:middle;
+	overflow:scroll;
+}
+
+.flowchart-demo ._jsPlumb_connector { z-index:10; }
+.flowchart-demo ._jsPlumb_endpoint, .endpointTargetLabel, .endpointSourceLabel{ z-index:21;cursor:pointer; }
+
+.flowchart-demo .aLabel {
+ 	background-color:white; 
+	padding:0.4em; 
+	font:12px sans-serif; 
+	
+	z-index:21;
+	border:1px dotted gray;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	cursor: pointer;
+}
+.flowchart-demo .aLabel._jsPlumb_hover {
+	background-color:#5C96BC;
+	color:white;	
+	border:1px solid white;
+}

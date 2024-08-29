@@ -1,0 +1,238 @@
+<html>
+    <head>
+        <style type="text/css" media="print">
+            @page {
+                size: auto;   /* auto is the initial value */
+                margin: 0;  /* this affects the margin in the printer settings */
+            }
+
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/sweet-alert.css" />
+        <script src="custom-js/jquery.min.js"></script>
+        <script src="custom-js/bootstrap.min.js"></script>
+        <script src="custom-js/sweet-alert.min.js"></script>
+    </head>
+
+    <body style="font-family: monospace; margin-left: 20px;" onload="getInvoice(2)">
+
+
+
+        <div>
+            <center>
+                <!--<button id="p2" class="btn btn-success" onclick="myFunction()">Print Page</button>-->
+                <button id="p1" class="btn btn-danger" onclick="deleteSalesData()">Delete Sale Record</button>
+                <button id="p3" class="btn btn-warning" onclick="editSalesData()">Edit Sale Record</button>
+                <a id="p3" class="btn btn-primary" target="_blank" onclick="openBillOfPay()">Print Invoice</a></center> 
+            <center>
+                <h3 id="invHeader2">GST INVOICE</h3>
+                <h3 id="shopName" style="margin-top: -5px;">AVON PHARMA MEDICAL CORNER</h3>
+            </center>
+
+            <table style="font-size: 14px;font-weight: 700;width:96%;" border="0" >
+                <tr id="shopAdd1" style="font-size: 14px;">
+                    <td>
+                        <div>Hospital Chowk,</div>
+                    </td>
+                    <td style="text-align: right;margin-right: 200px;font-size: 16px;" id="shopAdd1_1"> 
+                        Bill No : <span id="billPrintNo" ></span>
+                    </td>
+
+                </tr>
+                <tr id="shopAdd2" style="font-size: 14px;">
+                    <td>
+                        <div>Satna, M.P., 485001, PH: 409511, Centres : 511 </div>
+                    </td>
+                    <td style="text-align: right;font-size: 16px;" id="shopAdd2_1">
+                        Bill Date : <span id="billPrintDate"></span>
+                    </td>
+
+                </tr>
+                <tr id="shopGstin" style="font-size: 14px;">
+                    <td>
+                        <div>GSTIN : 23APEPS2411Q1ZQ</div>
+                    </td>
+                    <td style="text-align: right;font-size: 16px;" id="shopGstin_1">
+                        Payment Status : <span id="creditStatus" style="font-size: 18px;font-weight:700;"></span>
+                    </td>
+                </tr>
+                <tr id="shopDl1" style="font-size: 14px;">
+                    <td>
+                        <div>D.L. No. : 13/DL R/86</div>
+                    </td>
+                </tr>
+                <tr id="shopDl2" style="font-size: 14px;">
+                    <td>
+                        <div>D.L. No. : 14/DL R/86</div>
+                    </td>
+                </tr>
+            </table>
+
+            <center>
+                <span id="creditAmount" style="font-size: 18px;font-weight:700;"></span>
+                <table>
+                    <tr>
+                        <td><span id="creditSpn" style="display: none;font-size: 18px;font-weight:700;">Credit Amount : </span></td>
+                        <td><input type="text" id="creditAmountTxt" style="background-color:#FAFB9E;width:100px;height:30px;font-weight: 600;font-size: 16px;display: none;" placeholder="CREDIT AMOUNT" /></td>
+                        <td><span id="payRecieve" style="display: none;font-size: 18px;font-weight:700;">Payment </span></td>
+                        <td><input type="text" id="paymentAmountTxt" style="background-color:#FAFB9E;width:100px;height:30px;font-weight: 600;font-size: 16px;display: none;" placeholder="PAYMENT AMOUNT" /></td>
+                        <td><span id="payRecieve1" style="display: none;font-size: 18px;font-weight:700;">CHQ NO</span></td>
+                        <td><input type="text" id="paymentAmountTxt1" style="background-color:#FAFB9E;width:100px;height:30px;font-weight: 600;font-size: 16px;display: none;" placeholder="CHEQUE NO" /></td>
+                        <td><span id="payRecieve2" style="display: none;font-size: 18px;font-weight:700;">CARD NO</span></td>
+                        <td><input type="text" id="paymentAmountTxt2" style="background-color:#FAFB9E;width:100px;height:30px;font-weight: 600;font-size: 16px;display: none;" placeholder="CARD NO" /></td>
+                        <td><span id="payRecieve3" style="display: none;font-size: 18px;font-weight:700;">DD NO</span></td>
+                        <td><input type="text" id="paymentAmountTxt3" style="background-color:#FAFB9E;width:100px;height:30px;font-weight: 600;font-size: 16px;display: none;" placeholder="DD NO" /></td>
+                        <td><span id="statusSpn" style="display: none;font-size: 18px;font-weight:700;">Payment Status : </span></td>
+                        <td>
+                            <select class="form-control" id="creditStatusTxt" style="background-color:#FAFB9E;width:200px;height:40px;font-weight: 600;font-size: 16px;display: none;">
+                                <option value="" selected="selected">CREDIT STATUS</option>
+                                <option value="PAID">PAID</option>
+                                <option value="PAYMENT-PENDING">PAYMENT-PENDING</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </center>
+            <br />
+            <table id="invHeaderTable" style="width:100%;font-size: 12px;" border="0" >
+
+                <tr>
+                    <td>
+                        <div>Customer Name : <span id="custname"></span><input type="text" id="custnameTxt" style="background-color:#FAFB9E;width:200px;height:30px;font-weight: 600;font-size: 16px;display: none;" placeholder="CUSTOMER NAME"/></div>
+                    </td>
+                    <td>
+                        <div>Prescriber Name : <span id="prescribername"></span><input type="text" id="prescriberNameTxt" style="background-color:#FAFB9E;width:200px;height:30px;font-weight: 600;font-size: 16px;display: none;" placeholder="DOCTOR NAME"/></div>
+                    </td>
+                    <td>
+                        <div>Total Products : <span id="invoicenumber2"></span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>Customer Contact : <span id="custmobile"></span> <input type="text" id="custmobileTxt" style="background-color:#FAFB9E;width:200px;height:30px;font-weight: 600;font-size: 16px;display: none;" placeholder="CUSTOMER MOIBLE"/> </div>
+                    </td>
+                    <td>
+                        <div>Prescription Written Date : <span id="prescriptionDate"></span><input type="text" id="prescriptionWrittenDateTxt" style="background-color:#FAFB9E;width:200px;height:30px;font-weight: 600;font-size: 16px;display: none;" placeholder="Prescription Date"/></div>
+                    </td>
+                    <td>
+                        <div>Invoice Date : <span id="invoiceDate"></span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>Customer Address : <span id="custaddress"></span></div>
+                    </td>
+                    <td>
+                        <div>Tracking Sale ID  : <span id="invoicenumber"></span></div>
+                    </td>
+                    <td>
+                        <div>Payment Method : <span id="paymentType" style="font-size: 12px;font-weight:700;"></span>
+                            <select class="form-control" id="paymentTypeTxt" style="background-color:#FAFB9E;width:200px;height:40px;font-weight: 600;font-size: 16px;display: none;">
+                                <option value="" selected="selected">PAYMENT TYPE</option>
+                                <option value="CASH">CASH</option>
+                                <option value="CARD-PAYMENT">CARD PAYMENT</option>
+                                <option value="CREDIT">CREDIT</option>
+                            </select>
+
+
+                    </td>
+                </tr>
+
+            </table>
+
+
+            <br />
+            <table  border="2"  class="table" style="width:97%;text-align: left;">
+                <tr id="tabBpelVariableListHead" style="font-size: 10px;">
+                    <th align="left">SR. NO </th>
+                    <th align='left'>PRODUCT NAME</th>
+                    <th align='left'>BATCH NUMBER</th>
+                    <th align='left'>COMPANY</th>
+                    <th align='left'>PACKING</th>
+                    <th align='left'>EXPIRY DATE</th>
+                    <th align='right' style="text-align: right;">MRP/PACK</th>
+                    <th align='right' style="text-align: right;">QUANTITY ORD/RET </th>
+                    <th align='right' style="text-align: right;">TOTAL-AMOUNT/UNIT</th>
+                    <th align='right' style="text-align: right;">TOTAL-TAXABLE-AMOUNT</th>
+                    <th align='right' style="text-align: right;">CGST</th>
+                    <th align='right' style="text-align: right;">SGST</th>    
+                    
+                    
+
+                    <!--                                <th align='left'>CGST (%)</th>
+                                                    <th align='left'>SGST (%)</th>
+                                                    <th align='left'>IGST (%)</th>-->
+
+                    <th align='right' style="text-align: right;">TOTAL AMOUNT WITH TAX</th>
+                </tr>  
+
+                <tbody id='tabBpelVariableListBody' style="font-size: 13px;"> 
+
+
+                </tbody>
+
+
+            </table> 
+        </div>
+
+        <div style="font-size: 12px;text-align: left;font-family: monospace;">
+            * COMPOSITION TAXPAYER, NOT ELIGIBLE TO COLLECT TAX ON SUPPLY  <br />
+            * SOLD GOODS ARE NOT RETURNED <br />
+            * BY MISTAKE IF ANY AMOUNT IS CHARGED IN EXCESS WILL BE REFUNDED UNDER DRUG (PRICE CONTROL) ORDER 1970  <br />
+            * E.& O.E.
+        </div>
+
+
+
+        <br/>
+        <hr />
+
+
+
+        <script>
+            function myFunction() {
+                document.getElementById("p2").style.display = "none";
+                document.getElementById("p1").style.display = "none";
+                document.getElementById("p3").style.display = "none";
+                document.getElementById("tabBpelVariableListBody").style.fontSize = "8px";
+                document.getElementById("tabBpelVariableListHead").style.fontSize = "8px";
+                document.getElementById("invHeaderTable").style.fontSize = "10px";
+                document.getElementById("creditStatus").style.fontSize = "12px";
+                document.getElementById("creditAmount").style.fontSize = "12px";
+                document.getElementById("paymentType").style.fontSize = "12px";
+
+                document.getElementById("shopName").style.fontSize = "15px";
+                document.getElementById("shopName").style.fontWeight = 700;
+
+                document.getElementById("shopAdd1").style.fontSize = "11px";
+                document.getElementById("shopAdd2").style.fontSize = "11px";
+                document.getElementById("shopGstin").style.fontSize = "11px";
+                document.getElementById("shopDl1").style.fontSize = "11px";
+                document.getElementById("shopDl2").style.fontSize = "11px";
+
+                //
+                document.getElementById("shopAdd1_1").style.fontSize = "12px";
+                document.getElementById("shopAdd2_1").style.fontSize = "12px";
+                document.getElementById("shopGstin_1").style.fontSize = "12px";
+
+
+                document.getElementById("invHeader2").style.fontSize = "11px";
+                document.getElementById("invHeader2").style.fontWeight = 600;
+
+
+
+                document.getElementById("row_unit_total_totalAmountPaid_a0").style.fontSize = "10px";
+                document.getElementById("row_unit_total_totalAmountPaid_a00").style.fontSize = "10px";
+                document.getElementById("row_AddDis_total_totalAmountPaid_a1").style.fontSize = "10px";
+                document.getElementById("row_AddDis_total_totalAmountPaid_a11").style.fontSize = "10px";
+                document.getElementById("row_Grand_total_totalAmountPaid_a2").style.fontSize = "10px";
+                document.getElementById("row_Grand_total_totalAmountPaid_a22").style.fontSize = "10px";
+                window.print();
+            }
+        </script>
+        <script src="custom-js/SalesData.js"></script>
+    </body>
+</html>

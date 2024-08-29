@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)http://optimisticdesigns.herokuapp.com/angularx/#/ui/components -->
+<html class="no-js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style></style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Angular-X</title>
+        <meta name="description" content="Responsive Admin Web App">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <style>.file-input-wrapper { overflow: hidden; position: relative; cursor: pointer; z-index: 1; }.file-input-wrapper input[type=file], .file-input-wrapper input[type=file]:focus, .file-input-wrapper input[type=file]:hover { position: absolute; top: 0; left: 0; cursor: pointer; opacity: 0; filter: alpha(opacity=0); z-index: 99; outline: 0; }.file-input-name { margin-left: 8px; }</style><link href="./Angular-X_files/css" rel="stylesheet" type="text/css">
+        <!-- Needs images, font... therefore can not be part of main.css -->
+        <link rel="stylesheet" href="./Angular-X_files/font-awesome.min.css">
+        <link rel="stylesheet" href="./Angular-X_files/weather-icons.min.css">
+        <!-- end Needs images -->
+
+            
+            <link rel="stylesheet" href="./Angular-X_files/main.css">
+
+    <style></style><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style><script type="text/javascript" charset="UTF-8" src="./Angular-X_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./Angular-X_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./Angular-X_files/stats.js"></script></head>
+    <body data-ng-app="app" id="app" class="app  ng-scope       pace-done" data-custom-page="" data-off-canvas-nav="" data-ng-controller="AppCtrl" data-ng-class=" {&#39;layout-boxed&#39;: admin.layout === &#39;boxed&#39; } "><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+        <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- ngInclude: 'views/header.html' --><section data-ng-include=" &#39;views/header.html&#39; " id="header" class="header-container ng-scope header-fixed" data-ng-class=" {&#39;header-fixed&#39;: admin.fixedHeader} " data-ng-controller="HeaderCtrl"><header class="top-header clearfix ng-scope">
+
+    <!-- Logo -->
+    <div class="logo">
+        <a href="http://optimisticdesigns.herokuapp.com/angularx/#/">
+            <!-- <span class="logo-icon glyphicon glyphicon-fire"></span> -->
+            <span class="ng-binding">Angular-X</span>
+        </a>
+    </div>
+
+    <!-- needs to be put after logo to make it working-->
+    <div class="menu-button" toggle-off-canvas="">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </div>
+
+    <div class="top-nav">
+        <ul class="nav-left list-unstyled">
+            <li>
+                <a href="http://optimisticdesigns.herokuapp.com/angularx/#/" data-toggle-nav-collapsed-min="" class="toggle-min" id="step3"><i class="fa fa-bars"></i></a>
+            </li>
+            <li class="search-box visible-md visible-lg visible-xs">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search text-muted"></i></span>
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+            </li>
+            
+        </ul> 
+
+        <ul class="nav-right pull-right list-unstyled">
+            <li class="dropdown hidden-xs">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bell-o"></i>
+                    <span class="badge badge-primary">4</span>
+                </a>
+                <div class="dropdown-menu with-arrow panel  pull-right panel-dark">
+                    <div class="panel-heading">
+                        You have 4 notifications.
+                    </div>
+                    <ul class="list-group">
+						<li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="pull-left media-icon">
+                                    <span class="btn-icon-lined btn-icon-round btn-warning"><i class="fa fa-bell-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">Added Animation to the project.</span>
+                                    <span class="text-muted block">few seconds ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="pull-left media-icon">
+                                    <span class="btn-icon-lined btn-icon-round btn-success"><i class="fa fa-bell-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">New tasks needs to be done</span>
+                                    <span class="text-muted block">2min ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="pull-left media-icon">
+                                    <span class="btn-icon-lined btn-icon-round btn-info"><i class="fa fa-bell-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">Change your password</span>
+                                    <span class="text-muted">3 hours ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="pull-left media-icon">
+                                    <span class="btn-icon-lined btn-icon-round btn-danger"><i class="fa fa-bell-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">New feature added</span>
+                                    <span class="text-muted">9 hours ago</span>
+                                </div>
+                            </a>
+                        </li>                       
+                    </ul>
+                    <div class="panel-footer">
+                        <a href="http://optimisticdesigns.herokuapp.com/angularx/#/mail/inbox">Show all notifications.</a>
+                    </div>
+                </div>
+            </li>
+			
+			<li class="dropdown langs text-normal ng-scope" data-ng-controller="LangCtrl">
+                <a href="javascript:;" class="dropdown-toggle active-flag" id="step2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="flag flags-american"></div>
+                </a>
+                <ul class="dropdown-menu with-arrow  pull-right list-langs" role="menu">
+                    <li data-ng-show="lang !== &#39;English&#39; " class="ng-hide">
+                        <a href="javascript:;" data-ng-click="setLang(&#39;English&#39;)"><div class="flag flags-american"></div> English</a></li>
+                    <li data-ng-show="lang !== &#39;Español&#39; " class="">
+                        <a href="javascript:;" data-ng-click="setLang(&#39;Español&#39;)"><div class="flag flags-spain"></div> Español</a></li>
+                    <li data-ng-show="lang !== &#39;français&#39; " class="">
+                        <a href="javascript:;" data-ng-click="setLang(&#39;français&#39;)"><div class="flag flags-france"></div> français</a></li>
+                    <li data-ng-show="lang !== &#39;Italiano&#39; " class="">
+                        <a href="javascript:;" data-ng-click="setLang(&#39;Italiano&#39;)"><div class="flag flags-italy"></div> Italiano</a></li>
+                    <li data-ng-show="lang !== &#39;Portugal&#39; " class="">
+                        <a href="javascript:;" data-ng-click="setLang(&#39;Portugal&#39;)"><div class="flag flags-portugal"></div> Portugal</a></li>
+                </ul>
+            </li>
+            <li class="dropdown text-normal nav-profile">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./Angular-X_files/g1.jpg" alt="" class="img30_30">
+                    <span class="hidden-xs">
+                        <span data-i18n="John Doe">John Doe</span>
+                    </span>
+                </a>
+                <ul class="dropdown-menu with-arrow pull-right">
+                    <li>
+                        <a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/profile">
+                            <i class="fa fa-user"></i>
+                            <span data-i18n="My Profile">My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://optimisticdesigns.herokuapp.com/angularx/#/tasks/tasks">
+                            <i class="fa fa-check"></i>
+                            <span data-i18n="My Tasks">My Tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/lock-screen">
+                            <i class="fa fa-lock"></i>
+                            <span data-i18n="Lock">Lock</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/signin">
+                            <i class="fa fa-sign-out"></i>
+                            <span data-i18n="Log Out">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+			<li class="dropdown hidden-xs">
+                <a href="javascript:;" class="dropdown-toggle" id="step1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cogs"></i></a>
+                <div class="dropdown-menu panel panel-dark admin-options" ui-not-close-on-click="">
+                    <div class="panel-heading"> Customizations </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p>Layouts Style</p>
+                            <label class="ui-radio"><input name="layout" type="radio" value="boxed" ng-model="admin.layout" class="ng-pristine ng-valid"><span>Boxed</span></label>
+                            <label class="ui-radio"><input name="layout" type="radio" value="wide" ng-model="admin.layout" class="ng-pristine ng-valid"><span>Wide</span></label>
+                        </li>
+                        <li class="list-group-item">
+                            <p>Menu Style</p>
+                            <label class="ui-radio"><input name="menu" type="radio" value="vertical" ng-model="admin.menu" class="ng-pristine ng-valid"><span>Vertical</span></label>
+                            <label class="ui-radio"><input name="menu" type="radio" value="horizontal" ng-model="admin.menu" class="ng-pristine ng-valid"><span>Horizontal</span></label>
+                        </li>
+                        <li class="list-group-item">
+                            <p>Additional</p>
+                            <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option1" ng-model="admin.fixedHeader" class="ng-pristine ng-valid"><span>Fixed Top Header</span></label>
+                            <br>
+                            <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option1" ng-model="admin.fixedSidebar" class="ng-pristine ng-valid"><span>Fixed Sidebar Menu</span></label>
+                        </li>
+                        <li class="list-group-item">
+                            <p>
+                                <span>Page Transition: </span> 
+                                <span class="space"></span>
+                                <select ng-model="admin.pageTransition" ng-options="ageTransitionOpt.name for ageTransitionOpt in pageTransitionOpts" class="ng-pristine ng-valid"><option value="0">Scale up</option><option value="1">Fade up</option><option value="2">Slide in from right</option><option value="3">Flip Y</option></select>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</header>
+</section>
+
+        <div class="main-container">
+            <!-- ngInclude: 'views/nav.html' --><aside data-ng-include=" &#39;views/nav.html&#39; " id="nav-container" class="nav-container ng-scope nav-vertical" data-ng-class=" {&#39;nav-fixed&#39;: admin.fixedSidebar, &#39;nav-horizontal&#39;: admin.menu === &#39;horizontal&#39;, &#39;nav-vertical&#39;: admin.menu === &#39;vertical&#39;}">        
+<div class="nav-wrapper ng-scope">
+    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><ul id="nav" class="nav ng-scope" data-ng-controller="NavCtrl" data-slim-scroll="" data-collapse-nav="" data-highlight-active="" style="overflow: hidden; width: auto; height: 100%;">
+        <li class=""><a href="http://optimisticdesigns.herokuapp.com/angularx/#/dashboard"> <i class="fa fa-home"></i><span data-i18n="Dashboard">Dashboard</span> </a></li>
+        <li class="open active">
+            <a href="http://optimisticdesigns.herokuapp.com/angularx/#/ui"><i class="fa fa-desktop"></i><span data-i18n="UI Kit">UI Kit</span></a>
+            <ul style="display: block;">
+                <li class=""><a href="http://optimisticdesigns.herokuapp.com/angularx/#/ui/buttons"><i class="fa fa-angle-right"></i><span data-i18n="Buttons">Buttons</span></a></li>
+                <li class=""><a href="http://optimisticdesigns.herokuapp.com/angularx/#/ui/icons"><i class="fa fa-angle-right"></i><span data-i18n="Icons">Icons</span></a></li>
+                <li class="active"><a href="http://optimisticdesigns.herokuapp.com/angularx/#/ui/components"><i class="fa fa-angle-right"></i><span data-i18n="Components">Components</span> <span class="badge badge-danger">18</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/ui/widgets"><i class="fa fa-angle-right"></i><span data-i18n="Widgets">Widgets</span> <span class="badge badge-success">13</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/ui/timeline"><i class="fa fa-angle-right"></i><span data-i18n="Timeline">Timeline</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/ui/nested-lists"><i class="fa fa-angle-right"></i><span data-i18n="Nested Lists">Nested Lists</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/ui/pricing-tables"><i class="fa fa-angle-right"></i><span data-i18n="Pricing Tables">Pricing Tables</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/ui/maps"><i class="fa fa-angle-right"></i><span data-i18n="Maps">Maps</span>  <span class="badge badge-warning">2</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/ui/grids"><i class="fa fa-angle-right"></i><span data-i18n="Grids">Grids</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/ui/typography"><i class="fa fa-angle-right"></i><span data-i18n="Typography">Typography</span></a></li>
+            </ul>
+        <i class="fa fa-angle-down icon-has-ul-h"></i><i class="fa fa-angle-right icon-has-ul"></i></li>
+        <li>
+            <a href="http://optimisticdesigns.herokuapp.com/angularx/#/table"><i class="fa fa-table"></i><span data-i18n="Tables">Tables</span></a>
+            <ul style="">
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/tables/static"><i class="fa fa-angle-right"></i><span data-i18n="Static Tables">Static Tables</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/tables/responsive"><i class="fa fa-angle-right"></i><span data-i18n="Responsive Tables">Responsive Tables</span> <span class="badge badge-info">2</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/tables/dynamic"><i class="fa fa-angle-right"></i><span data-i18n="Dynamic Tables">Dynamic Tables</span></a></li>
+            </ul>
+        <i class="fa fa-angle-down icon-has-ul-h"></i><i class="fa fa-angle-right icon-has-ul"></i></li>
+        <li>
+            <a href="http://optimisticdesigns.herokuapp.com/angularx/#/form"><i class="fa fa-pencil"></i><span data-i18n="Forms">Forms</span></a>
+            <ul style="">
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/forms/layouts"><i class="fa fa-angle-right"></i><span data-i18n="Form Layouts">Form Layouts</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/forms/elements"><i class="fa fa-angle-right"></i><span data-i18n="Form Elements">Form Elements</span> <span class="badge badge-warning">14</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/forms/validation"><i class="fa fa-angle-right"></i><span data-i18n="Form Validation">Form Validation</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/forms/wizard"><i class="fa fa-angle-right"></i><span data-i18n="Form Wizard">Form Wizard</span></a></li>
+            </ul>
+        <i class="fa fa-angle-down icon-has-ul-h"></i><i class="fa fa-angle-right icon-has-ul"></i></li>
+       <li>
+            <a href="http://optimisticdesigns.herokuapp.com/angularx/#/charts"><i class="fa fa-bar-chart-o"></i><span data-i18n="Charts">Charts</span></a>
+            <ul style="">
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/charts/flot"><i class="fa fa-angle-right"></i>Flot <span data-i18n="Charts">Charts</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/charts/morris"><i class="fa fa-angle-right"></i>Morris <span data-i18n="Charts">Charts</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/charts/charts"><i class="fa fa-angle-right"></i>Other <span data-i18n="Charts">Charts</span></a></li>
+            </ul>
+        <i class="fa fa-angle-down icon-has-ul-h"></i><i class="fa fa-angle-right icon-has-ul"></i></li>
+		<li>
+            <a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages"><i class="fa fa-windows"></i><span data-i18n="Pages">Pages</span></a>
+            <ul style="">
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/signin"><i class="fa fa-angle-right"></i><span data-i18n="Sign in">Sign in</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/signup"><i class="fa fa-angle-right"></i><span data-i18n="Sign Up">Sign Up</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/forgot-password"><i class="fa fa-angle-right"></i><span data-i18n="Forgot Password">Forgot Password</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/lock-screen"><i class="fa fa-angle-right"></i><span data-i18n="Lock Screen">Lock Screen</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/profile"><i class="fa fa-angle-right"></i><span data-i18n="User Profile">User Profile</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/404"><i class="fa fa-angle-right"></i>404 <span data-i18n="Error">Error</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/500"><i class="fa fa-angle-right"></i>500 <span data-i18n="Error">Error</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/blank"><i class="fa fa-angle-right"></i><span data-i18n="Blank Page">Blank Page</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/pages/invoice"><i class="fa fa-angle-right"></i><span data-i18n="Invoice">Invoice</span></a></li>
+            </ul>
+        <i class="fa fa-angle-down icon-has-ul-h"></i><i class="fa fa-angle-right icon-has-ul"></i></li>
+        <li>
+            <a href="http://optimisticdesigns.herokuapp.com/angularx/#/mail"><i class="fa fa-envelope-o"></i><span data-i18n="Mail">Mail</span></a>
+            <ul style="">
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/mail/inbox"><i class="fa fa-angle-right"></i><span data-i18n="Inbox">Inbox</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/mail/compose"><i class="fa fa-angle-right"></i><span data-i18n="Compose">Compose</span></a></li>
+                <li><a href="http://optimisticdesigns.herokuapp.com/angularx/#/mail/single"><i class="fa fa-angle-right"></i><span data-i18n="Single Mail">Single Mail</span></a></li>
+            </ul>
+        <i class="fa fa-angle-down icon-has-ul-h"></i><i class="fa fa-angle-right icon-has-ul"></i></li>
+    </ul><div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 266px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+</div></aside>
+
+            <!-- ngView:  --><section data-ng-view="" id="content" class="content-container ainmate-scale-up"><div class="page ng-scope">
+
+<!--     <div class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Example</div>
+        <div class="panel-body">
+            
+        </div>
+    </div> -->
+
+
+    <!-- Labels -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Labels &amp; Badges</div>
+        <div class="panel-body text-center">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5 class="text-muted">Labels</h5>
+                    <span class="label label-default">Default label</span>
+                    <div class="space"></div>
+                    <span class="label label-primary">Primary</span>
+                    <div class="space"></div>
+                    <span class="label label-success">Success</span>
+                    <div class="space"></div>
+                    <span class="label label-info">Info</span>
+                    <div class="space"></div>
+                    <span class="label label-warning">Warning</span>
+                    <div class="space"></div>
+                    <span class="label label-danger">Danger</span>                    
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="text-muted">Badges</h5>
+                    <span class="badge">7</span>
+                    <div class="space"></div>
+                    <span class="badge badge-primary">1</span>
+                    <div class="space"></div>
+                    <span class="badge badge-success">2</span>
+                    <div class="space"></div>
+                    <span class="badge badge-info">4</span>
+                    <div class="space"></div>
+                    <span class="badge badge-warning">8</span>
+                    <div class="space"></div>
+                    <span class="badge badge-danger">16</span>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Labels -->
+
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Popover -->
+            <section class="panel panel-default">
+                <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Popover</div>
+                <div class="panel-body text-center">
+                    <button popover-placement="top" popover-title="The Popover Title" popover="On the Top! Here&#39; goes the popover content..." popover-append-to-body="true" class="btn btn-w-lg btn-danger btn-gap ng-scope">Popover on Top</button>
+                    <br>
+                    <button popover-placement="right" popover-title="The Popover Title" popover="On the Right! Here&#39; goes the popover content..." popover-append-to-body="true" class="btn btn-w-lg btn-warning btn-gap ng-scope">Popover on Right</button>
+                    <br>
+                    <button popover-placement="bottom" popover-title="The Popover Title" popover="On the Bottom! Here&#39; goes the popover content..." popover-append-to-body="true" class="btn btn-w-lg btn-info btn-gap ng-scope">Popover on Bottom</button>
+                    <br>
+                    <button popover-placement="left" popover-title="The Popover Title" popover="On the Left! Here&#39; goes the popover content..." popover-append-to-body="true" class="btn btn-w-lg btn-success btn-gap ng-scope">Popover on Left</button>
+                    <br>
+                    <button popover="On mouse enter!" popover-trigger="mouseenter" class="btn btn-w-lg btn-primary btn-gap ng-scope">Popover on Mouseenter</button>
+                    <div class="divider"></div>
+                    <input type="text" value="Popover on Click" popover="I appeared on focus! Click away and I&#39;ll vanish..." popover-trigger="focus" class="form-control ng-scope">
+                </div>
+            </section>
+            <!-- Popover -->
+        </div>
+        <div class="col-md-6">
+            <!-- Tooltip -->
+            <section class="panel panel-default">
+                <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Tooltip</div>
+                <div class="panel-body text-center">
+                    <button class="btn btn-w-lg btn-default btn-gap ng-scope" tooltip-placement="top" tooltip="On the Top!" tooltip-append-to-body="true">Tooltip on Top</button>
+                    <br>
+                    <button class="btn btn-w-lg btn-primary btn-gap ng-scope" tooltip-placement="left" tooltip="On the Left!" tooltip-append-to-body="true">Tooltip on Left</button>
+                    <br>
+                    <button class="btn btn-w-lg btn-success btn-gap ng-scope" tooltip-placement="right" tooltip="On the Right!" tooltip-append-to-body="true">Tooltip on Right</button>
+                    <br>
+                    <button class="btn btn-w-lg btn-danger btn-gap ng-scope" tooltip-animation="false" tooltip="I don&#39;t fade. :-(" tooltip-append-to-body="true">Without Animation</button>
+                    <br>
+                    <button class="btn btn-w-lg btn-warning btn-gap ng-scope" tooltip-popup-delay="1000" tooltip="Appears with delay" tooltip-append-to-body="true">Tooltip Delayed</button>
+                    <br>
+                    <button class="btn btn-w-lg btn-info btn-gap ng-scope" tooltip-placement="bottom" tooltip="On the Bottom!" tooltip-append-to-body="true">Tooltip on Bottom</button>
+                </div>
+            </section>
+            <!-- end Tooltip -->
+        </div>
+    </div>
+
+
+
+
+    <!-- Progressbar -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Progressbar</div>
+        <div class="panel-body ng-scope" data-ng-controller="ProgressDemoCtrl">
+            <div class="page-header">
+                <h3>Static Progressbar</h3>
+            </div>
+            <div class="progressbar-sm progress-rounded progress ng-isolate-scope" value="34" type="success">
+  <div class="progress-bar progress-bar-success" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="34%" ng-transclude="" style="width: 34%;"></div>
+</div>
+            <div class="progressbar-sm progress-rounded progress ng-isolate-scope" value="68" type="info">
+  <div class="progress-bar progress-bar-info" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="68%" ng-transclude="" style="width: 68%;"></div>
+</div>
+            <div class="progressbar-sm progress-rounded progress ng-isolate-scope" value="52" type="warning">
+  <div class="progress-bar progress-bar-warning" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="52%" ng-transclude="" style="width: 52%;"></div>
+</div>
+            <div class="progressbar-sm progress-rounded progress ng-isolate-scope" value="77" type="danger">
+  <div class="progress-bar progress-bar-danger" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="77%" ng-transclude="" style="width: 77%;"></div>
+</div>
+            <p class="text-muted">Stacked Progress Bars</p>
+            <div class="progressbar-sm progress-rounded progress ng-isolate-scope" ng-transclude="">
+                <div class="progress-bar ng-isolate-scope progress-bar-success" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="40%" ng-transclude="" value="40" type="success" style="width: 40%;"></div>
+                <div class="progress-bar ng-isolate-scope progress-bar-warning" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="20%" ng-transclude="" value="20" type="warning" style="width: 20%;"></div>
+                <div class="progress-bar ng-isolate-scope progress-bar-danger" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="20%" ng-transclude="" value="20" type="danger" style="width: 20%;"></div>
+            </div>            
+
+            <div class="page-header">
+                <h3>Striped Progressbar</h3>
+            </div>
+            <div class="progressbar-sm progress-rounded progress-striped progress ng-isolate-scope" value="34" type="success">
+  <div class="progress-bar progress-bar-success" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="34%" ng-transclude="" style="width: 34%;"></div>
+</div>
+            <div class="progressbar-sm progress-rounded progress-striped progress ng-isolate-scope" value="68" type="info">
+  <div class="progress-bar progress-bar-info" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="68%" ng-transclude="" style="width: 68%;"></div>
+</div>
+            <div class="progressbar-sm progress-rounded progress-striped progress ng-isolate-scope" value="52" type="warning">
+  <div class="progress-bar progress-bar-warning" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="52%" ng-transclude="" style="width: 52%;"></div>
+</div>
+            <div class="progressbar-sm progress-rounded progress-striped progress ng-isolate-scope" value="77" type="danger">
+  <div class="progress-bar progress-bar-danger" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="77%" ng-transclude="" style="width: 77%;"></div>
+</div>
+            <p class="text-muted">Animated Progress Bars</p>
+            <div class="progressbar-sm progress-rounded progress-striped active progress ng-isolate-scope" value="55">
+  <div class="progress-bar" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="55%" ng-transclude="" style="width: 55%;"></div>
+</div>
+            <div class="progressbar-sm progress-rounded progress-striped active progress ng-isolate-scope" ng-transclude="">
+                <div class="progress-bar ng-isolate-scope progress-bar-success" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="40%" ng-transclude="" value="40" type="success" style="width: 40%;"></div>
+                <div class="progress-bar ng-isolate-scope progress-bar-warning" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="20%" ng-transclude="" value="20" type="warning" style="width: 20%;"></div>
+                <div class="progress-bar ng-isolate-scope progress-bar-danger" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="20%" ng-transclude="" value="20" type="danger" style="width: 20%;"></div>
+            </div> 
+
+            <div class="page-header">
+                <h3>Dynamic Progressbar</h3>
+            </div>
+            <div class="progress-rounded progress ng-isolate-scope" max="max" value="dynamic">
+  <div class="progress-bar" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="200" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="38%" ng-transclude="" style="width: 38%;"><span class="ng-binding ng-scope">76 / 200</span></div>
+</div>
+
+            <p class="text-muted">No animation</p>
+            <div class="progress-rounded progress ng-isolate-scope" animate="false" value="dynamic" type="success">
+  <div class="progress-bar progress-bar-success" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="76%" ng-transclude="" style="transition: none; width: 76%;"><b class="ng-binding ng-scope">76%</b></div>
+</div>
+
+            <p class="text-muted">Object <em>(changes type based on value)</em></p>
+            <div class="progress-striped progress-rounded active progress ng-isolate-scope" value="dynamic" type="danger">
+  <div class="progress-bar progress-bar-danger" ng-class="type &amp;&amp; &#39;progress-bar-&#39; + type" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" ng-style="{width: percent + &#39;%&#39;}" aria-valuetext="76%" ng-transclude="" style="width: 76%;"><span class="ng-binding ng-scope">danger </span><i ng-show="showWarning" class="ng-scope">!!! Watch out !!!</i></div>
+</div>
+            <div class="divider"></div>
+            <button class="btn btn-sm btn-primary" type="button" ng-click="random()">Randomize</button>
+        </div>
+    </section>
+    <!-- end Progressbar -->
+
+
+    <!-- Pagination -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Pagination</div>
+        <div class="panel-body ng-scope" data-ng-controller="PaginationDemoCtrl">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="page-header">
+                        <h3>Pagination Sizing</h3>
+                    </div>            
+                    <ul class="pagination-sm pagination ng-isolate-scope ng-pristine ng-valid" direction-links="true" total-items="totalItems" ng-model="currentPage" num-pages="smallnumPages" previous-text="‹" next-text="›">
+  <!-- ngIf: boundaryLinks -->
+  <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noPrevious()}" class="ng-scope"><a href="" ng-click="selectPage(page - 1)" class="ng-binding">‹</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">2</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">3</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope active"><a href="" ng-click="selectPage(page.number)" class="ng-binding">4</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">5</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">6</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">7</a></li><!-- end ngRepeat: page in pages track by $index -->
+  <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noNext()}" class="ng-scope"><a href="" ng-click="selectPage(page + 1)" class="ng-binding">›</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngIf: boundaryLinks -->
+</ul>
+                    <br>
+                    <ul class="pagination ng-isolate-scope ng-pristine ng-valid" boundary-links="true" total-items="totalItems" ng-model="currentPage" previous-text="‹" next-text="›" first-text="«" last-text="»">
+  <!-- ngIf: boundaryLinks --><li ng-if="boundaryLinks" ng-class="{disabled: noPrevious()}" class="ng-scope"><a href="" ng-click="selectPage(1)" class="ng-binding">«</a></li><!-- end ngIf: boundaryLinks -->
+  <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noPrevious()}" class="ng-scope"><a href="" ng-click="selectPage(page - 1)" class="ng-binding">‹</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">2</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">3</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope active"><a href="" ng-click="selectPage(page.number)" class="ng-binding">4</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">5</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">6</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">7</a></li><!-- end ngRepeat: page in pages track by $index -->
+  <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noNext()}" class="ng-scope"><a href="" ng-click="selectPage(page + 1)" class="ng-binding">›</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngIf: boundaryLinks --><li ng-if="boundaryLinks" ng-class="{disabled: noNext()}" class="ng-scope"><a href="" ng-click="selectPage(totalPages)" class="ng-binding">»</a></li><!-- end ngIf: boundaryLinks -->
+</ul>
+                    <br>
+                    <ul class="pagination-lg pagination ng-isolate-scope ng-pristine ng-valid" total-items="totalItems" ng-model="currentPage" previous-text="‹" next-text="›">
+  <!-- ngIf: boundaryLinks -->
+  <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noPrevious()}" class="ng-scope"><a href="" ng-click="selectPage(page - 1)" class="ng-binding">‹</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">2</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">3</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope active"><a href="" ng-click="selectPage(page.number)" class="ng-binding">4</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">5</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">6</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">7</a></li><!-- end ngRepeat: page in pages track by $index -->
+  <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noNext()}" class="ng-scope"><a href="" ng-click="selectPage(page + 1)" class="ng-binding">›</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngIf: boundaryLinks -->
+</ul>
+<!--                     <div class="callout callout-info">
+                        <p>The selected page no: {{currentPage}}</p>
+                    </div> -->
+                    <br>
+                    <button class="btn btn-primary" ng-click="setPage(3)">Set current page to: 3</button>                         
+                </div>
+
+                <div class="col-md-6">
+                    <div class="page-header">
+                        <h3>Limit the Maximum Visible Buttons</h3>
+                    </div>
+                    <ul class="pagination-sm pagination ng-isolate-scope ng-pristine ng-valid" total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" boundary-links="true" previous-text="‹" next-text="›">
+  <!-- ngIf: boundaryLinks --><li ng-if="boundaryLinks" ng-class="{disabled: noPrevious()}" class="ng-scope disabled"><a href="" ng-click="selectPage(1)" class="ng-binding">First</a></li><!-- end ngIf: boundaryLinks -->
+  <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noPrevious()}" class="ng-scope disabled"><a href="" ng-click="selectPage(page - 1)" class="ng-binding">‹</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope active"><a href="" ng-click="selectPage(page.number)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">2</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">3</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">4</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">5</a></li><!-- end ngRepeat: page in pages track by $index -->
+  <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noNext()}" class="ng-scope"><a href="" ng-click="selectPage(page + 1)" class="ng-binding">›</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngIf: boundaryLinks --><li ng-if="boundaryLinks" ng-class="{disabled: noNext()}" class="ng-scope"><a href="" ng-click="selectPage(totalPages)" class="ng-binding">Last</a></li><!-- end ngIf: boundaryLinks -->
+</ul>
+                    <br>
+                    <ul class="pagination-sm pagination ng-isolate-scope ng-pristine ng-valid" total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" boundary-links="true" rotate="false" num-pages="numPages" previous-text="‹" next-text="›">
+  <!-- ngIf: boundaryLinks --><li ng-if="boundaryLinks" ng-class="{disabled: noPrevious()}" class="ng-scope disabled"><a href="" ng-click="selectPage(1)" class="ng-binding">First</a></li><!-- end ngIf: boundaryLinks -->
+  <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noPrevious()}" class="ng-scope disabled"><a href="" ng-click="selectPage(page - 1)" class="ng-binding">‹</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope active"><a href="" ng-click="selectPage(page.number)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">2</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">3</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">4</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">5</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active}" class="ng-scope"><a href="" ng-click="selectPage(page.number)" class="ng-binding">...</a></li><!-- end ngRepeat: page in pages track by $index -->
+  <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noNext()}" class="ng-scope"><a href="" ng-click="selectPage(page + 1)" class="ng-binding">›</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngIf: boundaryLinks --><li ng-if="boundaryLinks" ng-class="{disabled: noNext()}" class="ng-scope"><a href="" ng-click="selectPage(totalPages)" class="ng-binding">Last</a></li><!-- end ngIf: boundaryLinks -->
+</ul>
+                    <div class="callout callout-info">
+                        <p class="ng-binding">Page: 1 / 18</p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Pagination -->
+
+
+    <!-- Notfify -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Notify</div>
+        <div class="panel-body ng-scope" data-ng-controller="NotifyCtrl">
+            <button class="btn btn-w-md btn-gap btn-info" data-ng-click="notify(&#39;info&#39;)">info message</button>
+            <button class="btn btn-w-md btn-gap btn-success" data-ng-click="notify(&#39;success&#39;)">success message</button>
+            <button class="btn btn-w-md btn-gap btn-warning" data-ng-click="notify(&#39;warning&#39;)">warning message</button>
+            <button class="btn btn-w-md btn-gap btn-danger" data-ng-click="notify(&#39;error&#39;)">error message</button>
+            <div class="callout callout-info">
+                <p>Notification will show in lower right corner.</p>
+            </div>
+        </div>
+    </section>
+    <!-- end Notify -->
+
+
+    <!-- Tab -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Tabs</div>
+        <div class="panel-body ng-scope" data-ng-controller="TabsDemoCtrl">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Simple Tabs</h3>
+                    <div class="divider"></div>
+                    <div class="ui-tab ng-isolate-scope">
+  <ul class="nav nav-tabs" ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}" ng-transclude="">
+                        <li ng-class="{active: active, disabled: disabled}" heading="Static title" class="ng-isolate-scope active">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Static title</a>
+</li>
+                        <!-- ngRepeat: tab in tabs --><li ng-class="{active: active, disabled: disabled}" ng-repeat="tab in tabs" heading="Dynamic Title 1" active="tab.active" disabled="disabled" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Dynamic Title 1</a>
+</li><!-- end ngRepeat: tab in tabs --><li ng-class="{active: active, disabled: disabled}" ng-repeat="tab in tabs" heading="Disabled" active="tab.active" disabled="disabled" class="ng-isolate-scope disabled">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Disabled</a>
+</li><!-- end ngRepeat: tab in tabs -->
+                    </ul>
+  <div class="tab-content">
+    <!-- ngRepeat: tab in tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Static content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at.</span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-binding ng-scope">
+                            Dynamic content 1.  Consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at.
+                        </span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-binding ng-scope">
+                            Dynamic content 2.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at.
+                        </span></div><!-- end ngRepeat: tab in tabs -->
+  </div>
+</div>
+                </div>
+
+                <div class="col-sm-6">
+                    <h3>Justified Tabs</h3>
+                    <div class="divider"></div>
+                    <div justified="true" class="ui-tab ng-isolate-scope">
+  <ul class="nav nav-tabs nav-justified" ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}" ng-transclude="">
+                        <li ng-class="{active: active, disabled: disabled}" heading="Justified" class="ng-isolate-scope active">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Justified</a>
+</li>
+                        <li ng-class="{active: active, disabled: disabled}" heading="SJ" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">SJ</a>
+</li>
+                        <li ng-class="{active: active, disabled: disabled}" heading="Long Justified" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Long Justified</a>
+</li>
+                    </ul>
+  <div class="tab-content">
+    <!-- ngRepeat: tab in tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Justified content</span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Short Labeled Justified content</span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Long Labeled Justified content</span></div><!-- end ngRepeat: tab in tabs -->
+  </div>
+</div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="ui-tab-container">
+                        <div class="ui-tab ng-isolate-scope">
+  <ul class="nav nav-tabs" ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}" ng-transclude="">
+                            <li ng-class="{active: active, disabled: disabled}" heading="Home" class="ng-isolate-scope active">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Home</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Quod ea" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Quod ea</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Earum sequi" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Earum sequi</a>
+</li>
+                        </ul>
+  <div class="tab-content">
+    <!-- ngRepeat: tab in tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus. </span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Quod ea vel dolores earum veritatis quae sunt tempore odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</span></div><!-- end ngRepeat: tab in tabs -->
+  </div>
+</div>
+                    </div>                    
+                </div>
+                <div class="col-md-6">
+                    <div class="ui-tab-container ui-tab-dark">
+                        <div class="ui-tab ng-isolate-scope">
+  <ul class="nav nav-tabs" ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}" ng-transclude="">
+                            <li ng-class="{active: active, disabled: disabled}" heading="Home" class="ng-isolate-scope active">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Home</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Quod ea" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Quod ea</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Earum sequi" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Earum sequi</a>
+</li>
+                        </ul>
+  <div class="tab-content">
+    <!-- ngRepeat: tab in tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus. </span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Quod ea vel dolores earum veritatis quae sunt tempore odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</span></div><!-- end ngRepeat: tab in tabs -->
+  </div>
+</div>
+                    </div>                      
+                </div>
+            </div>
+
+            <div class="divider divider-md"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="ui-tab-container ui-tab-success">
+                        <div class="ui-tab ng-isolate-scope">
+  <ul class="nav nav-tabs" ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}" ng-transclude="">
+                            <li ng-class="{active: active, disabled: disabled}" heading="Home" class="ng-isolate-scope active">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Home</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Quod ea" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Quod ea</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Earum sequi" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Earum sequi</a>
+</li>
+                        </ul>
+  <div class="tab-content">
+    <!-- ngRepeat: tab in tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus. </span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Quod ea vel dolores earum veritatis quae sunt tempore odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</span></div><!-- end ngRepeat: tab in tabs -->
+  </div>
+</div>
+                    </div>                    
+                </div>
+                <div class="col-md-6">
+                    <div class="ui-tab-container ui-tab-info">
+                        <div class="ui-tab ng-isolate-scope">
+  <ul class="nav nav-tabs" ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}" ng-transclude="">
+                            <li ng-class="{active: active, disabled: disabled}" heading="Home" class="ng-isolate-scope active">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Home</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Quod ea" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Quod ea</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Earum sequi" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Earum sequi</a>
+</li>
+                        </ul>
+  <div class="tab-content">
+    <!-- ngRepeat: tab in tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus. </span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Quod ea vel dolores earum veritatis quae sunt tempore odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</span></div><!-- end ngRepeat: tab in tabs -->
+  </div>
+</div>
+                    </div>                      
+                </div>
+            </div>
+
+            <div class="divider divider-md"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="ui-tab-container ui-tab-warning">
+                        <div class="ui-tab ng-isolate-scope">
+  <ul class="nav nav-tabs" ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}" ng-transclude="">
+                            <li ng-class="{active: active, disabled: disabled}" heading="Home" class="ng-isolate-scope active">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Home</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Quod ea" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Quod ea</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Earum sequi" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Earum sequi</a>
+</li>
+                        </ul>
+  <div class="tab-content">
+    <!-- ngRepeat: tab in tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus. </span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Quod ea vel dolores earum veritatis quae sunt tempore odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</span></div><!-- end ngRepeat: tab in tabs -->
+  </div>
+</div>
+                    </div>                    
+                </div>
+                <div class="col-md-6">
+                    <div class="ui-tab-container ui-tab-danger">
+                        <div class="ui-tab ng-isolate-scope">
+  <ul class="nav nav-tabs" ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}" ng-transclude="">
+                            <li ng-class="{active: active, disabled: disabled}" heading="Home" class="ng-isolate-scope active">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Home</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Quod ea" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Quod ea</a>
+</li>
+                            <li ng-class="{active: active, disabled: disabled}" heading="Earum sequi" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Earum sequi</a>
+</li>
+                        </ul>
+  <div class="tab-content">
+    <!-- ngRepeat: tab in tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus. </span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Quod ea vel dolores earum veritatis quae sunt tempore odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</span></div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    <span class="ng-scope">Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</span></div><!-- end ngRepeat: tab in tabs -->
+  </div>
+</div>
+                    </div>                      
+                </div>
+            </div>
+            <div class="divider divider-lg"></div>
+    <!-- end Tab -->
+
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <!-- Modal -->
+            <section class="panel panel-default">
+                <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Modal</div>
+                <div class="panel-body ng-scope" data-ng-controller="ModalDemoCtrl">
+                    <script type="text/ng-template" id="myModalContent.html">
+                        <div class="modal-header">
+                            <h3>I am a modal!</h3>
+                        </div>
+                        <div class="modal-body">
+                            <span ng-repeat="item in items" class="list-unstyled">
+                                <label class="ui-radio"><input name="radio1" type="radio" value="{{ item }}"  ng-checked="selected.item === item" ng-click="selected.item = item"><span>{{ item }}</span></label>
+                            </span>
+                            <br>
+                            Selected: <b>{{ selected.item }}</b>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" ng-click="ok()">OK</button>
+                            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                        </div>
+                    </script>
+
+                    <button class="btn btn-gap-v btn-primary" ng-click="open()">Open me!</button>
+                    <button class="btn btn-gap-v btn-info" ng-click="open()">Open me!</button>
+                    <button class="btn btn-gap-v btn-warning" ng-click="open()">Open me!</button>
+                    <button class="btn btn-gap-v btn-success" ng-click="open()">Open me!</button>
+                    <button class="btn btn-gap-v btn-danger" ng-click="open()">Open me!</button>
+                    <div class="divider"></div>
+                    <div class="callout callout-info">
+                        <p>Selection from a modal: <strong class="ng-binding"></strong></p>
+                    </div>
+                </div>
+            </section>
+            <!-- end Modal -->
+
+        </div>
+
+        <div class="col-md-6">
+
+            <!-- Collapse -->
+            <section class="panel panel-default">
+                <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Collapse</div>
+                <div class="panel-body ng-scope" data-ng-controller="CollapseDemoCtrl">
+                    <button class="btn btn-primary" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
+                    <div class="divider divider-md"></div>
+                    <div collapse="isCollapsed" class="collapse in" style="height: auto;">
+                        <div class="well well-lg">Some content</div> 
+                    </div>            
+                </div>
+            </section>
+            <!-- end Collapse -->
+
+        </div>
+    </div>
+
+
+    <!-- Bullet -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Bullet</div>
+        <div class="panel-body">
+            <div class="divider divider-lg"></div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="ui-bullet">
+                        <div class="btn-icon btn-icon-round btn-icon-lg bg-primary">
+                            <i class="fa fa-cab"></i>
+                        </div>
+                        <div class="ui-bullet-content">
+                            <h3>This Bullet Title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, nesciunt, eius accusamus quam quaerat molestiae voluptas dignissimos tempora non veniam. Sint libero quia repellendus eveniet dolores distinctio amet consectetur suscipit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ui-bullet">
+                        <div class="btn-icon btn-icon-round btn-icon-lg bg-info">
+                            <i class="fa fa-database"></i>
+                        </div>
+                        <div class="ui-bullet-content">
+                            <h3>Another Bullet Title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, nesciunt, eius accusamus quam quaerat molestiae voluptas dignissimos tempora non veniam. Sint libero quia repellendus eveniet dolores distinctio amet consectetur suscipit.</p>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="col-md-4">
+                    <div class="ui-bullet">
+                        <div class="btn-icon btn-icon-round btn-icon-lg bg-danger">
+                            <i class="fa fa-joomla"></i>
+                        </div>
+                        <div class="ui-bullet-content">
+                            <h3>Last Bullet Title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, nesciunt, eius accusamus quam quaerat molestiae voluptas dignissimos tempora non veniam. Sint libero quia repellendus eveniet dolores distinctio amet consectetur suscipit.</p>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="divider divider-lg"></div>
+        </div>
+    </section>
+    <!-- end Bullet -->
+
+
+    <!-- Alert -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Alerts</div>
+        <div class="panel-body ng-scope" data-ng-controller="AlertDemoCtrl">
+            <!-- ngRepeat: alert in alerts --><div class="alert ng-isolate-scope alert-success alert-dismissable" ng-class="{&#39;alert-success&#39;: true, &#39;alert-dismissable&#39;: closeable}" role="alert" ng-repeat="alert in alerts" type="success" close="closeAlert($index)">
+    <button ng-show="closeable" type="button" class="close" ng-click="close()">
+        <span aria-hidden="true">×</span>
+        <span class="sr-only">Close</span>
+    </button>
+    <div ng-transclude=""><span class="ng-binding ng-scope">Well done! You successfully read this important alert message.</span></div>
+</div><!-- end ngRepeat: alert in alerts --><div class="alert ng-isolate-scope alert-info alert-dismissable" ng-class="{&#39;alert-info&#39;: true, &#39;alert-dismissable&#39;: closeable}" role="alert" ng-repeat="alert in alerts" type="info" close="closeAlert($index)">
+    <button ng-show="closeable" type="button" class="close" ng-click="close()">
+        <span aria-hidden="true">×</span>
+        <span class="sr-only">Close</span>
+    </button>
+    <div ng-transclude=""><span class="ng-binding ng-scope">Heads up! This alert needs your attention, but it is not super important.</span></div>
+</div><!-- end ngRepeat: alert in alerts --><div class="alert ng-isolate-scope alert-warning alert-dismissable" ng-class="{&#39;alert-warning&#39;: true, &#39;alert-dismissable&#39;: closeable}" role="alert" ng-repeat="alert in alerts" type="warning" close="closeAlert($index)">
+    <button ng-show="closeable" type="button" class="close" ng-click="close()">
+        <span aria-hidden="true">×</span>
+        <span class="sr-only">Close</span>
+    </button>
+    <div ng-transclude=""><span class="ng-binding ng-scope">Warning! Best check yo self, you're not looking too good.</span></div>
+</div><!-- end ngRepeat: alert in alerts --><div class="alert ng-isolate-scope alert-danger alert-dismissable" ng-class="{&#39;alert-danger&#39;: true, &#39;alert-dismissable&#39;: closeable}" role="alert" ng-repeat="alert in alerts" type="danger" close="closeAlert($index)">
+    <button ng-show="closeable" type="button" class="close" ng-click="close()">
+        <span aria-hidden="true">×</span>
+        <span class="sr-only">Close</span>
+    </button>
+    <div ng-transclude=""><span class="ng-binding ng-scope">Oh snap! Change a few things up and try submitting again.</span></div>
+</div><!-- end ngRepeat: alert in alerts -->
+            <button class="btn btn-primary" ng-click="addAlert()">Add Alert</button>
+        </div>
+    </section>
+    <!-- end Alert -->
+
+
+    <!-- Ribbons -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Ribbons</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-default ui-ribbon-container">
+                        <div class="ui-ribbon-wrapper">
+                            <div class="ui-ribbon">
+                                30% Off
+                            </div>
+                        </div>
+                        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Ribbon</div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti rerum reprehenderit ipsam natus saepe. Recusandae, itaque nulla in illum dolorum ea eveniet quaerat ipsa placeat magni commodi obcaecati mollitia necessitatibus?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default ui-ribbon-container ui-ribbon-primary">
+                        <div class="ui-ribbon-wrapper">
+                            <div class="ui-ribbon">
+                                30% Off
+                            </div>
+                        </div>
+                        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Ribbon-primary</div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti rerum reprehenderit ipsam natus saepe. Recusandae, itaque nulla in illum dolorum ea eveniet quaerat ipsa placeat magni commodi obcaecati mollitia necessitatibus?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default ui-ribbon-container ui-ribbon-success">
+                        <div class="ui-ribbon-wrapper">
+                            <div class="ui-ribbon">
+                                30% Off
+                            </div>
+                        </div>
+                        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Ribbon-success</div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti rerum reprehenderit ipsam natus saepe. Recusandae, itaque nulla in illum dolorum ea eveniet quaerat ipsa placeat magni commodi obcaecati mollitia necessitatibus?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-default ui-ribbon-container ui-ribbon-info">
+                        <div class="ui-ribbon-wrapper">
+                            <div class="ui-ribbon">
+                                30% Off
+                            </div>
+                        </div>
+                        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Ribbon-info</div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti rerum reprehenderit ipsam natus saepe. Recusandae, itaque nulla in illum dolorum ea eveniet quaerat ipsa placeat magni commodi obcaecati mollitia necessitatibus?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default ui-ribbon-container ui-ribbon-warning">
+                        <div class="ui-ribbon-wrapper">
+                            <div class="ui-ribbon">
+                                30% Off
+                            </div>
+                        </div>
+                        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Ribbon-warning</div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti rerum reprehenderit ipsam natus saepe. Recusandae, itaque nulla in illum dolorum ea eveniet quaerat ipsa placeat magni commodi obcaecati mollitia necessitatibus?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default ui-ribbon-container ui-ribbon-danger">
+                        <div class="ui-ribbon-wrapper">
+                            <div class="ui-ribbon">
+                                30% Off
+                            </div>
+                        </div>
+                        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Ribbon-danger</div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti rerum reprehenderit ipsam natus saepe. Recusandae, itaque nulla in illum dolorum ea eveniet quaerat ipsa placeat magni commodi obcaecati mollitia necessitatibus?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end Ribbons -->
+
+
+    <!-- Accordion -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Accordion or Collapse</div>
+        <div class="panel-body ng-scope" data-ng-controller="AccordionDemoCtrl">
+            <div class="row">
+                <div class="col-lg-3">
+                    <p><strong>Open only one at a time?</strong></p>
+                    <label class="switch switch-success"><input type="checkbox" ng-model="oneAtATime" class="ng-pristine ng-valid"><i></i></label>
+                    <div class="divider divider-lg"></div>
+                </div>
+                <div class="col-lg-9">
+                    <accordion close-others="oneAtATime" class="ui-accordion"><div class="panel-group" ng-transclude="">
+                        <div class="panel panel-default ng-isolate-scope" heading="Static Header, initially expanded" is-open="status.isFirstOpen">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Static Header, initially expanded</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse in" collapse="!isOpen" style="height: auto;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                            This content is straight in the template.
+                        </span></div>
+  </div>
+</div>
+                        <!-- ngRepeat: group in groups --><div class="panel panel-default ng-isolate-scope" heading="Dynamic Group Header - 1" ng-repeat="group in groups">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Dynamic Group Header - 1</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-binding ng-scope">
+                            Dynamic Group Body - 1
+                        </span></div>
+  </div>
+</div><!-- end ngRepeat: group in groups --><div class="panel panel-default ng-isolate-scope" heading="Dynamic Group Header - 2" ng-repeat="group in groups">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Dynamic Group Header - 2</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-binding ng-scope">
+                            Dynamic Group Body - 2
+                        </span></div>
+  </div>
+</div><!-- end ngRepeat: group in groups --><div class="panel panel-default ng-isolate-scope" heading="Dynamic Group Header - 3" ng-repeat="group in groups">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Dynamic Group Header - 3</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-binding ng-scope">
+                            Dynamic Group Body - 3
+                        </span></div>
+  </div>
+</div><!-- end ngRepeat: group in groups -->
+                    </div></accordion>
+                </div>
+            </div>
+        
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <accordion close-others="oneAtATime" class="ui-accordion ui-accordion-success"><div class="panel-group" ng-transclude="">
+                        <div class="panel panel-default ng-isolate-scope" heading="Consectetur adipisicing elit" is-open="status.isFirstOpen1">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Consectetur adipisicing elit</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse in" collapse="!isOpen" style="height: auto;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, totam, iusto, quibusdam, voluptates ullam consequuntur facilis odio magni error fugit architecto a.
+                        </span></div>
+  </div>
+</div>
+                        <div class="panel panel-default ng-isolate-scope" heading="Temporibus consequatur vel veritatis">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Temporibus consequatur vel veritatis</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                            Asperiores, natus error eveniet velit id labore quo necessitatibus. Voluptatum, eaque, vel explicabo nobis nulla quasi veritatis reprehenderit quam pariatur culpa magni perferendis voluptas quas.
+                        </span></div>
+  </div>
+</div>
+                        <div class="panel panel-default ng-isolate-scope" heading="Vel veritatis corrupti minima">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Vel veritatis corrupti minima</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                             Ab, unde, quasi harum voluptatum voluptate quaerat repudiandae doloremque aut deserunt laborum nisi fugit maiores ex vero quisquam dignissimos recusandae reprehenderit sint illum?
+                        </span></div>
+  </div>
+</div>
+                    </div></accordion>
+                </div>
+                <div class="col-md-6">
+                    <accordion close-others="oneAtATime" class="ui-accordion ui-accordion-info"><div class="panel-group" ng-transclude="">
+                        <div class="panel panel-default ng-isolate-scope" heading="Consectetur adipisicing elit" is-open="status.isFirstOpen2">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Consectetur adipisicing elit</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse in" collapse="!isOpen" style="height: auto;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, totam, iusto, quibusdam, voluptates ullam consequuntur facilis odio magni error fugit architecto a.
+                        </span></div>
+  </div>
+</div>
+                        <div class="panel panel-default ng-isolate-scope" heading="Temporibus consequatur vel veritatis">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Temporibus consequatur vel veritatis</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                            Asperiores, natus error eveniet velit id labore quo necessitatibus. Voluptatum, eaque, vel explicabo nobis nulla quasi veritatis reprehenderit quam pariatur culpa magni perferendis voluptas quas.
+                        </span></div>
+  </div>
+</div>
+                        <div class="panel panel-default ng-isolate-scope" heading="Vel veritatis corrupti minima">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Vel veritatis corrupti minima</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                             Ab, unde, quasi harum voluptatum voluptate quaerat repudiandae doloremque aut deserunt laborum nisi fugit maiores ex vero quisquam dignissimos recusandae reprehenderit sint illum?
+                        </span></div>
+  </div>
+</div>                    
+                    </div></accordion>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <accordion close-others="oneAtATime" class="ui-accordion ui-accordion-warning"><div class="panel-group" ng-transclude="">
+                        <div class="panel panel-default ng-isolate-scope" heading="Consectetur adipisicing elit" is-open="status.isFirstOpen3">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Consectetur adipisicing elit</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse in" collapse="!isOpen" style="height: auto;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, totam, iusto, quibusdam, voluptates ullam consequuntur facilis odio magni error fugit architecto a.
+                        </span></div>
+  </div>
+</div>
+                        <div class="panel panel-default ng-isolate-scope" heading="Temporibus consequatur vel veritatis">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Temporibus consequatur vel veritatis</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                            Asperiores, natus error eveniet velit id labore quo necessitatibus. Voluptatum, eaque, vel explicabo nobis nulla quasi veritatis reprehenderit quam pariatur culpa magni perferendis voluptas quas.
+                        </span></div>
+  </div>
+</div>
+                        <div class="panel panel-default ng-isolate-scope" heading="Vel veritatis corrupti minima">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Vel veritatis corrupti minima</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                             Ab, unde, quasi harum voluptatum voluptate quaerat repudiandae doloremque aut deserunt laborum nisi fugit maiores ex vero quisquam dignissimos recusandae reprehenderit sint illum?
+                        </span></div>
+  </div>
+</div>
+                    </div></accordion>
+                </div>
+                <div class="col-md-6">
+                    <accordion close-others="oneAtATime" class="ui-accordion ui-accordion-danger"><div class="panel-group" ng-transclude="">
+                        <div class="panel panel-default ng-isolate-scope" heading="Consectetur adipisicing elit" is-open="status.isFirstOpen4">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Consectetur adipisicing elit</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse in" collapse="!isOpen" style="height: auto;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, totam, iusto, quibusdam, voluptates ullam consequuntur facilis odio magni error fugit architecto a.
+                        </span></div>
+  </div>
+</div>
+                        <div class="panel panel-default ng-isolate-scope" heading="Temporibus consequatur vel veritatis">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Temporibus consequatur vel veritatis</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                            Asperiores, natus error eveniet velit id labore quo necessitatibus. Voluptatum, eaque, vel explicabo nobis nulla quasi veritatis reprehenderit quam pariatur culpa magni perferendis voluptas quas.
+                        </span></div>
+  </div>
+</div>
+                        <div class="panel panel-default ng-isolate-scope" heading="Vel veritatis corrupti minima">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Vel veritatis corrupti minima</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude=""><span class="ng-scope">
+                             Ab, unde, quasi harum voluptatum voluptate quaerat repudiandae doloremque aut deserunt laborum nisi fugit maiores ex vero quisquam dignissimos recusandae reprehenderit sint illum?
+                        </span></div>
+  </div>
+</div>                    
+                    </div></accordion>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Accordion -->
+
+
+    <!-- Panels -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Panels</div>
+        <div class="panel-body">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Panel content
+                </div>
+                <div class="panel-footer">Panel footer</div>
+            </div>
+            <div class="panel panel-dark">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Panels -->
+
+
+
+    <!-- Callout -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Callout</div>
+        <div class="panel-body">
+            <div class="callout callout-success">
+                <h4>Callout heading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, alias, in accusantium totam adipisci vel et suscipit quidem libero pariatur minus ratione quo doloremque error at nemo incidunt dicta quia?</p>
+            </div>
+            <div class="callout callout-info">
+                <h4>Callout heading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, alias, in accusantium totam adipisci vel et suscipit quidem libero pariatur minus ratione quo doloremque error at nemo incidunt dicta quia?</p>
+            </div>
+            <div class="callout callout-warning">
+                <h4>Callout heading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, alias, in accusantium totam adipisci vel et suscipit quidem libero pariatur minus ratione quo doloremque error at nemo incidunt dicta quia?</p>
+            </div>
+            <div class="callout callout-danger">
+                <h4>Callout heading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, alias, in accusantium totam adipisci vel et suscipit quidem libero pariatur minus ratione quo doloremque error at nemo incidunt dicta quia?</p>
+            </div>
+        </div>
+    </section>
+    <!-- end Callout -->
+
+
+    <!-- Well -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Well</div>
+        <div class="panel-body">
+            <div class="well well-sm">Look, I'm in a small well!</div>
+            <div class="well">Look, I'm in a well!</div>
+            <div class="well well-lg">Look, I'm in a large well!</div>
+        </div>
+    </section>
+    <!-- end Well -->
+
+
+    <!-- Scrollable Box -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Scrollable Box</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Scrollable Box</div>
+                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;"><div class="panel-body ui-map " data-slim-scroll="" data-scroll-height="200px" style="overflow: hidden; width: auto; height: 200px;">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, tenetur, repellat obcaecati unde esse doloribus accusamus exercitationem vitae corporis blanditiis aspernatur quibusdam porro rerum voluptatum quos eligendi necessitatibus enim! Maiores, doloribus, fuga, perspiciatis cupiditate aperiam repellendus natus nisi recusandae rerum optio consectetur nemo reprehenderit nesciunt molestiae at. Molestiae, nesciunt inventore dignissimos itaque exercitationem vero aliquam provident aperiam repudiandae nostrum. Ipsa, possimus, natus culpa magni rem iusto ut quisquam cupiditate aspernatur nemo sed aliquam quam illum illo quos dolor animi ipsum dolorem sunt beatae officia facere voluptatem omnis! Sapiente, illo voluptatibus amet omnis optio labore nesciunt porro facere praesentium laudantium molestiae voluptas eos incidunt quod nulla. Provident, debitis, odit qui ab facere adipisci laborum ea necessitatibus sapiente voluptatibus minima inventore veritatis unde nemo ipsa quisquam dolorum autem et minus repudiandae nostrum aliquam numquam aperiam similique vero delectus maiores non aliquid laboriosam eius impedit cum vel a corporis consequuntur natus earum suscipit. Repellat, laborum, cupiditate aperiam distinctio vero dolor est quibusdam sit rerum expedita tempore reiciendis quidem quisquam deserunt autem pariatur eos fugiat qui hic temporibus ullam dicta voluptatem sequi at iusto! Accusamus, iure, optio temporibus molestiae ab dolor blanditiis veritatis corporis eius reiciendis sed molestias obcaecati dolorem similique rerum illo excepturi.</p>
+                        </div><div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 77.6699px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 240px;"><div class="panel-body ui-map " data-slim-scroll="" data-scroll-height="240px" style="overflow: hidden; width: auto; height: 240px;">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, tenetur, repellat obcaecati unde esse doloribus accusamus exercitationem vitae corporis blanditiis aspernatur quibusdam porro rerum voluptatum quos eligendi necessitatibus enim! Maiores, doloribus, fuga, perspiciatis cupiditate aperiam repellendus natus nisi recusandae rerum optio consectetur nemo reprehenderit nesciunt molestiae at. Molestiae, nesciunt inventore dignissimos itaque exercitationem vero aliquam provident aperiam repudiandae nostrum. Ipsa, possimus, natus culpa magni rem iusto ut quisquam cupiditate aspernatur nemo sed aliquam quam illum illo quos dolor animi ipsum dolorem sunt beatae officia facere voluptatem omnis! Sapiente, illo voluptatibus amet omnis optio labore nesciunt porro facere praesentium laudantium molestiae voluptas eos incidunt quod nulla. Provident, debitis, odit qui ab facere adipisci laborum ea necessitatibus sapiente voluptatibus minima inventore veritatis unde nemo ipsa quisquam dolorum autem et minus repudiandae nostrum aliquam numquam aperiam similique vero delectus maiores non aliquid laboriosam eius impedit cum vel a corporis consequuntur natus earum suscipit. Repellat, laborum, cupiditate aperiam distinctio vero dolor est quibusdam sit rerum expedita tempore reiciendis quidem quisquam deserunt autem pariatur eos fugiat qui hic temporibus ullam dicta voluptatem sequi at iusto! Accusamus, iure, optio temporibus molestiae ab dolor blanditiis veritatis corporis eius reiciendis sed molestias obcaecati dolorem similique rerum illo excepturi.</p>
+                        </div><div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 111.845px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end Scrollable Box -->
+
+
+</div>
+
+
+</section>
+        </div>
+
+
+        <script src="./Angular-X_files/js"></script>
+        <script src="./Angular-X_files/vendor.js"></script>
+
+        <script src="./Angular-X_files/ui.js"></script><input id="textAngular-editableFix-010203040506070809" style="width:1px;height:1px;border:none;margin:0;padding:0;position:absolute; top: -10000; left: -10000;" unselectable="on" tabindex="-1">
+
+        <script src="./Angular-X_files/app.js"></script>
+    
+<div id="flotTip" style="display: none; position: absolute;"></div></body></html>

@@ -1,0 +1,1452 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="msapplication-TileColor" content="#0061da">
+        <meta name="theme-color" content="#1643a3">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+        <!-- Title -->
+        <title>KiteRx Reports</title>
+        <link rel="stylesheet" href="assets/fonts/fonts/font-awesome.min.css">
+
+        <!-- Font family -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+        <!-- Dashboard Css -->
+        <link href="assets/css/dashboard.css" rel="stylesheet" />
+
+
+        <!-- c3.js Charts Plugin -->
+        <link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
+
+        <!-- Custom scroll bar css-->
+        <link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+        <link href="assets/plugins/date-picker/spectrum.css" rel="stylesheet" />
+
+        <!---Font icons-->
+        <link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/sweet-alert.css" />
+
+    </head>
+    <body class="">
+        <div id="global-loader" ></div>
+        <div class="page" >
+            <div class="page-main">
+                <div class="header py-1">
+                    <div class="container">
+                        <div class="d-flex">
+                            <a class="header-brand" href="#">
+                                <!--								<img src="assets/images/brand/logo.png" class="header-brand-img" alt="Viboon logo">-->
+                                <img src="img/logo_3.png" style="position: absolute;top: -15px;">
+                            </a>
+                            <div class="d-flex order-lg-2 ml-auto">
+                                <div class="dropdown d-none d-md-flex mt-4" >
+                                    <h3 style="color: white;">  Window view : Fast Customer Billing </h3>
+                                </div>
+                                <div class="dropdown d-none d-md-flex mt-1" >
+                                    <a  class="nav-link icon full-screen-link">
+                                        <i class="fe fe-maximize floating"  id="fullscreen-button"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown d-none d-md-flex mt-1" >
+                                    <a  class="nav-link icon full-screen-link">
+                                        <i class="fe fe-star floating"  id="buttonAside"></i>
+                                    </a>
+                                </div>
+
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-bell floating"></i>
+                                        <span class="nav-unread bg-danger"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-thumbs-o-up"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Someone likes our posts.</strong>
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-commenting-o"></i>
+                                            </div>
+                                            <div>
+                                                <strong> 3 New Comments</strong>
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-cogs"></i>
+                                            </div>
+                                            <div>
+                                                <strong> Server Rebooted.</strong>
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">View all Notification</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-mail floating"></i>
+                                        <span class=" nav-unread badge badge-warning  badge-pill">2</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item text-center">2 New Messages</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/male/41.jpg)"></span>
+                                            <div>
+                                                <strong>Madeleine</strong> Hey! there I' am available....
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/1.jpg)"></span>
+                                            <div>
+                                                <strong>Anthony</strong> New product Launching...
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/18.jpg)"></span>
+                                            <div>
+                                                <strong>Olivia</strong> New Schedule Realease......
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">See all Messages</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown mt-1">
+                                    <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                                        <span class="avatar avatar-md brround" style="background-image: url(img/user_images/user_1.jpg)"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow ">
+                                        <div class="text-center">
+                                            <a href="#" class="dropdown-item text-center font-weight-sembold user" id="username">Manish Soin</a>
+                                            <span class="text-center user-semi-title text-dark" id="userRole">Pharmacy Director</span>
+                                            <div class="dropdown-divider"></div>
+                                        </div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-account-outline "></i> Profile
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon  mdi mdi-settings"></i> Settings
+                                        </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?
+                                        </a>
+                                        <a class="dropdown-item" href="login.html">
+                                            <i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                                <span class="header-toggler-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-navbar" id="headerMenuCollapse">
+                    <div class="container">
+                        <ul class="nav">
+                            <li class="nav-item with-sub">
+                                <a class="nav-link " href="#"><i class="fa fa-bar-chart"></i> <span>Billing</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductSaleEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Sales Entry</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html"><i class="fa fa-check"></i>Sale Entry</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Purchase Entry</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html">Tagged Billing</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sale return</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Purchase return</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link " href="index4.html">
+                                    <i class="fa fa-home"></i>
+                                    <span>DASHBOARD</span>
+                                </a>
+                                <!--                                <div class="sub-item">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="index.html">Dashboard 1</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index2.html">Dashboard 2</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index3.html">Dashboard 3</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index4.html">Dashboard 4</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index5.html">Dashboard 5</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> sub-item -->
+                            </li>
+
+                            <li class="nav-item with-sub">
+                                <a class="nav-link active" href="#"><i class="fa fa-snowflake-o"></i> <span>Reports</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="SaleReportV2.html"><i class="fa fa-check"></i>Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductSalesReportV2.html"><i class="fa fa-check"></i>Product Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="PurchaseReportV2.html"><i class="fa fa-check"></i>Purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleReportV2.html?paymentTypeFilter=CREDIT"> <i class="fa fa-check"></i> Credit report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Inventory report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Return items</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-file-text-o"></i> <span>Stocks</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseV2.html"><i class="fa fa-check"></i>Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2_Stock.html"><i class="fa fa-check"></i>Current Stock</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2.html"><i class="fa fa-check"></i>Sales chart</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Expired products</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub ">
+                                <a class="nav-link " data-toggle="dropdown" href="#"><i class="fa fa-cubes"></i> <span>Accounts</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <!--                                        <li>
+                                                                                    <a href="new-company.html"><i class="fa fa-check"></i>New Company</a>
+                                                                                </li>-->
+                                        <li>
+                                            <a href="new-customer.html"><i class="fa fa-check"></i>New Customer</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-credit-account.html"><i class="fa fa-check"></i>New Credit Account</a>
+                                        </li>
+                                        <!--                                        <li>
+                                                                                    <a href="#">Company list</a>
+                                                                                </li>-->
+                                        <li>
+                                            <a href="CustomerListV2.html"><i class="fa fa-check"></i>Manage Customers & Payments</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?isCreditSearch=1"><i class="fa fa-check"></i>Credit Account List</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?onlyPending=1"><i class="fa fa-check"></i>Pending Payments To me</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-bandcamp"></i> <span>System Management</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="salesHistory.html">Export Product Sheet</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export expiry</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Database Backup</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="my-3 my-md-5">
+                    <div class="container">
+
+                        <div id="popupasideprodAnalysis" style="position:absolute;left:-2000px;top:10px;z-index: 10000;width:90%;height:100%;
+                             margin-top: -10px;background-color: 
+                             #FAFB9E;color: #393939; font-family: monospace;border-style: solid;border-width: 2px;border-color: black;">
+                            <center><h1>Sales Entry<span id="asidebatchHeader"></span> 
+                                    <button class="btn btn-round pull-right" style="position:absolute;font-size: 20px;margin-top: 5px;" 
+                                            id="buttonAside3" onclick="asideStat()">X</button></h1></center>
+                        </div>
+
+                        <div class="row-fluid"> 
+                            <div class="box span12" >
+                                <div class="row-fluid" style="overflow: auto">
+                                    <div id = "filterDiv">
+                                        <center>
+                                            <table style="width:99%">
+                                                <tr>
+                                                    <td>Product Name</td>
+                                                    <td>ID</td>
+                                                    <td>Batch</td>
+                                                    <td>Packing</td>
+                                                    <td>MRP</td>
+                                                    <td>Expiry</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="text" id="productNameFilterTxt" placeholder="Product Name" style="width: 100%;height:35px;"  autofocus autocomplete="off" onfocus='hideBatchdiv()'/>
+                                                            <div id="nameListDiv1" style="visibility: hidden;position:absolute;background-color: #21584e;color:white;font-size:14px;z-index: 20000;
+                                                                 overflow: scroll;height:200px;width:300px;border-style: solid;border-width: 2px;border-color: black;">
+                                                                <center><img src="img/loading.gif" width="40" height="40" id="loadingNamesImg"/></center>
+                                                                <table id="custNameList1" class="table card-table table-vcenter text-nowrap">
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="text" id="custBatchFilterTxt" placeholder="Product Batch" style="width: 100%;height:35px;" readonly/>
+                                                            <div id="batchListDiv1" style="visibility: hidden;position:absolute;background-color: #21584e;color:white;font-size:14px;z-index: 2;
+                                                                 overflow: scroll;height:500px;width:100%;border-style: solid;border-width: 2px;border-color: black;left: 0px;">
+                                                                <center><table><tr><td><h4>Select Product Batch</h4></td><td><button class="btn btn-primary" onclick="deleteBulkProduct()">Delete Product</button>&nbsp;&nbsp;<button class="btn btn-primary" onclick="updateQuantityZero()">Update QTY 0</button>&nbsp;&nbsp;<button class="btn btn-primary" onclick="selectAllCheck()">Select All Rows</button></td></tr></table></center>
+                                                                <table id="custBatchList1" class="table card-table table-vcenter text-nowrap">
+                                                                    <tr style="font-size: 12px;font-weight: 800;color:white;">
+                                                                        <th align="left" style="font-size: 14px;font-weight: 600;color:white;">NAME</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;" >ENTRY DATE</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">BATCH</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">PACKING</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">MRP</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">PUR.RATE</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">EXP</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">STOCK</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">FREE</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">COMPANY</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">DISTRIBUTER</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">SCHEDULE</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">CGST</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">SGST</th>
+                                                                        <th align='left' style="font-size: 14px;font-weight: 600;color:white;">MARGIN</th>
+                                                                    </tr>  
+
+                                                                    <tbody id='custBatchList1Body' style="font-size: 14px;font-weight: 600;"> 
+
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="text" id="productIdTxt" placeholder="ID" style="width: 100%;height:35px;" autocomplete="off"/>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="text" id="packing" placeholder="Packing" style="width: 100%;height:35px;" autocomplete="off"/>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="text" id="mrpTxt" placeholder="MRP" style="width: 100%;height:35px;" autocomplete="off"/>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input type="text" id="expiryTxt" placeholder="Expiry Date" style="width: 100%;height:35px;" autocomplete="off"/>
+                                                        </div>
+                                                    </td>
+                                                    <!--                                                    <td>
+                                                                                                            <div class="form-group">
+                                                                                                                <input type="text" id="addQuantityForBillingTxt" placeholder="Order Quantity" style="width: 100%;height:35px;" autocomplete="off"/>
+                                                                                                            </div>
+                                                                                                        </td>-->
+
+                                                    <!--                                                    <td>
+                                                                                                            <button class="btn btn-primary" onclick="addProductForBilling()" style="margin-top: -18px;">Add Product</button>
+                                                                                                        </td>-->
+
+                                                </tr>
+                                            </table>
+
+
+                                        </center>
+                                    </div>
+
+                                    <table style="width:100%" border="0" >
+                                        <tr>
+                                            <th colspan="2" align="left">
+
+                                                <h3>Product Sales Entry <span id="filterSpn"></span><span id="totalSaleSpn" style="font-size:26px;color:red;font-weight:700;"><button id="saveBillBtn" data-toggle="collapse" data-target="#saleDemo" type="button" class="btn btn-primary"><font style="font-size:14px;"><span id="spnCartCount">#0</span></font><i class="fa fa-upload fa-spin ml-2"></i></button></span> <!--<button onclick="getCustomerInstances(1)">Export All Sales Data</button>--></h3> 
+
+                                            </th>
+
+                                        </tr>
+                                    </table>
+
+                                    <div id="demo" class="collapse">
+                                        <center>
+                                            <input type="text" id="expDateFiltertxt" value="" style="width:50%;height:30px;font-weight: 500;background-color:#FAFB9E;" />
+                                            <br />
+                                            <div>
+                                                <div id="calendar" style="curson:pointer;width:350px;height:300px"></div>
+
+                                            </div>
+                                        </center>
+                                    </div>
+                                    <div class="row-fluid" id="myModal" style="position:absolute;">
+                                        <button type="button" class="close" data-dismiss="modal" style="background-color: #393939;"></button>
+                                        <center>
+                                            <div class="modal-body">
+                                                <img src="img/red_loader.gif" width="100" height="100" />
+                                            </div>
+                                        </center>
+                                    </div>
+
+                                    <div id="salesDivSummary" style="background-color: #21584e;color:white;font-size:14px;
+                                         overflow: scroll;height:100%;width:100%;border-style: solid;border-width: 2px;border-color: black;left: 10px;">
+
+                                        <table id="tableForOrder" border="0" class="table card-table table-vcenter text-nowrap" style="cursor: pointer">
+                                            <thead>
+                                                <tr style="font-size: 14px;font-weight: 800;color:white;">
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">ACTION</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">ID</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">PRODUCT</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">PACK</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">BATCH</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">EXP</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">MRP</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">P.RATE</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">P.AM PU</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">CGST</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">SGST</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">COMPANY</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">QTY</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">A.PU</th>	
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">RETURN</th>
+                                                    <th align='left' style="font-size: 14px;font-weight: 700;color:white;">TOTAL</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody id="bpelInstSummayTabBody"  style="font-size: 14px;font-weight: 700;color:white;">
+                                            </tbody>							
+
+                                        </table> 
+                                        <center><strong><button id='btnGenerateBill' class="btn btn-primary" style="font-weight:700;visibility:hidden" onclick="generateBill()" > Generate Sales Invoice</button></strong></center>
+                                        <br />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="mySwalWindow" style="z-index: 5000; position: absolute; top: 20px; 
+                 left: 30%; border-width: 2px; border-color: black; background-color: #063930; color: white;width:600px;display: none;">
+                <center><h1 id="mySwalTitle">Info</h1></center>
+                <hr style="margin-top: -10px;"/>
+                <center><h3 id="mySwalMessage">This is the dummy message</h3>
+                    <button class="btn btn-warning" style="width: 100px;" onclick="hideMySwal()" id="mySwalAction" >OK</button></center>
+                <br />
+            </div>
+
+            <div id="myMessageTrackingWindow" class="modal fade">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header pd-x-20">
+                            <center><h4 class="modal-title">Add purchase quantity information for product</h4></center>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div id='billingDivMainTop'>
+
+                            <div class="modal-body" >
+                                <center>
+                                    <span id='errorInQuantitySpn' style='color:red;font-size: 16px;'> </span>
+                                    <table class="table" style="font-size : 18px;cursor:pointer; width:100%" border="2">
+                                        <tr>
+                                            <td align="left" style='color:black;font-size : 16px;'>PRODUCT NAME : <span id='bpelName' style='color:orangered;font-size : 17px;font-weight:700;'></span> </td>
+                                            <td align="left" style='color:black;font-size : 16px;'>BATCH : <span id='batchModel1' style='color:orangered;font-size : 17px;font-weight:700;'></span> </td>
+                                            <td style='color:black;;font-size : 18px;'>Product ID : <span id='bpelID' style='color:orangered;font-size : 17px;font-weight:700;'></span></td>
+                                            <td style='color:black;;font-size : 18px;'>Company : <span id='companyModel1' style='color:orangered;font-size : 17px;font-weight:700;'></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style='color:black;;font-size : 16px;'>AVAILABLE UNITS : <span id='quantity' style='color:orangered ;font-size : 17px;font-weight:700;'></span> </td>
+                                            <td align="left" style='color:black;;font-size : 16px;'>MRP [MAXIMUM RETAIL PRICE] : <span id='mrpForProduct' style='color:orangered;font-size : 17px;font-weight:700;'></span> </td>
+                                            <td align="left" style='color:black;;font-size : 16px;'>PURCHASE RATE : <span id='amountPerUnit1' style='color:orangered;font-size : 17px;font-weight:700;'></span> </td>
+                                            <td align="left" style='color:black;;font-size : 16px;'>EXPIRY DATE : <span id='expiryDateModel1' style='color:orangered;font-size : 17px;font-weight:700;'></span> </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style='color:black;;font-size : 16px;'>TOTAL TAX (%): 
+                                                <select class="" id="totalTaxInfo" style="color:orangered ;font-size : 17px;font-weight:700;width: 100px;" 
+                                                        onchange="taxValueChanged()">
+                                                    <option value="0" selected="selected">0</option>
+                                                    <option value="5">5</option>
+                                                    <option value="12">12</option>
+                                                    <option value="18">18</option>
+                                                    <option value="28">28</option>
+                                                </select>
+                                            </td>
+                                            <!--<input type="text" id='totalTaxInfo' style='color:orangered ;font-size : 17px;font-weight:700;' onchange="taxValueChanged()"/> </td>-->
+                                            <td align="left" style='color:black;;font-size : 16px;'>CGST (%): <input type="text"  id='cgstTaxInfo' style='color:orangered;font-size : 17px;font-weight:700;' /> </td>
+                                            <td align="left" style='color:black;;font-size : 16px;'>SGST (%): <input type="text"  id='sgstTaxInfo' style='color:orangered;font-size : 17px;font-weight:700;' /> </td>
+                                            <td align="left" style='color:black;;font-size : 16px;'>DISTRIBUTER NAME : <span id='distributernameInfo' style='color:orangered;font-size : 17px;font-weight:700;'></span> </td>
+                                        </tr>
+
+                                        <!--                                <tr style="width:0px;height:0px;visibility: hidden">
+                                                                            <td align="left" style='color:black;;font-size : 16px;'>Sale amount per unit</td><td>
+                                                                            <td align="left" style='color:black;;font-size : 16px;'>Product Default Discount</td><td align="left" style='color:orangered;font-size : 17px;' colspan="2"> 
+                                                                                <span id="productDiscount"></span>
+                                                                            </td>
+                                                                        </tr>-->
+                                    </table>
+
+                                    <span id="pramountPerUnit" style="width:0px;height: 0px;visibility: hidden;"></span>
+
+                                    <table width="70%" style='color:black;font-size : 16px;' border="2">
+                                        <tr>
+                                            <td>
+                                                <font style="font-size : 16px;">Packing info</font>
+                                            </td>
+                                            <td>
+                                                <font style="font-size : 16px;">CGST/Unit (Rs)</font>
+                                            </td>
+                                            <td>
+                                                <font style="font-size : 16px;">SGST/Unit (Rs)</font>
+                                            </td>
+                                            <td>
+                                                <font style="font-size : 16px;">Amount/Unit (Without Tax)</font>
+                                            </td>
+                                            <td>
+                                                <font style="font-size : 16px;">Total Amount/Unit (With Tax)</font>
+                                            </td>                                            
+                                            <td>
+                                                <font style="font-size : 16px;">Order/Return Units</font>
+                                            </td>
+                                            <td>
+                                                <font style="font-size : 16px;">Is Product Returned?</font>
+                                            </td>                                                     
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span id='packingInfo' style='font-size : 16px;width:70%;height:40px;font-weight: 600;background-color: #FAFB9E'> </span>
+                                            </td>
+                                            <td>
+                                                <input type='text' id='cgstPerUnit' style='font-size : 16px;width:100%;height:35px;font-weight: 600;' placeholder="CGST" autocomplete="off" />
+                                            </td>
+                                            <td>
+                                                <input type='text' id='sgstPerUnit' style='font-size : 16px;width:100%;height:35px;font-weight: 600;' placeholder="SGST" autocomplete="off" />
+                                            </td>
+                                            <td>
+                                                <input type='text' id='taxAmountPerUnit' style='font-size : 16px;width:100%;height:35px;font-weight: 600;' placeholder="SGST" autocomplete="off" />
+                                            </td>
+                                            <td>
+                                                <input type='text' id='amountPerUnit' style='font-size : 16px;width:100%;height:35px;font-weight: 600;' placeholder="Order Units" autocomplete="off" />
+                                            </td>
+                                            <td>
+                                                <input type='text' id='addQuantityForBillingTxt' name="addQuantityForBillingTxt" style='font-size : 16px;width:100%;height:35px;font-weight: 600;' placeholder="Order Units" autocomplete="off" />
+                                            </td>
+                                            <td>
+                                                <select class="form-control myListener" id="isProductReturned" style="width:95%;height:40px;font-weight: 600;font-size: 20px;background-color: #FAFB9E;" >
+                                                    <option value="N" selected="selected">NO</option>
+                                                    <option value="Y">YES</option>
+                                                </select>
+                                            </td>
+
+                                        </tr>
+                                    </table>
+
+                                    <!--<button class="btn btn-success" style="width:200px;height:40px;font-size: 16px;" onclick="addProductForBilling()">Add for sales</button>-->
+                                </center>
+                                <div  class="pull-right" >
+                                    <table>
+                                        <tr>
+                                            <td  style='color: seagreen;font-size : 22px;font-weight:700;'><span id="profitDiv">Total Estimated Profit : <span id="totalEstimatedProfit"></span></span></td>
+                                            <td><img src="img/alert_1.gif" id="redAlert" style="width:40px;height: 40px;" /> </td><td><img src="img/yellow_alert_1.gif" id="yellowAlert" style="width:40px;height: 40px;"></td>
+                                        </tr>
+                                    </table>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id='billingDivMainTopFinalBill' style="visibility:hidden;">                    
+                            <div class="modal-body">
+
+                                <table class="table" style="font-size : 18px;cursor:pointer;width:100%" border="2">
+                                    <tr>
+                                        <td align="left" style='color:black;font-size : 16px;'>Sale ID</td>
+                                        <td align="left">
+                                            <span id='billNo' style='color:orangered;font-size : 16px;font-weight:700;'> </span> </td>
+
+                                        <td align="left" style='color:black;font-size : 16px;'>Sale date</td>
+                                        <td align="left">
+                                            <!--<input class="form-control" type="text" id='billDate' style='color:orangered;font-size : 16px;font-weight:700;height:40px;' />--> 
+
+                                            <div class="input-group" style="margin-top: -1px;color:orangered;font-size : 16px;font-weight:700;height:40px;">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
+                                                    </div>
+                                                </div><input class="form-control" id="billDate" placeholder="DD/MM/YYYY" type="text">
+                                            </div>
+                                        </td>
+
+                                        <td align="left" style='color:black;font-size : 16px;'>Number of products</td>
+                                        <td align="left"><span id='productForBill' style='color:orangered;font-size : 16px;'></span> </td>
+
+                                        <td align="left" style='color:black;font-size : 16px;'>Sale Total Amount (Without Discount)</td>
+                                        <td align="left"><span id='amountTotalForFill' style='color:orangered;font-size : 16px;font-weight:700;'></span> </td>
+                                    </tr>
+                                </table><br />
+                                <table style="font-size : 12px;cursor:pointer;width:100%" border="0" class="" >
+                                    <tr>
+                                        <td align="left" style='color:black;font-size : 12px;font-weight: 700;'>CUSTOMER NAME </td>
+                                        <td align="left" style='color:black;font-size : 12px;font-weight: 700;'>MOBILE NUMBER</td>
+                                        <td align="left" style='color:black;font-size : 12px;font-weight: 700;'>DOCTOR NAME </td>
+                                        <td align="left" style='color:black;font-size : 12px;font-weight: 700;'>PRESCRIPTION DATE</td>
+                                        <td align="left" style='color:black;font-size : 12px;font-weight: 700;'>DISCOUNT</td>
+                                        <td align="left" style='color:black;font-size : 12px;font-weight: 700;'>PAYMENT TYPE</td>
+                                        <td align="left" style='color:black;font-size : 12px;font-weight: 700;'>CREDIT AMOUNT</td>
+                                        <td align="left" style='color:black;font-size : 12px;font-weight: 700;'>CREDIT COMMENTS</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            <input type='text' id='custNameForBillingTxt' 
+                                                   style="width:100%;height:35px;font-size : 12px;font-weight:600;" 
+                                                   value="" placeholder="Customer Name" tabindex="103"  autocomplete="off" /> 
+                                            <div id="nameListDiv" style="visibility: hidden;position:absolute;background-color: #21584e;color:white;font-size:14px;z-index: 40000;
+                                                 overflow: scroll;height:200px;width:300px;border-style: solid;border-width: 2px;border-color: black;">
+                                                <table id="custNameList" class="table card-table table-vcenter text-nowrap">
+
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td id='tdCustMobile' align="left">
+                                            <input type='text'   id='custNameMobileNumberTxt' style="width:100%;height:35px;font-size : 12px;font-weight:600;" value="" placeholder="Contact Number" tabindex="104" autocomplete="off" /> </td>
+                                        <td id='tdPreName' align="left">
+                                            <input type='text'   id='prescriberNameForBillingTxt' style="width:100%;height:35px;font-size : 12px;font-weight:600;" value="SELF" placeholder="Doctor Name" tabindex="101" autocomplete="off" /> </td>
+                                        <td id='tdPreDate' align="left">
+                                            <input type='text'   id='prescriptionDateTxt' style="width:100%;height:35px;font-size : 12px;font-weight:600;" value="" placeholder="Written Date" tabindex="102" autocomplete="off" /> </td>
+                                        <td align="left">
+                                            <input type='text'   id='additionalDicount' style="width:100%;height:35px;font-size : 12px;font-weight:600;" value="" placeholder="Additional Discount" tabindex="105" autocomplete="off" /> 
+                                        </td>
+                                        <td align="left">
+
+                                            <select  id="paymentType" 
+                                                     style="width:200px;height:40px;font-weight: 600;font-size: 12px;" 
+                                                     onchange="checkCreditAmount()">
+                                                <option value="CASH" selected="selected">CASH</option>
+                                                <option value="CARD-PAYMENT">CARD PAYMENT</option>
+                                                <option value="CHEQUE-PAYMENT">CHEQUE-PAYMENT</option>
+                                                <option value="DEMAND-DRAFT">DEMAND-DRAFT</option>
+                                                <option value="CREDIT">CREDIT</option>
+                                                <option value="PRE-PAID">PRE-PAID</option>
+                                            </select>
+                                        </td>
+                                        <td align="left">
+                                            <input type='text' disabled="true"  id='creditAmount' style="width:100%;height:35px;font-size : 12px;font-weight:600;" value="" placeholder="Credit Amount" tabindex="105" autocomplete="off" /> 
+                                        </td>
+                                        <td align="left">
+                                            <input type='text' id='creditComment' style="width:100%;height:35px;font-size : 12px;font-weight:600;" value="" placeholder="Comments" tabindex="105" autocomplete="off" /> 
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div id="creditReportDiv" style='color:#21584e;font-size : 14px;font-weight:600;display: none;'>Fetching credit report...</div>
+                                <center><span style='color:#21584e;font-size : 22px;font-weight:700;'>Total Amount (With Discount) : </span><span id='amountTotalForFillWithDiscount' style='color:black;font-size : 28px;font-weight:700;color:#21584e;'></span> </center>
+                                <br />
+                                <strong><button id='btnGenerateFinalBill2' class="btn btn-primary" style="font-weight:700;height:40px;font-size: 16px;" onclick="print_specific_div_content()" tabindex="106">Generate Sales Invoice</button> </strong>
+                                <div id="salesDivSummary56" style="background-color: #21584e;color:white;font-size:14px;
+                                     overflow: scroll;height:100%;width:100%;border-style: solid;border-width: 2px;border-color: black;left: 10px;">
+
+
+                                    <table id="tableForFinalOrder" border="0" class="table card-table table-vcenter text-nowrap" style="cursor: pointer">
+                                        <thead>
+                                            <tr>
+                                                <th align='left' style='color:black;font-size : 10px;'>Product Name</th>
+                                                <th align='left' style='color:black;font-size : 10px;'>Quantity</th>
+                                                <th align='left' style='color:black;font-size : 10px;'>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="bpelInstSummayTabBodyF" style='color:black;font-size : 10px;'>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <img id="prfimg" src="img/profit.PNG" style="width:30px;height:30px;" /><span style="font-size: 12px; font-family: monospace;font-weight: 700; opacity: 0.8;">Total profit : <span id="totalInvProfile"></span></span>
+                                <strong><button id='btnGenerateFinalBill' class="btn btn-primary" style="font-weight:700;height:40px;font-size: 16px;" onclick="print_specific_div_content()" >Generate Sales Invoice</button> </strong>
+                                <br /><br />
+                                <h4 id='billFooter' style='color:blue;font-size : 12px;visibility:hidden'>This is electronic generated sales invoice, Signature not needed</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- modal-dialog -->
+            </div>
+
+
+            <footer>
+                <p class="pull-left"><font color='black'>&copy; BTech Software Pvt. Ltd.</a> 2018-2019</p>
+                <p class="pull-right"><font color='black' >Developed by: <a href="https://www.facebook.com/param.cool2008"  target="_blank">Paramjeet Singh.</a></p>
+                <marquee behavior="scroll" direction="left">In case of any doubt on the product operation, feel free to contact us on +91 9986881500, or sent email to paramjeetsinghbawa@gmail.com </marquee>
+            </footer>
+            <!-- End Footer-->
+        </div>
+        <!-- Back to top -->
+        <a href="#top" id="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
+
+        <!-- Dashboard Core -->
+        <script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+        <script src="custom-js/jquery-ui-1.8.21.custom.min.js"></script>
+        <!-- transition / effect library -->
+        <script src="custom-js/bootstrap-transition.js"></script>
+        <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/vendors/jquery.sparkline.min.js"></script>
+        <script src="assets/js/vendors/selectize.min.js"></script>
+        <script src="assets/js/vendors/jquery.tablesorter.min.js"></script>
+        <script src="assets/js/vendors/circle-progress.min.js"></script>
+        <script src="assets/plugins/rating/jquery.rating-stars.js"></script>
+
+        <!-- Charts Plugin -->
+        <script src="assets/plugins/chart/Chart.bundle.js"></script>
+        <script src="assets/plugins/chart/utils.js"></script>
+
+        <!-- Input Mask Plugin -->
+        <script src="assets/plugins/input-mask/jquery.mask.min.js"></script>
+
+        <!-- Custom scroll bar Js-->
+        <script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Datepicker js -->
+        <script src="assets/plugins/date-picker/spectrum.js"></script>
+        <script src="assets/plugins/date-picker/jquery-ui.js"></script>
+        <script src="assets/plugins/input-mask/jquery.maskedinput.js"></script>
+
+        <!-- Index Scripts -->
+        <script src="assets/js/index4.js"></script>
+
+        <!-- Custom-->
+        <script src="assets/js/custom.js"></script>
+        <script src="custom-js/sweet-alert.min.js"></script>
+        <!-- application script for Charisma demo -->
+        <script>
+
+        </script>
+        <script src='custom-js/fullcalendar.min.js'></script>
+        <script src="custom-js/ProductSalesEntryV2.js"></script>
+        <script src='custom-js/fullcalendar.min.js'></script>
+        <script src="custom-js/DashboardV2.js"></script>
+
+
+
+        <script type="text/javascript">
+                                    $(function () {
+                                        'use strict'
+                                        $('#billDate').datepicker({
+                                            showOtherMonths: true,
+                                            selectOtherMonths: true,
+                                            numberOfMonths: 2,
+                                            dateFormat: 'dd/mm/yy'
+                                        });
+
+                                    });
+
+                                    window.onload = maxWindow;
+
+                                    var searchCommand = 1;
+                                    var mainMenuCommand = 0;
+                                    var tableRowRountInst = 0;
+                                    var gCmd = 0;
+
+                                    // swalParam({title: "Info"});
+
+                                    function helloKeyboard() {
+                                        window.onkeydown = function (evnt) {
+
+                                            if (evnt.keyCode === 38 || evnt.keyCode === 40
+                                                    || evnt.keyCode === 37 || evnt.keyCode === 39 || evnt.keyCode === 27) {
+
+                                                console.log("updateWindow : " + updateWindow);
+                                                //alert(updateWindow);
+
+                                                if (updateWindow === 1) {
+
+                                                    if (evnt.keyCode === 27) {
+                                                        asideHelp3();
+                                                        return false;
+                                                    }
+
+
+                                                    if (evnt.keyCode === 38 || evnt.keyCode === 40) {
+
+                                                        if (evnt.keyCode === 40) {
+                                                            currenNameListIndex++;
+                                                        }
+
+                                                        if (evnt.keyCode === 38) {
+                                                            currenNameListIndex--;
+                                                        }
+
+                                                        for (var i1 = 0; i1 < document.getElementById("custNameList").children.length; i1++) {
+                                                            document.getElementById("custNameList").children[i1].style.border = "";
+                                                            document.getElementById("custNameList").children[i1].style.backgroundColor = "#21584e";
+                                                            //document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].style.fontSize = '14px';
+                                                        }
+
+                                                        if (evnt.keyCode === 40 || evnt.keyCode === 38) {
+                                                            document.getElementById("custNameList").children[currenNameListIndex - 1].children[0].children[0].focus();
+                                                            document.getElementById("custNameList").children[currenNameListIndex - 1].style.border = '0.2em solid black';
+                                                            document.getElementById("custNameList").children[currenNameListIndex - 1].style.backgroundColor = '	#006400';
+                                                        }
+                                                        return false;
+
+                                                    }
+                                                } else if (updateWindow === -1 || updateWindow === 0) {
+                                                    if (evnt.keyCode === 27) {
+                                                        document.getElementById("productNameFilterTxt").focus();
+                                                        document.getElementById("productNameFilterTxt").select();
+                                                        currenNameListIndex1 = 0;
+                                                        document.getElementById("nameListDiv1").style.visibility = "hidden";
+                                                        document.getElementById("batchListDiv1").style.visibility = "hidden";
+                                                    }
+                                                    if (evnt.keyCode === 38 || evnt.keyCode === 40) {
+                                                        var totalLength = document.getElementById("custNameList1").children.length;
+                                                        if (evnt.keyCode === 40) {
+                                                            if (currenNameListIndex1 < totalLength) {
+                                                                currenNameListIndex1++;
+                                                            }
+                                                        }
+
+                                                        if (evnt.keyCode === 38) {
+                                                            if (currenNameListIndex1 > 1) {
+                                                                currenNameListIndex1--;
+                                                            }
+                                                        }
+
+                                                        for (var i1 = 0; i1 < document.getElementById("custNameList1").children.length; i1++) {
+                                                            document.getElementById("custNameList1").children[i1].style.border = "";
+                                                            document.getElementById("custNameList1").children[i1].style.backgroundColor = "#21584e";
+                                                        }
+
+
+                                                        if (evnt.keyCode === 40 || evnt.keyCode === 38) {
+                                                            document.getElementById("custNameList1").children[currenNameListIndex1 - 1].children[0].children[0].focus();
+                                                            document.getElementById("custNameList1").children[currenNameListIndex1 - 1].style.border = '0.2em solid black';
+                                                            document.getElementById("custNameList1").children[currenNameListIndex1 - 1].style.backgroundColor = '	#006400';
+                                                        }
+                                                        return false;
+
+                                                    }
+                                                } else if (updateWindow === -2) {
+                                                    if (evnt.keyCode === 27) {
+                                                        document.getElementById("productNameFilterTxt").focus();
+                                                        document.getElementById("productNameFilterTxt").select();
+                                                        document.getElementById("nameListDiv1").style.visibility = "hidden";
+                                                        document.getElementById("batchListDiv1").style.visibility = "hidden";
+                                                        currenNameListIndex2 = 0;
+                                                    }
+                                                    if (evnt.keyCode === 38 || evnt.keyCode === 40) {
+                                                        try {
+                                                            var totalLength = document.getElementById("custBatchList1Body").children.length;
+                                                            if (evnt.keyCode === 40) {
+                                                                if (currenNameListIndex2 < totalLength) {
+                                                                    currenNameListIndex2++;
+                                                                }
+                                                            }
+
+                                                            if (evnt.keyCode === 38) {
+                                                                if (currenNameListIndex2 > 1) {
+                                                                    currenNameListIndex2--;
+                                                                }
+                                                            }
+
+                                                            for (var i1 = 0; i1 < document.getElementById("custBatchList1Body").children.length; i1++) {
+                                                                document.getElementById("custBatchList1Body").children[i1].style.border = "";
+                                                                document.getElementById("custBatchList1Body").children[i1].style.backgroundColor = "#21584e";
+                                                                //document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].style.fontSize = '14px';
+                                                            }
+
+                                                            if (evnt.keyCode === 40 || evnt.keyCode === 38) {
+                                                                document.getElementById("custBatchList1Body").children[currenNameListIndex2 - 1].children[0].children[1].focus();
+                                                                document.getElementById("custBatchList1Body").children[currenNameListIndex2 - 1].style.border = '0.2em solid black';
+                                                                document.getElementById("custBatchList1Body").children[currenNameListIndex2 - 1].style.backgroundColor = '	#006400';
+                                                            }
+                                                        } catch (err) {
+                                                            updateWindow = -1;
+                                                        }
+                                                        return false;
+
+                                                    }
+                                                } else if (updateWindow === -3) {
+                                                    document.getElementById("amountPerUnit").style.border = '';
+                                                    document.getElementById("addQuantityForBillingTxt").style.border = '';
+                                                    document.getElementById("totalTaxInfo").style.border = '';
+                                                    if (currentTab === 0) {
+                                                        if (taxTotalFound === 0) {
+                                                            document.getElementById("amountPerUnit").focus();
+                                                            document.getElementById("amountPerUnit").style.border = '0.17em solid orange';
+                                                        } else if (taxTotalFound === 1) {
+                                                            document.getElementById("totalTaxInfo").focus();
+                                                            document.getElementById("totalTaxInfo").style.border = '0.27em solid orange';
+                                                        }
+                                                    }
+
+                                                    if (currentTab === 1) {
+                                                        if (taxTotalFound === 0) {
+                                                            document.getElementById("addQuantityForBillingTxt").focus();
+                                                            document.getElementById("addQuantityForBillingTxt").style.border = '0.17em solid orange';
+                                                        } else if (taxTotalFound === 1) {
+                                                            document.getElementById("amountPerUnit").focus();
+                                                            document.getElementById("amountPerUnit").style.border = '0.17em solid orange';
+                                                        }
+                                                    }
+
+                                                    if (currentTab === 2) {
+                                                        if (taxTotalFound === 0) {
+                                                            document.getElementById("totalTaxInfo").focus();
+                                                            document.getElementById("totalTaxInfo").style.border = '0.27em solid orange';
+                                                        } else if (taxTotalFound === 1) {
+                                                            document.getElementById("addQuantityForBillingTxt").focus();
+                                                            document.getElementById("addQuantityForBillingTxt").style.border = '0.17em solid orange';
+                                                        }
+                                                    }
+
+                                                    currentTab++;
+
+                                                    if (currentTab === 3) {
+                                                        currentTab = 0;
+
+                                                    }
+
+                                                    return false;
+
+                                                } else if (updateWindow === -4) {
+                                                    if (evnt.keyCode === 9) {
+                                                        return false;
+                                                    }
+
+                                                    document.getElementById("prescriberNameForBillingTxt").style.border = '';
+                                                    document.getElementById("prescriptionDateTxt").style.border = '';
+                                                    document.getElementById("custNameForBillingTxt").style.border = '';
+                                                    document.getElementById("custNameMobileNumberTxt").style.border = '';
+                                                    document.getElementById("additionalDicount").style.border = '';
+                                                    document.getElementById("btnGenerateFinalBill2").style.border = '';
+                                                    document.getElementById("paymentType").style.border = '';
+                                                    document.getElementById("creditAmount").style.border = '';
+                                                    document.getElementById("paymentType").style.border = '';
+                                                    document.getElementById("creditComment").style.border = '';
+
+
+                                                    if (evnt.keyCode === 39) {
+                                                        currentTab++;
+                                                    }
+
+                                                    if (evnt.keyCode === 37) {
+                                                        if (currentTab !== -1) {
+                                                            currentTab--;
+                                                        } else {
+                                                            currentTab++;
+                                                        }
+                                                    }
+                                                    if (currentTab !== 1) {
+                                                        removeNameList();
+                                                    }
+                                                    if (currentTab === 3) {
+                                                        document.getElementById("prescriberNameForBillingTxt").focus();
+                                                        document.getElementById("prescriberNameForBillingTxt").style.border = '0.17em solid orange';
+                                                    }
+
+                                                    if (currentTab === 4) {
+                                                        document.getElementById("prescriptionDateTxt").focus();
+                                                        document.getElementById("prescriptionDateTxt").style.border = '0.17em solid orange';
+                                                    }
+
+                                                    if (currentTab === 1) {
+                                                        document.getElementById("custNameForBillingTxt").focus();
+                                                        document.getElementById("custNameForBillingTxt").style.border = '0.17em solid orange';
+                                                    }
+
+                                                    if (currentTab === 2) {
+                                                        document.getElementById("custNameMobileNumberTxt").focus();
+
+                                                        document.getElementById("custNameMobileNumberTxt").style.border = '0.17em solid orange';
+                                                    }
+
+                                                    if (currentTab === 5) {
+                                                        document.getElementById("additionalDicount").focus();
+                                                        document.getElementById("additionalDicount").style.border = '0.17em solid orange';
+                                                    }
+
+                                                    if (currentTab === 6) {
+                                                        document.getElementById("paymentType").focus();
+                                                        document.getElementById("paymentType").style.border = '0.17em solid orange';
+                                                    }
+
+                                                    if (currentTab === 7) {
+                                                        document.getElementById("creditAmount").focus();
+                                                        document.getElementById("creditAmount").style.border = '0.17em solid orange';
+                                                    }
+
+                                                    if (currentTab === 8) {
+                                                        document.getElementById("creditComment").focus();
+                                                        document.getElementById("creditComment").style.border = '0.17em solid orange';
+                                                    }
+
+                                                    if (currentTab === 9) {
+                                                        document.getElementById("btnGenerateFinalBill2").focus();
+                                                        document.getElementById("btnGenerateFinalBill2").style.border = '0.17em solid orange';
+                                                    }
+
+                                                    //                        currentTab++;
+                                                    //
+                                                    //                        if (currentTab === 9) {
+                                                    //                            currentTab = 0;
+                                                    //                        }
+
+                                                    if (currentTab === 9) {
+                                                        currentTab = -1;
+                                                    }
+
+                                                    return false;
+
+                                                } else if (updateWindow === -5) {
+
+                                                    if (evnt.keyCode === 39) {
+                                                        document.getElementById("custNameForBillingTxt").style.border = '';
+                                                        document.getElementById("custNameMobileNumberTxt").focus();
+                                                        document.getElementById("custNameMobileNumberTxt").style.border = '0.17em solid orange';
+                                                        document.getElementById("nameListDiv").style.visibility = "hidden";
+                                                        updateWindow = -4;
+                                                        currentTab = 2;
+                                                        return;
+                                                    }
+
+                                                    if (evnt.keyCode === 38 || evnt.keyCode === 40) {
+                                                        var totalLength = document.getElementById("custNameList").children.length;
+                                                        if (evnt.keyCode === 40) {
+                                                            if (currenNameListIndex < totalLength) {
+                                                                currenNameListIndex++;
+                                                            }
+                                                        }
+
+                                                        if (evnt.keyCode === 38) {
+                                                            if (currenNameListIndex > 1) {
+                                                                currenNameListIndex--;
+                                                            }
+                                                        }
+
+                                                        for (var i1 = 0; i1 < document.getElementById("custNameList").children.length; i1++) {
+                                                            document.getElementById("custNameList").children[i1].style.border = "";
+                                                            document.getElementById("custNameList").children[i1].style.backgroundColor = "#21584e";
+                                                        }
+
+
+                                                        if (evnt.keyCode === 40 || evnt.keyCode === 38) {
+                                                            document.getElementById("custNameList").children[currenNameListIndex - 1].children[0].children[0].focus();
+                                                            document.getElementById("custNameList").children[currenNameListIndex - 1].style.border = '0.2em solid black';
+                                                            document.getElementById("custNameList").children[currenNameListIndex - 1].style.backgroundColor = '	#006400';
+                                                        }
+                                                        return false;
+
+                                                    }
+
+                                                } else {
+                                                    if (evnt.keyCode === 27) {
+                                                        document.getElementById("productNameFilterTxt").focus();
+                                                        document.getElementById("productNameFilterTxt").select();
+                                                        currenNameListIndex1 = 0;
+                                                        document.getElementById("nameListDiv1").style.visibility = "hidden";
+                                                        document.getElementById("batchListDiv1").style.visibility = "hidden";
+                                                    }
+                                                    if (evnt.keyCode === 38 || evnt.keyCode === 40) {
+                                                        var totalLength = document.getElementById("custNameList1").children.length;
+                                                        if (evnt.keyCode === 40) {
+                                                            if (currenNameListIndex1 < totalLength) {
+                                                                currenNameListIndex1++;
+                                                            }
+                                                        }
+
+                                                        if (evnt.keyCode === 38) {
+                                                            if (currenNameListIndex1 > 1) {
+                                                                currenNameListIndex1--;
+                                                            }
+                                                        }
+
+                                                        for (var i1 = 0; i1 < document.getElementById("custNameList1").children.length; i1++) {
+                                                            document.getElementById("custNameList1").children[i1].style.border = "";
+                                                            document.getElementById("custNameList1").children[i1].style.backgroundColor = "#21584e";
+                                                        }
+
+
+                                                        if (evnt.keyCode === 40 || evnt.keyCode === 38) {
+                                                            document.getElementById("custNameList1").children[currenNameListIndex1 - 1].children[0].children[0].focus();
+                                                            document.getElementById("custNameList1").children[currenNameListIndex1 - 1].style.border = '0.2em solid black';
+                                                            document.getElementById("custNameList1").children[currenNameListIndex1 - 1].style.backgroundColor = '	#006400';
+                                                        }
+                                                        return false;
+
+                                                    }
+
+                                                }
+                                                //return false;
+                                            } else if (evnt.keyCode === 9) {
+
+                                                return false;
+                                            } else if (evnt.keyCode === 27) {
+
+                                                asideHelp3();
+
+
+                                                return false;
+                                            } else if (evnt.keyCode === 173) {
+
+                                                $("#buttonAside").click();//popupasideprodAnalysis
+
+                                                return false;
+                                            } else if (evnt.keyCode === 174) {
+                                                document.getElementById("popupasideprodAnalysis").innerHTML = '';
+                                                document.getElementById("popupasideprodAnalysis").innerHTML = orgStatDivContent;
+                                                try {
+                                                    var prodId = '';
+                                                    if (currentTab !== 0) {
+                                                        prodId = document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].children[6].innerHTML;
+                                                    } else {
+                                                        prodId = document.getElementById("bpelInstSummayTabBody3").children[currentTab].children[6].innerHTML;
+                                                    }
+                                                    //alert(prodId);
+                                                    //alert(currentTab);
+                                                    if (prodId !== '') {
+                                                        document.getElementById("popupasideprodAnalysis").innerHTML += '<iframe style="width:100%;height:100%;" src="monthlySaleReportAnalysis.html?batch=' + prodId + '" ></iframe>';
+                                                        $("#popupasideprodAnalysis").animate({left: '0px'});
+                                                        document.getElementById("asidebatchHeader").innerHTML = prodId;
+                                                    } else {
+                                                        swal({title: "Info", text: "Select a product to get its stats"}, function () {
+                                                        });
+                                                    }
+                                                } catch (err) {
+                                                    swal({title: "Info", text: "Select a product to get its stats"}, function () {
+                                                    });
+                                                }
+                                                return false;
+                                            } else if (evnt.keyCode === 177) {
+                                                swal({
+                                                    title: "Are you sure to delete entry?",
+                                                    text: "Your will not be able to recover this product!",
+                                                    type: "warning",
+                                                    showCancelButton: true,
+                                                    confirmButtonClass: "btn-danger",
+                                                    confirmButtonText: "Yes, delete this product!",
+                                                    closeOnConfirm: true
+                                                },
+                                                        function () {
+                                                            var prodID;
+                                                            if (currentTab !== 0) {
+                                                                prodID = document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].id;
+                                                            } else {
+                                                                prodID = document.getElementById("bpelInstSummayTabBody3").children[currentTab].id;
+                                                            }
+                                                            var urlString = "/AvonMedicalService/rest/CoreService/deleteProductDetail?productId=" + prodID;
+                                                            $.ajax({
+                                                                url: urlString
+                                                            }).then(function (data) {
+                                                                if (data === true || data === 'true') {
+                                                                    swal({title: "Deleted", text: "Product Data Deleted"});
+                                                                } else {
+                                                                    swal({title: "Not Deleted", text: "Product Data Not Deleted Due to some error!!"});
+                                                                }
+                                                            });
+                                                        });
+
+                                                return false;
+                                            } else if (evnt.keyCode === 179) {
+
+                                                swal({
+                                                    title: "Are you sure to update product Quantity to 0 ?",
+                                                    text: "Your will not be able to recover this update!",
+                                                    type: "warning",
+                                                    showCancelButton: true,
+                                                    confirmButtonClass: "btn-danger",
+                                                    confirmButtonText: "Yes, update this product quantity to 0",
+                                                    closeOnConfirm: true
+                                                },
+                                                        function () {
+                                                            var prodID;
+                                                            if (currentTab !== 0) {
+                                                                prodID = document.getElementById("bpelInstSummayTabBody3").children[currentTab - 1].id;
+                                                            } else {
+                                                                prodID = document.getElementById("bpelInstSummayTabBody3").children[currentTab].id;
+                                                            }
+                                                            var urlString = "/AvonMedicalService/rest/CoreService/updateProductDetailQuantityZero?productId=" + prodID;
+                                                            $.ajax({
+                                                                url: urlString
+                                                            }).then(function (data) {
+                                                                if (data === true || data === 'true') {
+                                                                    swal({title: "Update Quantity to 0 ", text: "Product Data updated"});
+                                                                } else {
+                                                                    swal({title: "Not Updated!", text: "Product Data Not updated Due to some error!!"});
+                                                                }
+                                                            });
+                                                        });
+
+                                                return false;
+                                            } else if (evnt.ctrlKey && evnt.which === 80) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+
+                                                if (finalBilling === 0) {
+                                                    $("#saveBillBtn").click();
+                                                    window.scrollTo(0, 0);
+                                                }
+                                                return false;
+                                            } else if (evnt.ctrlKey && evnt.which === 71) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                //alert('Ctrl+S!');
+                                                gCmd = 1;
+                                                $("#btnGenerateBill").click();
+                                                window.scrollTo(0, 0);
+
+                                                return false;
+                                            } else if (evnt.ctrlKey && evnt.which === 73) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                //alert('Ctrl+S!');
+                                                if (gCmd === 1) {
+                                                    $("#btnGenerateFinalBill2").click();
+                                                    window.scrollTo(0, 0);
+                                                    gCmd = 0;
+                                                } else {
+                                                    gCmd = 1;
+                                                    $("#btnGenerateBill").click();
+                                                    window.scrollTo(0, 0);
+                                                }
+                                                return false;
+                                            } else if (evnt.ctrlKey && evnt.which === 77) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                //alert('Ctrl+S!');
+                                                mainMenuCommand = 1;
+                                                searchCommand = 0;
+                                                currentTab = 1;
+                                                document.getElementById("productNameFilterTxt").style.border = '';
+                                                document.getElementById("companyFilterTxt").style.border = '';
+                                                document.getElementById("formulaFilterTxt").style.border = '';
+                                                document.getElementById("batchNoFilterTxt").style.border = '';
+
+                                                document.getElementById("menu1").focus();
+                                                document.getElementById("menu1").style.border = '0.17em solid orange';
+                                                window.scrollTo(0, 0);
+
+                                                return false;
+                                            } else if (evnt.ctrlKey && evnt.which === 69) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+                                                //alert('Ctrl+S!');
+                                                var pid = document.getElementById("bpelID").innerHTML;
+
+                                                window.open("addOrUpdateProduct.html?pid=" + pid, "_blank");
+
+                                                return false;
+                                            } else if (evnt.ctrlKey && evnt.which === 70) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+
+                                                searchCommand = 1;
+                                                mainMenuCommand = 0;
+                                                currentTab = 1;
+                                                isSearchedProduct = 0;
+                                                document.getElementById("productNameFilterTxt").style.border = '';
+                                                document.getElementById("custBatchFilterTxt").style.border = '';
+                                                document.getElementById("productIdTxt").style.border = '';
+                                                document.getElementById("packing").style.border = '';
+                                                document.getElementById("packing").style.border = '';
+                                                document.getElementById("mrpTxt").style.border = '';
+                                                document.getElementById("expiryTxt").style.border = '';
+
+
+
+                                                document.getElementById("productNameFilterTxt").focus();
+                                                document.getElementById("productNameFilterTxt").style.border = '0.17em solid orange';
+                                                window.scrollTo(0, 0);
+
+                                                return false;
+                                            } else if (evnt.ctrlKey && evnt.which === 81) { // Check for the Ctrl key being pressed, and if the key = [S] (83)
+
+                                                $("#productNameFilterTxt").val("");
+                                                $("#productNameFilterTxt").text("");
+
+                                                $("#companyFilterTxt").val("");
+                                                $("#companyFilterTxt").text("");
+
+                                                $("#formulaFilterTxt").val("");
+                                                $("#formulaFilterTxt").text("");
+
+                                                $("#batchNoFilterTxt").val("");
+                                                $("#batchNoFilterTxt").text("");
+                                                searchCommand = 1;
+                                                mainMenuCommand = 0;
+                                                currentTab = 1;
+                                                isSearchedProduct = 0;
+                                                // if (productDetailDT) {
+                                                //   productDetailDT.destroy();
+                                                // }
+
+                                                //document.getElementById("bpelInstSummayTabBody3").innerHTML = "";
+                                                document.getElementById("productNameFilterTxt").focus();
+                                                document.getElementById("productNameFilterTxt").select();
+                                                document.getElementById("productNameFilterTxt").style.border = '0.17em solid orange';
+                                                document.getElementById("nameListDiv1").style.visibility = "hidden";
+                                                document.getElementById("batchListDiv1").style.visibility = "hidden";
+                                                document.getElementById("custNameList1").innerHTML = "";
+                                                document.getElementById("custBatchList1Body").innerHTML = "";
+                                                /**/
+
+                                                //$('#testInst tr').slice(1).remove();
+
+                                                window.scrollTo(0, 0);
+                                                return false;
+                                            }
+
+                                        }
+
+
+                                    }
+
+                                    helloKeyboard();
+
+                                    function maxWindow() {
+                                        window.moveTo(0, 0);
+
+
+                                        if (document.all) {
+                                            top.window.resizeTo(screen.availWidth, screen.availHeight);
+                                        } else if (document.layers || document.getElementById) {
+                                            if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
+                                                top.window.outerHeight = screen.availHeight;
+                                                top.window.outerWidth = screen.availWidth;
+                                            }
+                                        }
+
+                                        //swalParam({title: "Info"});
+                                    }
+
+                                    $('#myMessageTrackingWindow').on('hidden.bs.modal', function () {
+                                        // do something…
+                                        currentTab = 0;
+                                        currenModal = 0;
+                                        gCmd = 0;
+                                        finalBilling = 0;
+                                        document.getElementById("productNameFilterTxt").focus();
+                                        document.getElementById("productNameFilterTxt").select();
+                                    });
+
+                                    $('#myMessageTrackingWindow').on('shown.bs.modal', function () {
+                                        // do something…
+                                        currentTab = 0;
+                                        currenModal = 1;
+
+                                        if (updateWindow === -4) {
+                                            document.getElementById("custNameForBillingTxt").focus();
+                                            document.getElementById("custNameForBillingTxt").style.border = '0.17em solid orange';
+                                        } else if (updateWindow === -3) {
+
+                                            if (taxTotalFound === 0) {
+                                                document.getElementById("addQuantityForBillingTxt").focus();
+                                                document.getElementById("addQuantityForBillingTxt").style.border = '0.17em solid orange';
+                                            } else if (taxTotalFound === 1) {
+                                                document.getElementById("totalTaxInfo").focus();
+                                                document.getElementById("totalTaxInfo").style.border = '0.27em solid orange';
+                                                document.getElementById("totalTaxInfo").select();
+                                            }
+                                        }
+                                    });
+
+
+
+// 
+
+//            $('#myMessageTrackingWindow')
+//                    .on('hide', function () {
+//
+//                    })
+//                    .on('hidden', function () {
+//
+//                    })
+//                    .on('show', function () {
+//
+//                    })
+//                    .on('shown', function () {
+//
+//                        currentTab = 0;
+//                        currenModal = 1;
+//                    });
+
+        </script> 
+
+
+
+    </body>
+
+    <!-- Mirrored from www.spruko.com/demo/viboon/html/Viboon_teal/Horizontal-Light-Headerfix/index4.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Dec 2018 19:18:57 GMT -->
+</html>

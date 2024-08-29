@@ -1,0 +1,45 @@
+/*
+	Totem Ticker Stylesheet
+	Zach Dunn / Build Internet (buildinternet.com)
+	Winter 2011
+*/
+
+
+
+#wrapper{
+	
+	
+	
+}
+
+	p{color:#fff; padding:10px 0; text-align:center;}
+		.nav{}
+	
+	
+
+
+
+/*
+
+	This is the only semi-important stuff for plugin installation
+	It's just an example, so customize away!
+*/
+
+#vertical-ticker{
+	height:260px;
+	overflow:hidden;
+	margin:0; padding:0;
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0, .4);
+}
+
+	#vertical-ticker li{
+		padding:5px 2px;
+		display:block;
+		background:#efefef;
+		color:#333;
+		border-bottom:1px solid #ddd;
+		text-align:center;
+		font-size:25px;
+		font-weight:bold;
+		font-family: Helvetica Neue, times, serif;
+	}

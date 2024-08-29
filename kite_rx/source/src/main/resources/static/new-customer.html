@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+    <!-- Mirrored from www.spruko.com/demo/viboon/html/Viboon_teal/Horizontal-Light-Headerfix/form-elements.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Dec 2018 19:19:37 GMT -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="msapplication-TileColor" content="#0061da">
+        <meta name="theme-color" content="#1643a3">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+
+        <!-- Title -->
+        <title>KiteRx Ledger Creation</title>
+        <link rel="stylesheet" href="assets/fonts/fonts/font-awesome.min.css">
+
+        <!-- Font Family -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+        <!-- Dashboard Css -->
+        <link href="assets/css/dashboard.css" rel="stylesheet" />
+
+        <!-- c3.js Charts Plugin -->
+        <link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
+
+        <!-- select2 Plugin -->
+        <link href="assets/plugins/select2/select2.min.css" rel="stylesheet" />
+
+        <!-- Time picker Plugin -->
+        <link href="assets/plugins/time-picker/jquery.timepicker.css" rel="stylesheet" />
+
+        <!-- Date Picker Plugin -->
+        <link href="assets/plugins/date-picker/spectrum.css" rel="stylesheet" />
+
+        <!-- Custom scroll bar css-->
+        <link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+        <!-- file Uploads -->
+        <link href="assets/plugins/fileuploads/css/dropify.min.css" rel="stylesheet" type="text/css" />
+
+        <!---Font icons-->
+        <link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/sweet-alert.css" />
+
+    </head>
+    <body class="">
+        <div id="global-loader" ></div>
+        <div class="page" >
+            <div class="page-main">
+                <div class="header py-1">
+                    <div class="container">
+                        <div class="d-flex">
+                            <a class="header-brand" href="#">
+                                <!--								<img src="assets/images/brand/logo.png" class="header-brand-img" alt="Viboon logo">-->
+                                <img src="img/logo_3.png" style="position: absolute;top: -15px;">
+                            </a>
+                            <div class="d-flex order-lg-2 ml-auto">
+                                <div class="dropdown d-none d-md-flex mt-1" >
+                                    <a  class="nav-link icon full-screen-link">
+                                        <i class="fe fe-maximize floating"  id="fullscreen-button"></i>
+                                    </a>
+                                </div>
+
+
+
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-bell floating"></i>
+                                        <span class="nav-unread bg-danger"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-thumbs-o-up"></i>
+                                            </div>
+                                            <div>
+                                                <strong>Someone likes our posts.</strong>
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-commenting-o"></i>
+                                            </div>
+                                            <div>
+                                                <strong> 3 New Comments</strong>
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <div class="notifyimg">
+                                                <i class="fa fa-cogs"></i>
+                                            </div>
+                                            <div>
+                                                <strong> Server Rebooted.</strong>
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">View all Notification</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown d-none d-md-flex mt-1">
+                                    <a class="nav-link icon" data-toggle="dropdown">
+                                        <i class="fe fe-mail floating"></i>
+                                        <span class=" nav-unread badge badge-warning  badge-pill">2</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a href="#" class="dropdown-item text-center">2 New Messages</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/male/41.jpg)"></span>
+                                            <div>
+                                                <strong>Madeleine</strong> Hey! there I' am available....
+                                                <div class="small text-muted">3 hours ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/1.jpg)"></span>
+                                            <div>
+                                                <strong>Anthony</strong> New product Launching...
+                                                <div class="small text-muted">5  hour ago</div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="dropdown-item d-flex pb-3">
+                                            <span class="avatar brround mr-3 align-self-center" style="background-image: url(assets/images/faces/female/18.jpg)"></span>
+                                            <div>
+                                                <strong>Olivia</strong> New Schedule Realease......
+                                                <div class="small text-muted">45 mintues ago</div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item text-center">See all Messages</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown mt-1">
+                                    <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                                        <span class="avatar avatar-md brround" style="background-image: url(img/user_images/user_1.jpg)"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow ">
+                                        <div class="text-center">
+                                            <a href="#" class="dropdown-item text-center font-weight-sembold user" id="username">Manish Soin</a>
+                                            <span class="text-center user-semi-title text-dark" id="userRole">Pharmacy Director</span>
+                                            <div class="dropdown-divider"></div>
+                                        </div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-account-outline "></i> Profile
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon  mdi mdi-settings"></i> Settings
+                                        </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?
+                                        </a>
+                                        <a class="dropdown-item" href="login.html">
+                                            <i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                                <span class="header-toggler-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-navbar" id="headerMenuCollapse">
+                    <div class="container">
+                        <ul class="nav">
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" href="#"><i class="fa fa-bar-chart"></i> <span>Billing</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductSaleEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Sales Entry</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html"><i class="fa fa-check"></i>Old Sale Bill (Complete product list)</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Purchase Bill</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleBillV2.html">Tagged Billing</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sale return</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Purchase return</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link " href="index4.html">
+                                    <i class="fa fa-home"></i>
+                                    <span>DASHBOARD</span>
+                                </a>
+                                <!--                                <div class="sub-item">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="index.html">Dashboard 1</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index2.html">Dashboard 2</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index3.html">Dashboard 3</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index4.html">Dashboard 4</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="index5.html">Dashboard 5</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> sub-item -->
+                            </li>
+
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" href="#"><i class="fa fa-snowflake-o"></i> <span>Reports</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="SaleReportV2.html"><i class="fa fa-check"></i>Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="PurchaseReportV2.html"><i class="fa fa-check"></i>Purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="SaleReportV2.html?paymentTypeFilter=CREDIT"> <i class="fa fa-check"></i> Credit report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Inventory report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Return items</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-file-text-o"></i> <span>Stocks</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="ProductPurchaseEntryV2.html"><i class="fa fa-check"></i>Fast Lookup Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="ProductPurchaseV2.html"><i class="fa fa-check"></i>Add/Update Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2_Stock.html"><i class="fa fa-check"></i>Current Stock</a>
+                                        </li>
+                                        <li>
+                                            <a href="SalesHistoryV2.html"><i class="fa fa-check"></i>Sales chart</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Expired products</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub ">
+                                <a class="nav-link active" data-toggle="dropdown" href="#"><i class="fa fa-cubes"></i> <span>Accounts</span></a>
+                                <div class="sub-item">
+                                    <ul>
+<!--                                        <li>
+                                            <a href="new-company.html"><i class="fa fa-check"></i>New Company</a>
+                                        </li>-->
+                                        <li>
+                                            <a href="new-customer.html"><i class="fa fa-check"></i>New Customer</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-credit-account.html"><i class="fa fa-check"></i>New Credit Account</a>
+                                        </li>
+<!--                                        <li>
+                                            <a href="#">Company list</a>
+                                        </li>-->
+                                        <li>
+                                            <a href="CustomerListV2.html"><i class="fa fa-check"></i>Manage Customers & Payments</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?isCreditSearch=1"><i class="fa fa-check"></i>Credit Account List</a>
+                                        </li>
+                                        <li>
+                                            <a href="CustomerListV2.html?onlyPending=1"><i class="fa fa-check"></i>Pending Payments To me</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                            <li class="nav-item with-sub">
+                                <a class="nav-link" data-toggle="dropdown" href="#"><i class="fa fa-bandcamp"></i> <span>System Management</span></a>
+                                <div class="sub-item">
+                                    <ul>
+                                        <li>
+                                            <a href="salesHistory.html">Export Product Sheet</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export Sale report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export purchase report</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Export expiry</a>
+                                        </li>
+                                        <li>
+                                            <a href="salesHistory.html">Database Backup</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- dropdown-menu -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="my-3 my-md-5">
+                    <div class="container">
+                        <div id="popupasideBack" style="display: none;position:absolute;left:-5px;top:0px;z-index: 98;width:110%;height:200%;
+                             margin-top: -10px;background-color: black;color: #393939; opacity: 0.7;"></div>
+                        <div id="popupaside" class="container" style="position:absolute;left:-2000px;top:80px;z-index: 100;width:90%;height:75%;
+                             margin-top: -10px;background-color: whitesmoke;color: #393939; overflow: scroll;" >
+                            <br />
+                            <center><h1>Take Customer Photo : <a href="javascript:void(0)" class="btn btn-link" tabindex="" onclick="hidePaymentAsideSelf()" style="font-size:16px;font-weight: 700;">Done</a></h1></center>
+                            <div class="card-header md-8" style="overflow: scroll;">
+                                <!--
+                                        Ideally these elements aren't created until it's confirmed that the
+                                        client supports video/camera, but for the sake of illustrating the
+                                        elements involved, they are created with markup (not JavaScript)
+                                -->
+                                <h2>Camera View</h2><br/>
+                                <video id="video" width="400" height="400" autoplay></video>
+                                <button id="snap" class="btn btn-cyan">Snap Photo</button>
+                                <canvas id="canvas" width="400" height="300"></canvas>
+
+                                <script>
+                                    function initCamera() {
+
+
+
+                                    }
+
+                                    window.addEventListener("DOMContentLoaded", function () {
+                                        // Grab elements, create settings, etc.
+                                        var canvas = document.getElementById('canvas');
+                                        var context = canvas.getContext('2d');
+                                        var video = document.getElementById('video');
+                                        var mediaConfig = {video: true};
+                                        var errBack = function (e) {
+                                            console.log('An error has occurred!', e)
+                                        };
+
+                                        // Put video listeners into place
+                                        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                                            navigator.mediaDevices.getUserMedia(mediaConfig).then(function (stream) {
+                                                //video.src = window.URL.createObjectURL(stream);
+                                                video.srcObject = stream;
+                                                video.play();
+                                            });
+                                        }
+
+                                        /* Legacy code below! */
+                                        else if (navigator.getUserMedia) { // Standard
+                                            navigator.getUserMedia(mediaConfig, function (stream) {
+                                                video.src = stream;
+                                                video.play();
+                                            }, errBack);
+                                        } else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
+                                            navigator.webkitGetUserMedia(mediaConfig, function (stream) {
+                                                video.src = window.webkitURL.createObjectURL(stream);
+                                                video.play();
+                                            }, errBack);
+                                        } else if (navigator.mozGetUserMedia) { // Mozilla-prefixed
+                                            navigator.mozGetUserMedia(mediaConfig, function (stream) {
+                                                video.src = window.URL.createObjectURL(stream);
+                                                video.play();
+                                            }, errBack);
+                                        }
+
+                                        // Trigger photo take
+                                        document.getElementById('snap').addEventListener('click', function () {
+                                            context.drawImage(video, 0, 0, 400, 300);
+                                            downloadMe();
+                                        });
+
+                                    }, false);
+                                    // Put event listeners into place
+
+
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-header">
+                        <h4 class="page-title">New Customer Creation <img id="userImage" src="assets/images/faces/male/unknown.png" style="width:70px;height:70px;" class="avatar avatar-md brround"/></h4>
+
+                        <!--                        <button class="btn btn-primary">Take Customer Live Photo</button>-->
+                        <button  class="btn btn-primary" id="buttonAside">
+                            <i class="fe fe-star floating"  ></i> Live Customer Photo
+                        </button>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="card-header">
+                                <center><div class="row">
+                                        <div class="col-md-6">
+                                            <h3 class="card-title">Account Type </h3>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select name="accountType" id="accountType" class="form-control custom-select" style="margin-top: -5px;">
+                                                <option value="0" data-data='{"image": "./assets/images/flags/br.svg"}'>NORMAL</option>
+                                                <option value="1" data-data='{"image": "./assets/images/flags/pl.svg"}' >CREDIT</option>
+                                            </select>
+                                        </div>
+
+                                    </div></center>
+                            </div>
+
+
+                            <div class="card-body">
+
+
+                                <div class="row">
+                                    <div class="col-md-3 col-lg-3">
+                                        <div class="form-group">
+                                            <label class="form-label">Customer Name</label>
+                                            <input type="text" class="form-control" id="customerNameUp"  placeholder="Name" tabindex="1" autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Contact Person Name</label>
+                                            <input type="text" class="form-control" id="contactNameUp"  placeholder="Name" tabindex="2">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="form-label">Address <span class="form-label-small">56/100</span></label>
+
+                                            <input type="text" class="form-control" id="addressUp"  placeholder="Address" tabindex="3">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3">
+                                        <div class="form-group">
+                                            <label class="form-label">Email</label>
+                                            <!--                                                    <input type="text" class="form-control is-valid state-valid" name="example-text-input-valid" placeholder="Valid Email..">-->
+                                            <input type="text" class="form-control"  id="emailUp"  placeholder="Email" tabindex="4">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Mobile Number</label>
+                                            <!--                                                    <input type="text" class="form-control is-invalid state-invalid" name="example-text-input-invalid"
+                                                                                                       placeholder="Invalid Number..">
+                                                                                                <div class="invalid-feedback">Invalid number</div>-->
+                                            <input type="text" class="form-control" id="phoneUp"  placeholder="Mobile" tabindex="5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Alternate number</label>
+                                            <input type="text" class="form-control" id="phone2Up"  placeholder="ZIP" tabindex="6">
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-md-3 col-lg-3">
+                                        <div class="form-group">
+                                            <label class="form-label">Customer Type</label>
+                                            <select name="country" id="customerType" class="form-control custom-select" tabindex="7">
+                                                <option value="Regular" data-data='{"image": "./assets/images/flags/pl.svg"}' >Regular</option>
+                                                <option value="Hole-seller" data-data='{"image": "./assets/images/flags/br.svg"}'>Hole-seller</option>
+                                                <option value="General Trading" data-data='{"image": "./assets/images/flags/br.svg"}'>General Trading</option>
+                                                <option value="Retailer" data-data='{"image": "./assets/images/flags/cz.svg"}' selected>Retailer</option>
+                                                <option value="Pharmacy" data-data='{"image": "./assets/images/flags/de.svg"}'>Pharmacy</option>
+                                                <option value="Hospital" data-data='{"image": "./assets/images/flags/pl.svg"}' >Hospital</option>
+                                                <option value="Clinic" data-data='{"image": "./assets/images/flags/pl.svg"}' >Clinic</option>
+                                                <option value="Other" data-data='{"image": "./assets/images/flags/pl.svg"}' >Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">GST Number</label>
+                                            <input type="text" class="form-control" id="GSTIN"  placeholder="GST" tabindex="8">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Family Member</label>
+                                            <input type="text" class="form-control" id="custNameForBillingTxt" placeholder="Family member"
+                                                   tabindex="9">
+                                            <div id="nameListDiv" style="visibility: hidden;position:absolute;background-color: #21584e;color:white;font-size:14px;z-index: 20000;
+                                                 overflow: scroll;height:200px;width:200px;border-style: solid;border-width: 2px;border-color: black;">
+                                                <table id="custNameList" class="table card-table table-vcenter text-nowrap">
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CUSTOMERS NAME</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3">
+                                        <div class="form-group">
+                                            <label class="form-label" >Default Discount (%)</label>
+                                            <input type="text" class="form-control" id="defaultDiscountUp"  placeholder="Discuount in percentage" tabindex="10">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Search Keyword</label>
+                                            <input type="text" class="form-control" id="KEYWORDS"  placeholder="Fast Searching" tabindex="11">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" disabled="true" style="color: lightgray">Max Credit Allowed</label>
+                                            <input type="text" class="form-control" id="maxCreditAllowedUp" disabled="true"  placeholder="Max Credit Amount" tabindex="12">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer text-right">
+                                <div class="d-flex">
+                                    <a href="javascript:void(0)" class="btn btn-link" tabindex="14" onclick="asideHelp()">Cancel</a>
+                                    <button type="button" class="btn btn-primary ml-auto" tabindex="13" onclick="addCustomer()">Add Customer</button>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!--							<div class="col-lg-6">
+                                                                                        <div class="card">
+                                                                                                <div class="card-header">
+                                                                                                        <div class="card-title">Default Date picker</div>
+                                                                                                </div>
+                                                                                                <div class="card-body">
+                                                                                                        <p class="mg-b-20 mg-sm-b-40">The datepicker is tied to a standard form input field. Click on the input to open an interactive calendar in a small overlay. If a date is chosen, feedback is shown as the input's value.</p>
+                                                                                                        <div class="wd-200 mg-b-30">
+                                                                                                                <div class="input-group">
+                                                                                                                        <div class="input-group-prepend">
+                                                                                                                                <div class="input-group-text">
+                                                                                                                                        <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
+                                                                                                                                </div>
+                                                                                                                        </div><input class="form-control fc-datepicker" placeholder="MM/DD/YYYY" type="text">
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-lg-6">
+                                                                                        <div class="card">
+                                                                                                <div class="card-header">
+                                                                                                        <div class="card-title">Multiple Months </div>
+                                                                                                </div>
+                                                                                                <div class="card-body">
+                                                                                                        <p class="mg-b-20 mg-sm-b-40">The datepicker is tied to a standard form input field. Click on the input to open an interactive calendar in a small overlay. If a date is chosen, feedback is shown as the input's value.</p>
+                                                                                                        <div class="wd-200 mg-b-30">
+                                                                                                                <div class="input-group">
+                                                                                                                        <div class="input-group-prepend">
+                                                                                                                                <div class="input-group-text">
+                                                                                                                                        <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
+                                                                                                                                </div>
+                                                                                                                        </div><input class="form-control" id="datepickerNoOfMonths" placeholder="MM/DD/YYYY" type="text">
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--footer-->
+        <footer>
+            <p class="pull-left"><font color='black'>&copy; BTech Software Pvt. Ltd.</a> 2018-2019</p>
+            <p class="pull-right"><font color='black' >Developed by: <a href="https://www.facebook.com/param.cool2008"  target="_blank">Paramjeet Singh.</a></p>
+            <marquee behavior="scroll" direction="left">In case of any doubt on the product operation, feel free to contact us on +91 9986881500, or sent email to paramjeetsinghbawa@gmail.com </marquee>
+        </footer>
+        <!-- End Footer-->
+    </div>
+
+    <!-- Back to top -->
+    <a href="#top" id="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
+    <!-- Dashboard Css -->
+    <script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/vendors/jquery.sparkline.min.js"></script>
+    <script src="assets/js/vendors/selectize.min.js"></script>
+    <script src="assets/js/vendors/jquery.tablesorter.min.js"></script>
+    <script src="assets/js/vendors/circle-progress.min.js"></script>
+    <script src="assets/plugins/rating/jquery.rating-stars.js"></script>
+    <!--Select2 js -->
+    <script src="assets/plugins/select2/select2.full.min.js"></script>
+
+    <!-- Timepicker js -->
+    <script src="assets/plugins/time-picker/jquery.timepicker.js"></script>
+    <script src="assets/plugins/time-picker/toggles.min.js"></script>
+
+    <!-- Datepicker js -->
+    <script src="assets/plugins/date-picker/spectrum.js"></script>
+    <script src="assets/plugins/date-picker/jquery-ui.js"></script>
+    <script src="assets/plugins/input-mask/jquery.maskedinput.js"></script>
+
+    <!-- Inline js -->
+    <script src="assets/js/select2.js"></script>
+    <!-- file uploads js -->
+    <script src="assets/plugins/fileuploads/js/dropify.min.js"></script>
+
+    <!-- Custom scroll bar Js-->
+    <script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Custom Js-->
+    <script src="custom-js/sweet-alert.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script type="text/javascript">
+
+                                        $("#buttonAside").click(function () {
+                                            //popupasideBack
+                                            initCamera();
+                                            document.getElementById("popupasideBack").style.display = "block";
+                                            $("#popupaside").animate({left: '0px'});
+                                        });
+
+                                        function downloadMe() {
+                                            document.getElementById("userImage").setAttribute("src", document.getElementById("canvas").toDataURL("image/png"));
+                                            readURLFromCanvas(document.getElementById("canvas"));
+                                        }
+
+                                        var fileObj = {};
+
+
+                                        function canvasToBlob(canvas, type) {
+                                            var byteString = document.getElementById("canvas").toDataURL("image/png");
+                                            console.log(byteString);
+                                            return byteString;
+                                        }
+
+                                        function readURLFromCanvas(canvas) {
+                                            var blob = canvasToBlob(canvas, "image/png");
+                                            fileObj['userImg'] = blob;
+                                        }
+
+                                        function hidePaymentAsideSelf() {
+
+                                            //document.getElementById("popupasidepayment").style.display = "none";
+                                            $("#popupaside").animate({left: '-2000px'});
+
+                                            document.getElementById("popupasideBack").style.display = "none";
+
+                                        }
+
+                                        $('.dropify').dropify({
+                                            messages: {
+                                                'default': 'Drag and drop a file here or click',
+                                                'replace': 'Drag and drop or click to replace',
+                                                'remove': 'Remove',
+                                                'error': 'Ooops, something wrong appended.'
+                                            },
+                                            error: {
+                                                'fileSize': 'The file size is too big (2M max).'
+                                            }
+                                        });
+    </script>
+
+    <script src="custom-js/MonthlyCustomerData.js"></script>
+
+</body>
+
+<!-- Mirrored from www.spruko.com/demo/viboon/html/Viboon_teal/Horizontal-Light-Headerfix/form-elements.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Dec 2018 19:19:41 GMT -->
+</html>
+
+

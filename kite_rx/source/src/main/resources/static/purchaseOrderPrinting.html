@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <style type="text/css" media="print">
+            @page {
+                size: auto;   /* auto is the initial value */
+                margin: 0;  /* this affects the margin in the printer settings */
+            }
+
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="custom-js/jquery.min.js"></script>
+        <script src="custom-js/bootstrap.min.js"></script>
+    </head>
+
+    <body style="font-family: 'Rubik', sans-serif; margin-left: 20px;" onload="getInvoice()">
+        <div>
+            <center><button id="p2" onclick="myFunction()">Print Invoice</button></center>  
+            <table style="width:90%" border="0" >
+                <tr>
+                    <th colspan="2" align="left">
+
+                        <h2>Purchase Order</h2>  
+
+                    </th>
+                </tr>
+            </table>
+
+            <table style="width:90%;" border="0" >
+
+                <tr style="font-size: 12px;">
+                    <td>
+                        <div>BTech Technologies Pvt. Ltd. </div>
+                    </td>
+
+                </tr>
+                <tr style="font-size: 12px;">
+                    <td>
+                        <div>12/1 Avani Gardens, </div>
+                    </td>
+
+                </tr>
+                <tr style="font-size: 12px;">
+                    <td>
+                        <div>Jakkur, Bangalore, 560064 </div>
+                    </td>
+
+                </tr>
+                <tr style="font-size: 12px;">
+                    <td>
+                        <div>GSTIN #1231231</div>
+                    </td>
+
+                </tr>
+
+            </table>
+            <hr />
+            <table style="width:90%" border="0" style="font-size: 10px;">
+                <tr style="font-size: 14px;">
+                    <th> Vendor Detail </th>
+                    <th> Ship to </th>
+                    <th> Order Detail </th>
+                </tr>
+
+                <tr style="font-size: 12px;">
+                    <td>
+                        <div>Vendor Name : Paramjeet Singh</div>
+                    </td>
+                    <td>
+                        <div>BTech Technologies Pvt. Ltd. </div>
+                    </td>
+                    <td>
+                        <div>Order Number : #234</div>
+                    </td>
+                </tr>
+                <tr style="font-size: 12px;">
+                    <td>
+                        <div>Vendor Contact : +919986881500 </div>
+                    </td>
+                    <td>
+                        <div>12/1 Avani Gardens, </div>
+                    </td>
+                    <td>
+                        <div>Order Date : 21/07/2017 12:00:00 AM</div>
+                    </td>
+                </tr>
+                <tr style="font-size: 12px;">
+                    <td>
+                        <div>Vendor Address : Yelhanka</div>
+                    </td>
+                    <td>
+                        <div>Jakkur, Bangalore, 560064 </div>
+                    </td>
+                    <td>
+                        <div>Payment Method : Credit</div>
+                    </td>
+                </tr>
+
+            </table>
+
+            <br />
+            <hr />
+            <br />
+            <table  border="2"  class="table" style="width:97%;text-align: left;">
+                <tr style="font-size: 12px;">
+                    <th align="left">Sr. No </th>
+                    <th align='left'>Product Name </th>
+                    <th align='left'>QUANTITY </th>
+                    <th align='left'>AMOUNT PER UNIT</th>
+                    <th align='left'>TAXABLE AMOUNT</th>
+                    <th align='left'>CGST (%)</th>
+                    <th align='left'>SGST (%)</th>
+                    <th align='left'>IGST (%)</th>
+                    <th align='left'>PRODUCT DISCOUNT (%)</th>
+                    <th align='right' style="text-align: right;">TOTAL AMOUNT</th>
+                </tr>  
+                <tbody id='tabBpelVariableListBody' style="font-size: 11px;"> 
+                </tbody>
+            </table> 
+        </div>
+
+        <div style="font-size: 12px;">
+            Terms and Conditions Apply <br />
+            Account number : 35sfa5345234 <br />
+            PAN : ADFAS5432A <br />
+        </div>
+
+        <br/>
+        <hr />
+
+        <script>
+            function myFunction() {
+                document.getElementById("p2").style.display = "none";
+                window.print();
+            }
+        </script>
+        <script src="custom-js/SalesData.js"></script>
+    </body>
+</html>
